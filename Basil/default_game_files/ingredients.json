@@ -1,0 +1,92 @@
+{
+  "Bloodgrass": {
+    "rarity": "Common",
+    "effect": "Can combine with any other Potion Effect ingredient to become food for 1 day.",
+    "DC": 0,
+    "found_in": ["Most Terrain"]
+  },
+  "Primordial Balm": {
+    "rarity": "Rare",
+    "effect": "Doubles effect of potion or poison.",
+    "DC": 4,
+    "found_in": ["Mountain", "Swamp", "Underdark"]
+  },
+  "Chromus Slime": {
+    "rarity": "Rare",
+    "effect": "The final effect after all other calculations is the exact opposite.",
+    "DC": 4,
+    "found_in": ["Coastal", "Underdark"]
+  },
+  "Dried Ephedra": {
+    "rarity": "Uncommon",
+    "effect": "Increase the dice-type by 1 size for any healing Effect.",
+    "DC": 2,
+    "found_in": ["Desert", "Mountain"]
+  },
+  "Fennel Silk": {
+    "rarity": "Common",
+    "effect": "Stabilizes body heat to resist cold weather or wet condition penalties for 1 hour.",
+    "DC": 2,
+    "found_in": ["Arctic", "Underdark"]
+  },
+  "Gengko Brush": {
+    "rarity": "Uncommon",
+    "effect": "Double the dice rolled of any healing Effect, but divide the total of the dice by 2 (rounding down).",
+    "DC": 2,
+    "found_in": ["Hills", "Underdark"]
+  },
+  "Lavender Sprig": {
+    "rarity": "Common",
+    "effect": "Makes the potion or toxin more stable and safer to craft.",
+    "DC": -2,
+    "found_in": ["Coastal", "Grasslands", "Hills"]
+  },
+  "Wild Sageroot": {
+    "rarity": "Common",
+    "effect": "Heals for 2d4 + Alchemy Modifier.",
+    "DC": 0,
+    "found_in": ["Most Terrain"]
+  },
+  "Wyrmtongue Petals": {
+    "rarity": "Common",
+    "effect": "1d4 + Alchemy Modifier poison damage per round; target is poisoned for 1 minute.",
+    "DC": 0,
+    "found_in": ["Most Terrain"]
+  },
+  "Amanita Cap": {
+    "rarity": "Common",
+    "effect": "Changes any poison Effect to be non-lethal and only incapacitates the target.",
+    "DC": 1,
+    "found_in": ["Coastal", "Swamp"]
+  },
+  "Arctic Creeper": {
+    "rarity": "Common",
+    "effect": "Change poison damage to cold or necrotic damage; still considered poison for crafting.",
+    "DC": 2,
+    "found_in": ["Arctic", "Mountain"]
+  },
+  "Cactus Juice": {
+    "rarity": "Common",
+    "effect": "Delays poison damage by 5 rounds before taking effect.",
+    "DC": 2,
+    "found_in": ["Desert", "Grasslands"]
+  },
+  "Hydrathistle": {
+    "rarity": "Uncommon",
+    "effect": "Used to create potions of Water Breathing.",
+    "DC": 2,
+    "found_in": ["Coastal", "Swamp"]
+  },
+  "Fiend’s Ivy": {
+    "rarity": "Rare",
+    "effect": "Used to create potions of Mind Reading.",
+    "DC": 4,
+    "found_in": ["Arctic", "Underdark"]
+  },
+  "Voidroot": {
+    "rarity": "Very Rare",
+    "effect": "Used to create potions of Flying.",
+    "DC": 5,
+    "found_in": ["Arctic", "Desert"]
+  }
+}

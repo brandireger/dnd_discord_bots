@@ -1,0 +1,437 @@
+{
+	"caption": "Adventuring Gear",
+	"colLabels": [
+		"Item",
+		"Weight",
+		"Cost"
+	],
+	"colStyles": [
+		"col-8",
+		"col-2 text-center",
+		"col-2 text-right"
+	],
+	"rows": [
+		[
+			"{@item Acid|XPHB}",
+			"1 lb.",
+			"25 GP"
+		],
+		[
+			"{@item Alchemist's Fire|XPHB}",
+			"1 lb.",
+			"50 GP"
+		],
+		[
+			"Ammunition",
+			"Varies",
+			"Varies"
+		],
+		[
+			"{@item Antitoxin|XPHB}",
+			"—",
+			"50 GP"
+		],
+		[
+			"{@item Arcane Focus|XPHB}",
+			"Varies",
+			"Varies"
+		],
+		[
+			"{@item Backpack|XPHB}",
+			"5 lb.",
+			"2 GP"
+		],
+		[
+			"{@item Ball Bearings|XPHB}",
+			"2 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Barrel|XPHB}",
+			"70 lb.",
+			"2 GP"
+		],
+		[
+			"{@item Basket|XPHB}",
+			"2 lb.",
+			"4 SP"
+		],
+		[
+			"{@item Bedroll|XPHB}",
+			"7 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Bell|XPHB}",
+			"—",
+			"1 GP"
+		],
+		[
+			"{@item Blanket|XPHB}",
+			"3 lb.",
+			"5 SP"
+		],
+		[
+			"{@item Block and Tackle|XPHB}",
+			"5 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Book|XPHB}",
+			"5 lb.",
+			"25 GP"
+		],
+		[
+			"{@item Glass Bottle|XPHB|Bottle, Glass}",
+			"2 lb.",
+			"2 GP"
+		],
+		[
+			"{@item Bucket|XPHB}",
+			"2 lb.",
+			"5 CP"
+		],
+		[
+			"{@item Burglar's Pack|XPHB}",
+			"42 lb.",
+			"16 GP"
+		],
+		[
+			"{@item Caltrops|XPHB}",
+			"2 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Candle|XPHB}",
+			"—",
+			"1 CP"
+		],
+		[
+			"{@item Crossbow Bolt Case|XPHB|Case, Crossbow Bolt}",
+			"1 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Map or Scroll Case|XPHB|Case, Map or Scroll}",
+			"1 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Chain|XPHB}",
+			"10 lb.",
+			"5 GP"
+		],
+		[
+			"{@item Chest|XPHB}",
+			"25 lb.",
+			"5 GP"
+		],
+		[
+			"{@item Climber's Kit|XPHB}",
+			"12 lb.",
+			"25 GP"
+		],
+		[
+			"{@item Fine Clothes|XPHB|Clothes, Fine}",
+			"6 lb.",
+			"15 GP"
+		],
+		[
+			"{@item Traveler's Clothes|XPHB|Clothes, Traveler's}",
+			"4 lb.",
+			"2 GP"
+		],
+		[
+			"{@item Component Pouch|XPHB}",
+			"2 lb.",
+			"25 GP"
+		],
+		[
+			"{@item Costume|XPHB}",
+			"4 lb.",
+			"5 GP"
+		],
+		[
+			"{@item Crowbar|XPHB}",
+			"5 lb.",
+			"2 GP"
+		],
+		[
+			"{@item Diplomat's Pack|XPHB}",
+			"39 lb.",
+			"39 GP"
+		],
+		[
+			"{@item Druidic Focus|XPHB}",
+			"Varies",
+			"Varies"
+		],
+		[
+			"{@item Dungeoneer's Pack|XPHB}",
+			"55 lb.",
+			"12 GP"
+		],
+		[
+			"{@item Entertainer's Pack|XPHB}",
+			"58½ lb.",
+			"40 GP"
+		],
+		[
+			"{@item Explorer's Pack|XPHB}",
+			"55 lb.",
+			"10 GP"
+		],
+		[
+			"{@item Flask|XPHB}",
+			"1 lb.",
+			"2 CP"
+		],
+		[
+			"{@item Grappling Hook|XPHB}",
+			"4 lb.",
+			"2 GP"
+		],
+		[
+			"{@item Healer's Kit|XPHB}",
+			"3 lb.",
+			"5 GP"
+		],
+		[
+			"{@item Holy Symbol|XPHB}",
+			"Varies",
+			"Varies"
+		],
+		[
+			"{@item Holy Water|XPHB}",
+			"1 lb.",
+			"25 GP"
+		],
+		[
+			"{@item Hunting Trap|XPHB}",
+			"25 lb.",
+			"5 GP"
+		],
+		[
+			"{@item Ink|XPHB}",
+			"—",
+			"10 GP"
+		],
+		[
+			"{@item Ink Pen|XPHB}",
+			"—",
+			"2 CP"
+		],
+		[
+			"{@item Jug|XPHB}",
+			"4 lb.",
+			"2 CP"
+		],
+		[
+			"{@item Ladder|XPHB}",
+			"25 lb.",
+			"1 SP"
+		],
+		[
+			"{@item Lamp|XPHB}",
+			"1 lb.",
+			"5 SP"
+		],
+		[
+			"{@item Bullseye Lantern|XPHB|Lantern, Bullseye}",
+			"2 lb.",
+			"10 GP"
+		],
+		[
+			"{@item Hooded Lantern|XPHB|Lantern, Hooded}",
+			"2 lb.",
+			"5 GP"
+		],
+		[
+			"{@item Lock|XPHB}",
+			"1 lb.",
+			"10 GP"
+		],
+		[
+			"{@item Magnifying Glass|XPHB}",
+			"—",
+			"100 GP"
+		],
+		[
+			"{@item Manacles|XPHB}",
+			"6 lb.",
+			"2 GP"
+		],
+		[
+			"{@item Map|XPHB}",
+			"—",
+			"1 GP"
+		],
+		[
+			"{@item Mirror|XPHB}",
+			"1/2 lb.",
+			"5 GP"
+		],
+		[
+			"{@item Net|XPHB}",
+			"3 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Oil|XPHB}",
+			"1 lb.",
+			"1 SP"
+		],
+		[
+			"{@item Paper|XPHB}",
+			"—",
+			"2 SP"
+		],
+		[
+			"{@item Parchment|XPHB}",
+			"—",
+			"1 SP"
+		],
+		[
+			"{@item Perfume|XPHB}",
+			"—",
+			"5 GP"
+		],
+		[
+			"{@item Basic Poison|XPHB|Poison, Basic}",
+			"—",
+			"100 GP"
+		],
+		[
+			"{@item Pole|XPHB}",
+			"7 lb.",
+			"5 CP"
+		],
+		[
+			"{@item Iron Pot|XPHB|Pot, Iron}",
+			"10 lb.",
+			"2 GP"
+		],
+		[
+			"{@item Potion of Healing|XDMG}",
+			"1/2 lb.",
+			"50 GP"
+		],
+		[
+			"{@item Pouch|XPHB}",
+			"1 lb.",
+			"5 SP"
+		],
+		[
+			"{@item Priest's Pack|XPHB}",
+			"29 lb.",
+			"33 GP"
+		],
+		[
+			"{@item Quiver|XPHB}",
+			"1 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Portable Ram|XPHB|Ram, Portable}",
+			"35 lb.",
+			"4 GP"
+		],
+		[
+			"{@item Rations|XPHB}",
+			"2 lb.",
+			"5 SP"
+		],
+		[
+			"{@item Robe|XPHB}",
+			"4 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Rope|XPHB}",
+			"5 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Sack|XPHB}",
+			"1/2 lb.",
+			"1 CP"
+		],
+		[
+			"{@item Scholar's Pack|XPHB}",
+			"22 lb.",
+			"40 GP"
+		],
+		[
+			"{@item Shovel|XPHB}",
+			"5 lb.",
+			"2 GP"
+		],
+		[
+			"{@item Signal Whistle|XPHB}",
+			"—",
+			"5 CP"
+		],
+		[
+			"Spell Scroll (Cantrip)",
+			"—",
+			"30 GP"
+		],
+		[
+			"Spell Scroll (Level 1)",
+			"—",
+			"50 GP"
+		],
+		[
+			"{@item Iron Spikes|XPHB|Spikes, Iron}",
+			"5 lb.",
+			"1 GP"
+		],
+		[
+			"{@item Spyglass|XPHB}",
+			"1 lb.",
+			"1,000 GP"
+		],
+		[
+			"{@item String|XPHB}",
+			"—",
+			"1 SP"
+		],
+		[
+			"{@item Tent|XPHB}",
+			"20 lb.",
+			"2 GP"
+		],
+		[
+			"{@item Tinderbox|XPHB}",
+			"1 lb.",
+			"5 SP"
+		],
+		[
+			"{@item Torch|XPHB}",
+			"1 lb.",
+			"1 CP"
+		],
+		[
+			"{@item Vial|XPHB}",
+			"—",
+			"1 GP"
+		],
+		[
+			"{@item Waterskin|XPHB}",
+			"5 lb. (full)",
+			"2 SP"
+		]
+	],
+	"name": "Adventuring Gear",
+	"page": 222,
+	"source": "XPHB",
+	"chapter": {
+		"name": "Equipment",
+		"ordinal": {
+			"type": "chapter",
+			"identifier": 6
+		},
+		"index": 6
+	},
+	"type": "table"
+}

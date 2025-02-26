@@ -1,0 +1,332 @@
+{
+    "magical_items_alchemy": {
+        "acid": {
+            "price_cp": 2500,
+            "stock": 3
+        },
+        "alchemist's fire": {
+            "price_cp": 5000,
+            "stock": 3
+        },
+        "antitoxin": {
+            "price_cp": 5000,
+            "stock": 3
+        },
+        "component pouch": {
+            "price_cp": 2500,
+            "stock": 3
+        },
+        "holy water": {
+            "price_cp": 2500,
+            "stock": 3
+        },
+        "ink": {
+            "price_cp": 1000,
+            "stock": 3
+        },
+        "ink pen": {
+            "price_cp": 2,
+            "stock": 3
+        },
+        "oil": {
+            "price_cp": 10,
+            "stock": 3
+        },
+        "paper": {
+            "price_cp": 20,
+            "stock": 3
+        },
+        "parchment": {
+            "price_cp": 10,
+            "stock": 3
+        },
+        "potion of healing": {
+            "price_cp": 5000,
+            "stock": 3
+        },
+        "spell scroll (cantrip)": {
+            "price_cp": 3000,
+            "stock": 3
+        },
+        "spell scroll (level 1)": {
+            "price_cp": 5000,
+            "stock": 3
+        }
+    },
+    "containers_storage": {
+        "backpack": {
+            "price_cp": 200,
+            "stock": 3
+        },
+        "barrel": {
+            "price_cp": 200,
+            "stock": 3
+        },
+        "basket": {
+            "price_cp": 40,
+            "stock": 3
+        },
+        "glass bottle": {
+            "price_cp": 200,
+            "stock": 3
+        },
+        "bucket": {
+            "price_cp": 5,
+            "stock": 3
+        },
+        "crossbow bolt case": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "map or scroll case": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "chest": {
+            "price_cp": 500,
+            "stock": 3
+        },
+        "flask": {
+            "price_cp": 2,
+            "stock": 3
+        },
+        "jug": {
+            "price_cp": 2,
+            "stock": 3
+        },
+        "iron pot": {
+            "price_cp": 200,
+            "stock": 3
+        },
+        "pouch": {
+            "price_cp": 50,
+            "stock": 3
+        },
+        "quiver": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "sack": {
+            "price_cp": 1,
+            "stock": 3
+        },
+        "vial": {
+            "price_cp": 100,
+            "stock": 3
+        }
+    },
+    "hazards_traps": {
+        "ball bearings": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "caltrops": {
+            "price_cp": 100,
+            "stock": 2
+        },
+        "hunting trap": {
+            "price_cp": 500,
+            "stock": 3
+        },
+        "net": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "basic poison": {
+            "price_cp": 10000,
+            "stock": 3
+        },
+        "iron spikes": {
+            "price_cp": 100,
+            "stock": 3
+        }
+    },
+    "adventuring_essentials": {
+        "bedroll": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "blanket": {
+            "price_cp": 50,
+            "stock": 3
+        },
+        "candle": {
+            "price_cp": 1,
+            "stock": 3
+        },
+        "lamp": {
+            "price_cp": 50,
+            "stock": 3
+        },
+        "pole": {
+            "price_cp": 5,
+            "stock": 3
+        },
+        "rations": {
+            "price_cp": 50,
+            "stock": 3
+        },
+        "rope": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "shovel": {
+            "price_cp": 200,
+            "stock": 3
+        },
+        "tent": {
+            "price_cp": 200,
+            "stock": 3
+        },
+        "tinderbox": {
+            "price_cp": 50,
+            "stock": 3
+        },
+        "torch": {
+            "price_cp": 1,
+            "stock": 3
+        },
+        "waterskin": {
+            "price_cp": 20,
+            "stock": 3
+        }
+    },
+    "miscellaneous_equipment": {
+        "bell": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "book": {
+            "price_cp": 2500,
+            "stock": 3
+        },
+        "chain": {
+            "price_cp": 500,
+            "stock": 3
+        },
+        "fine clothes": {
+            "price_cp": 1500,
+            "stock": 3
+        },
+        "traveler's clothes": {
+            "price_cp": 200,
+            "stock": 3
+        },
+        "costume": {
+            "price_cp": 500,
+            "stock": 3
+        },
+        "ladder": {
+            "price_cp": 10,
+            "stock": 3
+        },
+        "bullseye lantern": {
+            "price_cp": 1000,
+            "stock": 3
+        },
+        "hooded lantern": {
+            "price_cp": 500,
+            "stock": 3
+        },
+        "magnifying glass": {
+            "price_cp": 10000,
+            "stock": 3
+        },
+        "map": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "mirror": {
+            "price_cp": 500,
+            "stock": 3
+        },
+        "perfume": {
+            "price_cp": 500,
+            "stock": 3
+        },
+        "portable ram": {
+            "price_cp": 400,
+            "stock": 3
+        },
+        "robe": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "signal whistle": {
+            "price_cp": 5,
+            "stock": 3
+        },
+        "spyglass": {
+            "price_cp": 100000,
+            "stock": 3
+        },
+        "string": {
+            "price_cp": 10,
+            "stock": 3
+        }
+    },
+    "utility_tools_climbing": {
+        "block and tackle": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "crowbar": {
+            "price_cp": 200,
+            "stock": 3
+        },
+        "grappling hook": {
+            "price_cp": 200,
+            "stock": 3
+        }
+    },
+    "adventurers_kits_packs": {
+        "burglar's pack": {
+            "price_cp": 1600,
+            "stock": 3
+        },
+        "climber's kit": {
+            "price_cp": 2500,
+            "stock": 3
+        },
+        "diplomat's pack": {
+            "price_cp": 3900,
+            "stock": 3
+        },
+        "dungeoneer's pack": {
+            "price_cp": 1200,
+            "stock": 3
+        },
+        "entertainer's pack": {
+            "price_cp": 4000,
+            "stock": 3
+        },
+        "explorer's pack": {
+            "price_cp": 1000,
+            "stock": 3
+        },
+        "healer's kit": {
+            "price_cp": 500,
+            "stock": 3
+        },
+        "priest's pack": {
+            "price_cp": 3300,
+            "stock": 3
+        },
+        "scholar's pack": {
+            "price_cp": 4000,
+            "stock": 3
+        }
+    },
+    "lockpicking_security": {
+        "lock": {
+            "price_cp": 1000,
+            "stock": 1
+        }
+    },
+    "armor_restraints": {
+        "manacles": {
+            "price_cp": 200,
+            "stock": 3
+        }
+    }
+}

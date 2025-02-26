@@ -1,0 +1,28 @@
+{
+    "craft_success": [
+      "✨ Success! Your {recipe} is perfectly brewed.",
+      "🔮 {recipe} is now complete. A fine creation!",
+      "🧪 Your {recipe} shimmers with magical potential!"
+    ],
+    "craft_failure": [
+      "💥 Oops! The {recipe} fizzles into nothingness.",
+      "😵 The mixture of {recipe} is unstable and fails.",
+      "⚠️ {recipe} does not hold together. Try again later!"
+    ],
+    "buy_success": [
+      "💰 You have successfully purchased {ingredient}.",
+      "🛍️ {ingredient} is now yours! Spend wisely.",
+      "🔖 You add {ingredient} to your collection."
+    ],
+    "sell_success": [
+      "💵 You sold {ingredient} for a fair price!",
+      "📦 {ingredient} finds a new home. You earn some gold.",
+      "💲 A merchant gladly takes {ingredient} off your hands."
+    ],
+    "market_empty": [
+      "😞 The market is out of stock today. Try again later!",
+      "🚫 No items are available for sale at the moment.",
+      "📉 The shelves are empty. Check back soon!"
+    ]
+  }
+  

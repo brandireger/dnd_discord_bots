@@ -1,0 +1,9 @@
+{
+    "starting_gold": {
+        "gp": 10,
+        "sp": 0,
+        "cp": 0
+    },
+    "csv_file": "AdventuringItems.csv",
+    "audit_channel_id": 1234567890
+}

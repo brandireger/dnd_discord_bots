@@ -1,0 +1,63 @@
+{
+    "Bloodgrass": {
+        "base_price": 11,
+        "stock": 3
+    },
+    "Primordial Balm": {
+        "base_price": 49,
+        "stock": 1
+    },
+    "Chromus Slime": {
+        "base_price": 48,
+        "stock": 4
+    },
+    "Dried Ephedra": {
+        "base_price": 30,
+        "stock": 4
+    },
+    "Fennel Silk": {
+        "base_price": 9,
+        "stock": 3
+    },
+    "Gengko Brush": {
+        "base_price": 20,
+        "stock": 3
+    },
+    "Lavender Sprig": {
+        "base_price": 7,
+        "stock": 3
+    },
+    "Wild Sageroot": {
+        "base_price": 13,
+        "stock": 1
+    },
+    "Wyrmtongue Petals": {
+        "base_price": 10,
+        "stock": 3
+    },
+    "Amanita Cap": {
+        "base_price": 15,
+        "stock": 4
+    },
+    "Arctic Creeper": {
+        "base_price": 8,
+        "stock": 1
+    },
+    "Cactus Juice": {
+        "base_price": 9,
+        "stock": 5
+    },
+    "Hydrathistle": {
+        "base_price": 27,
+        "stock": 5
+    },
+    "Fiend\u2019s Ivy": {
+        "base_price": 41,
+        "stock": 4
+    },
+    "Voidroot": {
+        "base_price": 77,
+        "stock": 2
+    },
+    "last_update": 1740509410.636714
+}

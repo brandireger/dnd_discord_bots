@@ -1,0 +1,12 @@
+{
+    "default": {
+        "intelligence": 0,
+        "wisdom": 0,
+        "charisma": 0,
+        "proficiency": 2,
+        "proficient": false,
+        "proficient_persuasion": false,
+        "herbalism_kit": false,
+        "alchemist_tools": false
+    }
+}

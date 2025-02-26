@@ -1,0 +1,70 @@
+{
+    "shop_intro": [
+        "🛒 **Welcome to Stanley CoinMancer’s Bazaar!**\n_\"I have many wares, traveler. But coin speaks louder than words.\"_",
+        "🛒 **Ah, a fellow seeker of fine goods!**\n_\"Come, browse my wares. Some are bargains… others, treasures beyond measure.\"_",
+        "🛒 **Stanley surveys you carefully.**\n_\"What are you in the market for? Something sharp? Something enchanted? Something... dangerous?\"_",
+        "🛒 **Stanley grins mischievously.**\n_\"You’ve come to the right place, my friend. Let’s make a deal...\"_",
+        "🛒 **Stanley winks.**\n_\"If you have the coin, I have the goods. Let’s see what piques your interest!\"_"
+    ],
+    "shop_no_items": [
+        "🛒 **Stanley strokes his chin.**\n_\"How odd... the shelves are bare! I must have misplaced my inventory!\"_",
+        "🛒 **Stanley shrugs.**\n_\"A shop without stock is like a bard without a song. Alas, today is not your lucky day.\"_",
+        "🛒 **Stanley frowns.**\n_\"A tragedy! My shop is as empty as a dragon’s conscience. Perhaps return later?\"_"
+    ],
+    "shop_invalid_category": [
+        "❌ **Stanley scoffs.**\n_\"You ask for `{category}`, yet such a thing eludes my records. Perhaps you meant one of these?\"_",
+        "❌ **Stanley raises an eyebrow.**\n_\"`{category}`? My dear patron, I stock **many** things, but that is not one of them. Choose wisely.\"_",
+        "❌ **Stanley scratches his head.**\n_\"Hmm, `{category}`? I’m afraid I must decline. But fear not! I have many other wares...\"_"
+    ],
+    "buy_no_item": [
+        "❌ **Stanley raises an eyebrow.**\n_\"You wish to buy... nothing? Curious. Try `/buy item_name` instead.\"_",
+        "❌ **Stanley frowns.**\n_\"I cannot sell what has no name. Speak clearer, or begone!\"_",
+        "❌ **Stanley sighs.**\n_\"You jest? This is a place of business, not a wishing well. Try again.\"_"
+    ],
+    "buy_not_available": [
+        "❌ **Stanley chuckles.**\n_\"Ah, `{item}`? A fine choice… if only I had such a thing. Try `/shop` to see what I truly possess.\"_",
+        "❌ **Stanley shakes his head.**\n_\"I'm afraid `{item}` is but a rumor in this shop. Try `/shop` to browse reality instead.\"_",
+        "❌ **Stanley leans in.**\n_\"A rare find, indeed. So rare, in fact, that I do not have it.\"_"
+    ],
+    "buy_no_money": [
+        "💸 **Stanley tuts disapprovingly.**\n_\"A fine taste, but alas, your purse is light. Return when your coin outweighs your ambition.\"_",
+        "💸 **Stanley smirks.**\n_\"No coin, no goods. Such is the way of the world, my dear patron.\"_",
+        "💸 **Stanley shrugs.**\n_\"Gold first, goods second. That’s the order of things, my friend.\"_"
+    ],
+    "buy_success": [
+        "✅ **Stanley nods approvingly.**\n_\"A wise purchase, {user}. {item} is now yours. May it serve you well.\"_",
+        "✅ **Stanley claps his hands.**\n_\"Done! `{item}` now belongs to `{user}`. Fortune favor your newfound treasure!\"_",
+        "✅ **Stanley grins.**\n_\"Ah, a discerning eye! `{item}` is an excellent choice. Use it wisely, {user}.\"_"
+    ],
+    "sell_success": [
+        "💰 **Stanley inspects the item.**\n_\"A fair trade, {user}. `{item}` is now mine, and `{price_gp}gp` is yours.\"_",
+        "💰 **Stanley weighs the coin.**\n_\"A good deal for both of us! `{item}` for `{price_gp}gp`. Pleasure doing business!\"_",
+        "💰 **Stanley chuckles.**\n_\"A fine bargain, indeed! `{item}` will find a new home, and you, {user}, have `{price_gp}gp` richer hands!\"_"
+    ],
+    "sell_no_item": [
+        "❌ **Stanley frowns.**\n_\"You cannot sell what you do not own, dear patron. No `{item}`? No deal.\"_",
+        "❌ **Stanley folds his arms.**\n_\"You attempt to sell air, {user}? I deal in goods, not illusions.\"_",
+        "❌ **Stanley gives you a skeptical look.**\n_\"A most curious offer, `{item}`… considering you have none to sell.\"_"
+    ],
+    "sell_not_shop_item": [
+        "❌ **Stanley taps his chin.**\n_\"Hmm… `{item}`? Not something I typically deal in. Try another merchant.\"_",
+        "❌ **Stanley shakes his head.**\n_\"I'm afraid `{item}` is not within my buying interests. Some things have no market value.\"_",
+        "❌ **Stanley frowns.**\n_\"A strange thing you offer. I am not in the business of `{item}`, {user}.\"_"
+    ],
+    "givegold_success": [
+        "💰 **Stanley nods.**\n_\"A generous spirit, {user}. `{amount} gp` has been gifted to `{receiver}`!\"_",
+        "💰 **Stanley grins.**\n_\"Ah, spreading the wealth! `{receiver}` now has `{amount} gp` richer hands, thanks to you, {user}.\"_"
+    ],
+    "takegold_success": [
+        "💰 **Stanley records the transaction.**\n_\"A necessary adjustment, I see. `{amount} gp` removed from `{target}`.\"_",
+        "💰 **Stanley jots down a note.**\n_\"All accounted for. `{target}` is now `{amount} gp` lighter.\"_"
+    ],
+    "request_success": [
+        "📜 **Stanley nods.**\n_\"Ah, a request for `{item}`. It shall be noted in my ledger, {user}.\"_",
+        "📜 **Stanley winks.**\n_\"A wise request, {user}. I shall see what I can do about `{item}`...\"_"
+    ],
+    "request_invalid": [
+        "❌ **Stanley shakes his head.**\n_\"That item is not within my power to provide. Try `/requests_available`.\"_",
+        "❌ **Stanley flips through his notes.**\n_\"Hmm… `{item}`? Not on the list, I'm afraid. Choose wisely.\"_"
+    ]
+}

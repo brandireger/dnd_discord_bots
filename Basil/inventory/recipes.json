@@ -1,0 +1,114 @@
+{
+    "Potion of Delayed Potent Healing": {
+        "base": "Wild Sageroot",
+        "modifiers": [
+            "Milkweed Seeds",
+            "Gengko Brush"
+        ],
+        "DC": 14,
+        "effect": "Heals (8d4/2) over 2 rounds"
+    },
+    "Potion of Greater Healing": {
+        "base": "Wild Sageroot",
+        "modifiers": [
+            "Dried Ephedra"
+        ],
+        "DC": 12,
+        "effect": "Heals 4d4 + Alchemy Modifier HP"
+    },
+    "Potion of Superior Healing": {
+        "base": "Wild Sageroot",
+        "modifiers": [
+            "Milkweed Seeds",
+            "Dried Ephedra"
+        ],
+        "DC": 16,
+        "effect": "Heals 8d4 + Alchemy Modifier HP"
+    },
+    "Potion of Supreme Healing": {
+        "base": "Wild Sageroot",
+        "modifiers": [
+            "Gengko Brush",
+            "Dried Ephedra",
+            "Milkweed Seeds"
+        ],
+        "DC": 20,
+        "effect": "Heals 10d4 + Alchemy Modifier HP"
+    },
+    "Death\u2019s Bite (Poison)": {
+        "base": "Wyrmtongue Petals",
+        "modifiers": [
+            "Arctic Creeper",
+            "Spineflower Berries",
+            "Quicksilver Lichen"
+        ],
+        "DC": 18,
+        "effect": "2d6 + Alchemy Modifier necrotic damage per round, poisoned for 30s"
+    },
+    "Widow Venom (Poison)": {
+        "base": "Wyrmtongue Petals",
+        "modifiers": [
+            "Amanita Cap",
+            "Cactus Juice",
+            "Spineflower Berries"
+        ],
+        "DC": 17,
+        "effect": "1d6 + Alchemy Modifier poison damage per round, poisoned for 1 minute, delayed effect"
+    },
+    "Potion of Frost Resistance": {
+        "base": "Fennel Silk",
+        "modifiers": [
+            "Lavender Sprig"
+        ],
+        "DC": 12,
+        "effect": "Provides resistance to cold damage for 1 hour"
+    },
+    "Potion of Invisibility": {
+        "base": "Wisp Stalks",
+        "modifiers": [],
+        "DC": 20,
+        "effect": "User becomes invisible for 1 hour"
+    },
+    "Potion of Water Breathing": {
+        "base": "Hydrathistle",
+        "modifiers": [],
+        "DC": 15,
+        "effect": "User can breathe underwater for 1 hour"
+    },
+    "Potion of Giant Strength": {
+        "base": "Primordial Balm",
+        "modifiers": [],
+        "DC": 22,
+        "effect": "Grants the strength of a Frost/Fire/Stone Giant for 1 hour"
+    },
+    "Potion of Mind Reading": {
+        "base": "Fiend\u2019s Ivy",
+        "modifiers": [],
+        "DC": 16,
+        "effect": "Grants the effects of the spell Detect Thoughts for 10 minutes"
+    },
+    "Potion of Clairvoyance": {
+        "base": "Cosmos Glond",
+        "modifiers": [],
+        "DC": 18,
+        "effect": "Grants the effects of the spell Clairvoyance for 10 minutes"
+    },
+    "Potion of Heroism": {
+        "base": "Luminous Cap Dust",
+        "modifiers": [],
+        "DC": 18,
+        "effect": "Gains 10 temporary HP and is under the effect of the spell Bless for 1 hour"
+    },
+    "Potion of Flying": {
+        "base": "Voidroot",
+        "modifiers": [],
+        "DC": 22,
+        "effect": "Grants a flying speed of 60ft for 1 hour"
+    },
+    "Potion of Speed": {
+        "base": "Tail Leaf",
+        "modifiers": [],
+        "DC": 20,
+        "effect": "Under the effect of the spell Haste for 1 minute"
+    }
+}

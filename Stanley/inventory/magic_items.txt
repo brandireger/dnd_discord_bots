@@ -1,0 +1,106 @@
+Spell Scroll Level 0,10,200,Common
+Ammunition +1 (each),25,150,Uncommon
+Potion of Healing,50,187,Common
+Quaal's Feather Token Anchor,50,188,Rare
+Spell Scroll Level 1,60,200,Common
+Philter of Love,90,184,Uncommon
+Ammunition +2 (each),100,150,Rare
+Potion of Poison,100,188,Uncommon
+Dust of Dryness (1 pellet),120,166,Uncommon
+Elixir of Health,120,168,Rare
+Keoghtom's Ointment (Per dose),120,179,Uncommon
+Spell Scroll Level 2,120,200,Uncommon
+Potion of Fire Breath,150,187,Uncommon
+Potion of Greater Healing,150,187,Uncommon
+Potion of Climbing,180,187,Common
+Potion of Heroism,180,188,Rare
+Potion of Invisibility,180,188,Very Rare
+Potion of Mind Reading,180,188,Rare
+Potion of Water Breathing,180,188,Uncommon
+Scroll of Protection,180,199,Rare
+Nolzur's Marvelous Pigments,200,183,Very Rare
+Potion of Animal Friendship,200,187,Uncommon
+Spell Scroll Level 3,200,200,Uncommon
+Quaal's Feather Token Fan,250,188,Rare
+Quaal's Feather Token Whip,250,188,Rare
+Potion of Diminution,270,187,Rare
+Potion of Growth,270,187,Uncommon
+Dust of Disappearance,300,166,Uncommon
+Necklace of Fireballs (One bead),300,182,Rare
+Potion of Gaseous Form,300,187,Rare
+Potion of Resistance,300,188,Uncommon
+Universal Solvent,300,209,Legendary
+Spell Scroll Level 4,320,200,Rare
+Ammunition +3 (each),400,150,Very Rare
+Potion of Speed,400,188,Very Rare
+Sovereign Glue,400,200,Legendary
+Horn of Blasting,450,174,Rare
+Potion of Superior Healing,450,187,Very Rare
+Dust of Sneezing and Choking,480,166,Uncommon
+Necklace of Fireballs (Two beads),480,182,Rare
+Oil of Slipperiness,480,184,Uncommon
+Potion of Flying,500,187,Very Rare
+Arrow of Slaying (each),600,152,Very Rare
+Spell Scroll Level 5,640,200,Rare
+Bead of Force,960,154,Rare
+Elemental Gem,960,167,Uncommon
+Necklace of Fireballs (Three beads),960,182,Rare
+Potion of Clairvoyance,960,187,Rare
+Potion of Vitality,960,188,Very Rare
+Spell Scroll Level 6,1280,200,Very Rare
+Potion of Supreme Healing,1350,187,Very Rare
+Chime of Opening,1500,158,Rare
+Helm of Comprehend Languages,500,173,Uncommon
+Driftglobe,750,166,Uncommon
+Trident of Fish Command,800,209,Uncommon
+Cap of Water Breathing,1000,157,Uncommon
+Eversmoking Bottle,1000,168,Uncommon
+Quiver of Ehlonna,1000,189,Uncommon
+Ioun Stone Sustenance,1000,177,Rare
+Ring of Warmth,1000,193,Uncommon
+Goggles of Night,1500,172,Uncommon
+Horseshoes of the Zephyr,1500,175,Very Rare
+Ring of X-Ray Vision,6000,193,Rare
+Cape of the Mountebank,8000,157,Rare
+Portable Hole,8000,185,Rare
+Apparatus of Kwalish,10000,151,Legendary
+Boots of the Winterlands,10000,156,Uncommon
+Folding Boat,10000,170,Rare
+Ring of Invisibility,10000,191,Legendary
+Helm of Telepathy,12000,174,Uncommon
+Cube of Force,16000,159,Rare
+Ring of Mind Shielding,16000,191,Uncommon
+Rod of Rulership,16000,197,Rare
+Mirror of Life Trapping,18000,181,Very Rare
+Amulet of Proof Against Detection and Location,20000,150,Uncommon
+Robe of Eyes,30000,193,Rare
+Gem of Seeing,32000,172,Rare
+Plate Armor of Etherealness,48000,185,Legendary
+Ammunition +1 (each),25,150,Uncommon
+Ammunition +2 (each),100,150,Rare
+Ammunition +3 (each),400,150,Very Rare
+Weapon +1,1000,213,Uncommon
+Weapon +2,4000,213,Rare
+Weapon +3,16000,213,Very Rare
+Shield +1,1500,200,Uncommon
+Shield +2,6000,200,Rare
+Shield +3,24000,200,Very Rare
+Bracers of Archery,4000,156,Uncommon
+Dagger of Venom,8000,160,Rare
+Mace of Disruption,8000,179,Rare
+Mace of Smiting,8000,179,Rare
+Mace of Terror,8000,179,Rare
+Sword of Life Stealing,8000,206,Rare
+Sword of Wounding,8000,207,Rare
+Trident of Fish Command,8000,209,Uncommon
+Berserker Axe,10000,155,Rare
+Flame Tongue,10000,170,Rare
+Frost Brand,10000,171,Very Rare
+Sun Blade,12000,205,Rare
+Dancing Sword,15000,160,Very Rare
+Defender,18000,164,Legendary
+Hammer of Thunderbolts,25000,173,Legendary
+Holy Avenger,50000,174,Legendary
+
+
+

@@ -1,0 +1,97 @@
+{
+    "hazards": {
+        "{@item net|xphb}": 100,
+        "{@item ball bearings|xphb}": 100,
+        "{@item caltrops|xphb}": 100,
+        "{@item iron spikes|xphb|spikes, iron}": 100,
+        "{@item chain|xphb}": 500,
+        "{@item acid|xphb}": 2500,
+        "{@item basic poison|xphb|poison, basic}": 10000
+    },
+    "armor": {
+        "{@item manacles|xphb}": 200
+    },
+    "adventuring_gear": {
+        "{@item torch|xphb}": 1,
+        "{@item candle|xphb}": 1,
+        "{@item pole|xphb}": 5,
+        "{@item signal whistle|xphb}": 5,
+        "{@item string|xphb}": 10,
+        "{@item rations|xphb}": 50,
+        "{@item blanket|xphb}": 50,
+        "{@item tinderbox|xphb}": 50,
+        "{@item bedroll|xphb}": 100,
+        "{@item rope|xphb}": 100,
+        "{@item tent|xphb}": 200,
+        "{@item shovel|xphb}": 200,
+        "{@item hunting trap|xphb}": 500
+    },
+    "tools": {
+        "{@item block and tackle|xphb}": 100,
+        "{@item climber's kit|xphb}": 2500,
+        "{@item grappling hook|xphb}": 200,
+        "{@item crowbar|xphb}": 200,
+        "{@item lock|xphb}": 1000
+    },
+    "containers": {
+        "{@item sack|xphb}": 1,
+        "{@item flask|xphb}": 2,
+        "{@item jug|xphb}": 2,
+        "{@item bucket|xphb}": 5,
+        "{@item ladder|xphb}": 10,
+        "{@item waterskin|xphb}": 20,
+        "{@item basket|xphb}": 40,
+        "{@item lamp|xphb}": 50,
+        "{@item pouch|xphb}": 50,
+        "{@item vial|xphb}": 100,
+        "{@item quiver|xphb}": 100,
+        "{@item crossbow bolt case|xphb|case, crossbow bolt}": 100,
+        "{@item map or scroll case|xphb|case, map or scroll}": 100,
+        "{@item backpack|xphb}": 200,
+        "{@item iron pot|xphb|pot, iron}": 200,
+        "{@item barrel|xphb}": 200,
+        "{@item glass bottle|xphb|bottle, glass}": 200,
+        "{@item bullseye lantern|xphb|lantern, bullseye}": 1000,
+        "{@item chest|xphb}": 500
+
+    },
+    "packs": {
+        "{@item burglar's pack|xphb}": 1600,
+        "{@item healer's kit|xphb}": 500,
+        "{@item component pouch|xphb}": 2500,
+        "{@item diplomat's pack|xphb}": 3900,
+        "{@item dungeoneer's pack|xphb}": 1200,
+        "{@item entertainer's pack|xphb}": 4000,
+        "{@item explorer's pack|xphb}": 1000,
+        "{@item priest's pack|xphb}": 3300,
+        "{@item scholar's pack|xphb}": 4000
+    },
+    "magic_supplies": {
+        "{@item ink pen|xphb}": 2,
+        "{@item oil|xphb}": 10,
+        "{@item parchment|xphb}": 10,
+        "{@item paper|xphb}": 20,
+        "{@item mirror|xphb}": 500,
+        "{@item ink|xphb}": 1000,
+        "{@item holy water|xphb}": 2500,
+        "spell scroll (cantrip)": 3000,
+        "spell scroll (level 1)": 5000,
+        "{@item alchemist's fire|xphb}": 5000,
+        "{@item potion of healing|xdmg}": 5000,
+        "{@item antitoxin|xphb}": 5000
+    },
+    "miscellaneous": {
+        "{@item bell|xphb}": 100,
+        "{@item map|xphb}": 100,
+        "{@item robe|xphb}": 100,
+        "{@item traveler's clothes|xphb|clothes, traveler's}": 200,
+        "{@item portable ram|xphb|ram, portable}": 400,
+        "{@item costume|xphb}": 500,
+        "{@item perfume|xphb}": 500,
+        "{@item hooded lantern|xphb|lantern, hooded}": 500,
+        "{@item fine clothes|xphb|clothes, fine}": 1500,
+        "{@item book|xphb}": 2500,
+        "{@item magnifying glass|xphb}": 10000,
+        "{@item spyglass|xphb}": 100000
+    }
+}

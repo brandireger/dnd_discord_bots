@@ -1,0 +1,14 @@
+{
+    "Healing Potion": 5,
+    "Invisibility Potion": 3,
+    "Enhanced Healing Potion": [
+        {
+            "effect": "Heals 6d4 + 3 HP",
+            "quantity": 1
+        },
+        {
+            "effect": "Lasts 10 minutes, healing 1d4 per round",
+            "quantity": 1
+        }
+    ]
+}

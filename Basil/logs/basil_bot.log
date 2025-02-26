@@ -1,0 +1,61 @@
+2025-02-22 20:05:14,403 - INFO - Market inventory generated: {'Voidroot': 5, 'Lavender Sprig': 5, 'Gengko Brush': 3, 'Fennel Silk': 1, 'Hydrathistle': 4}
+2025-02-22 20:05:50,895 - INFO - Market inventory generated: {'Lavender Sprig': 4, 'Amanita Cap': 1, 'Wild Sageroot': 4, 'Bloodgrass': 1, 'Cactus Juice': 4}
+2025-02-22 20:06:32,952 - INFO - Market inventory generated: {'Amanita Cap': 1, 'Gengko Brush': 1, 'Hydrathistle': 3, 'Wild Sageroot': 1, 'Arctic Creeper': 3}
+2025-02-22 20:06:49,961 - INFO - Market inventory generated: {'Wild Sageroot': 4, 'Dried Ephedra': 1, 'Lavender Sprig': 3, 'Voidroot': 5, 'Chromus Slime': 5}
+2025-02-22 20:31:08,569 - INFO - Market inventory generated: {'Lavender Sprig': 1, 'Cactus Juice': 1, 'Fennel Silk': 4, 'Chromus Slime': 4, 'Wild Sageroot': 3}
+2025-02-22 20:35:59,602 - INFO - Market inventory generated: {'Hydrathistle': 3, 'Bloodgrass': 1, 'Dried Ephedra': 3, 'Lavender Sprig': 2, 'Gengko Brush': 5}
+2025-02-22 20:43:10,355 - INFO - Market inventory generated: {'Wild Sageroot': 2, 'Arctic Creeper': 1, 'Dried Ephedra': 5, 'Gengko Brush': 3, 'Amanita Cap': 3}
+2025-02-22 20:44:27,367 - INFO - Market inventory generated: {'Hydrathistle': 2, 'Wyrmtongue Petals': 2, 'Bloodgrass': 1, 'Primordial Balm': 4, 'Fiend’s Ivy': 3}
+2025-02-22 20:58:14,438 - INFO - Market inventory generated: {'Lavender Sprig': 3, 'Fennel Silk': 1, 'Fiend’s Ivy': 4, 'Dried Ephedra': 2, 'Bloodgrass': 5}
+2025-02-22 20:59:29,161 - INFO - Market inventory generated: {'Amanita Cap': 5, 'Primordial Balm': 4, 'Arctic Creeper': 4, 'Dried Ephedra': 3, 'Lavender Sprig': 3}
+2025-02-22 21:06:38,347 - INFO - Market inventory generated: {'Dried Ephedra': 3, 'Bloodgrass': 3, 'Voidroot': 1, 'Chromus Slime': 5, 'Arctic Creeper': 1}
+2025-02-22 21:07:15,313 - INFO - Market inventory generated: {'Cactus Juice': 3, 'Wyrmtongue Petals': 1, 'Voidroot': 4, 'Fiend’s Ivy': 4, 'Dried Ephedra': 2}
+2025-02-22 21:23:24,581 - WARNING - ⚠️ Created a new `market.json` file with random items.
+2025-02-23 17:07:34,698 - WARNING - User tgbkitty attempted to craft an unknown poison: Potion of flying
+2025-02-23 17:07:50,874 - WARNING - User tgbkitty attempted to craft an unknown potion: Potion of flying
+2025-02-23 17:08:14,247 - WARNING - User tgbkitty attempted to craft an unknown potion: Potion of flying
+2025-02-23 18:27:50,165 - INFO - 🔄 One week has passed, refreshing market prices...
+2025-02-25 11:15:56,868 - INFO - Admin tgbkitty reset the recipe list.
+2025-02-25 11:15:56,873 - INFO - Admin tgbkitty reset the ingredient list.
+2025-02-25 12:43:52,805 - INFO - Recipes reset to default.
+2025-02-25 12:43:52,809 - INFO - Ingredients reset to default.
+2025-02-25 12:50:10,630 - INFO - Recipes reset to default.
+2025-02-25 12:50:10,634 - INFO - Ingredients reset to default.
+2025-02-25 12:50:10,639 - INFO - ✅ Market state saved.
+2025-02-25 12:50:10,649 - INFO - ✅ Market state saved.
+2025-02-25 12:50:10,649 - WARNING - Admin tgbkitty reset the shop.
+2025-02-25 19:39:15,818 - INFO - Recipes reset to default.
+2025-02-25 19:39:15,826 - INFO - Ingredients reset to default.
+2025-02-25 19:39:15,827 - INFO - ✅ Market state saved.
+2025-02-25 19:39:15,833 - INFO - ✅ Market state saved.
+2025-02-25 19:39:15,833 - WARNING - Admin tgbkitty reset the shop.
+2025-02-25 20:09:27,844 - INFO - Recipes reset to default.
+2025-02-25 20:09:27,849 - INFO - Ingredients reset to default.
+2025-02-25 20:09:27,850 - INFO - ✅ Market state saved.
+2025-02-25 20:09:27,850 - INFO - ✅ Market state saved.
+2025-02-25 20:09:27,850 - WARNING - Admin tgbkitty reset the shop.
+2025-02-25 20:38:04,974 - INFO - User tgbkitty rolled 14 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-25 20:38:04,975 - INFO - User tgbkitty searched in Desert but found nothing.
+2025-02-25 20:38:15,909 - INFO - User tgbkitty rolled 6 = 0 (stat) + 0 (prof) + 0 (kit). Found: Common Ingredient.
+2025-02-25 20:38:15,917 - INFO - User tgbkitty gathered 3x Common Ingredient in Forest.
+2025-02-25 20:38:37,901 - WARNING - User tgbkitty tried to identify an unknown ingredient: Common ingredient
+2025-02-25 20:38:53,838 - INFO - User tgbkitty rolled 17 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-25 20:38:53,839 - INFO - User tgbkitty searched in Grasslands but found nothing.
+2025-02-25 20:39:05,552 - INFO - User tgbkitty rolled 2 = 0 (stat) + 0 (prof) + 0 (kit). Found: Hydrathistle.
+2025-02-25 20:39:05,555 - INFO - User tgbkitty gathered 1x Hydrathistle in Coastal.
+2025-02-25 20:47:19,736 - INFO - User tgbkitty rolled 2 = 0 (stat) + 0 (prof) + 0 (kit). Found: Harrada Leaf.
+2025-02-25 20:47:19,737 - INFO - User tgbkitty gathered 3x Harrada Leaf in Forest.
+2025-02-25 20:48:03,788 - INFO - User tgbkitty rolled 15 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-25 20:48:03,788 - INFO - User tgbkitty searched in Coastal but found nothing.
+2025-02-25 20:48:13,815 - INFO - User tgbkitty rolled 1 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-25 20:48:13,823 - INFO - User tgbkitty searched in Desert but found nothing.
+2025-02-25 20:59:54,752 - INFO - User tgbkitty rolled 9 = 0 (stat) + 0 (prof) + 0 (kit). Found: Arrow Root.
+2025-02-25 20:59:54,758 - INFO - User tgbkitty gathered 4x Arrow Root in Forest.
+2025-02-25 21:03:41,870 - INFO - ✅ Market state saved.
+2025-02-25 21:03:41,870 - INFO - ✅ Market state saved.
+2025-02-25 21:03:41,876 - INFO - ✅ Market state saved.
+2025-02-25 21:03:41,876 - INFO - ✅ Market state saved.
+2025-02-25 21:07:08,817 - INFO - User tgbkitty rolled 16 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-25 21:07:08,817 - INFO - User tgbkitty searched in Forest but found nothing.
+2025-02-25 21:07:20,087 - INFO - User tgbkitty rolled 9 = 0 (stat) + 0 (prof) + 0 (kit). Found: Arrow Root.
+2025-02-25 21:07:20,090 - INFO - User tgbkitty gathered 4x Arrow Root in Forest.

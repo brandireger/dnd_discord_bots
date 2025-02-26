@@ -1,0 +1,392 @@
+[
+    {
+        "Name": "Acid",
+        "Value_cp": 2500,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Alchemist's fire",
+        "Value_cp": 5000,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Antitoxin",
+        "Value_cp": 5000,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Backpack",
+        "Value_cp": 200,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Ball bearings",
+        "Value_cp": 100,
+        "Category": "hazards_traps"
+    },
+    {
+        "Name": "Barrel",
+        "Value_cp": 200,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Basket",
+        "Value_cp": 40,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Bedroll",
+        "Value_cp": 100,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Bell",
+        "Value_cp": 100,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Blanket",
+        "Value_cp": 50,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Block and tackle",
+        "Value_cp": 100,
+        "Category": "utility_tools_climbing"
+    },
+    {
+        "Name": "Book",
+        "Value_cp": 2500,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Glass bottle",
+        "Value_cp": 200,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Bucket",
+        "Value_cp": 5,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Burglar's pack",
+        "Value_cp": 1600,
+        "Category": "adventurers_kits_packs"
+    },
+    {
+        "Name": "Caltrops",
+        "Value_cp": 100,
+        "Category": "hazards_traps"
+    },
+    {
+        "Name": "Candle",
+        "Value_cp": 1,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Crossbow bolt case",
+        "Value_cp": 100,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Map or scroll case",
+        "Value_cp": 100,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Chain",
+        "Value_cp": 500,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Chest",
+        "Value_cp": 500,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Climber's kit",
+        "Value_cp": 2500,
+        "Category": "adventurers_kits_packs"
+    },
+    {
+        "Name": "Fine clothes",
+        "Value_cp": 1500,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Traveler's clothes",
+        "Value_cp": 200,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Component pouch",
+        "Value_cp": 2500,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Costume",
+        "Value_cp": 500,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Crowbar",
+        "Value_cp": 200,
+        "Category": "utility_tools_climbing"
+    },
+    {
+        "Name": "Diplomat's pack",
+        "Value_cp": 3900,
+        "Category": "adventurers_kits_packs"
+    },
+    {
+        "Name": "Dungeoneer's pack",
+        "Value_cp": 1200,
+        "Category": "adventurers_kits_packs"
+    },
+    {
+        "Name": "Entertainer's pack",
+        "Value_cp": 4000,
+        "Category": "adventurers_kits_packs"
+    },
+    {
+        "Name": "Explorer's pack",
+        "Value_cp": 1000,
+        "Category": "adventurers_kits_packs"
+    },
+    {
+        "Name": "Flask",
+        "Value_cp": 2,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Grappling hook",
+        "Value_cp": 200,
+        "Category": "utility_tools_climbing"
+    },
+    {
+        "Name": "Healer's kit",
+        "Value_cp": 500,
+        "Category": "adventurers_kits_packs"
+    },
+    {
+        "Name": "Holy water",
+        "Value_cp": 2500,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Hunting trap",
+        "Value_cp": 500,
+        "Category": "hazards_traps"
+    },
+    {
+        "Name": "Ink",
+        "Value_cp": 1000,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Ink pen",
+        "Value_cp": 2,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Jug",
+        "Value_cp": 2,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Ladder",
+        "Value_cp": 10,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Lamp",
+        "Value_cp": 50,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Bullseye lantern",
+        "Value_cp": 1000,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Hooded lantern",
+        "Value_cp": 500,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Lock",
+        "Value_cp": 1000,
+        "Category": "lockpicking_security"
+    },
+    {
+        "Name": "Magnifying glass",
+        "Value_cp": 10000,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Manacles",
+        "Value_cp": 200,
+        "Category": "armor_restraints"
+    },
+    {
+        "Name": "Map",
+        "Value_cp": 100,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Mirror",
+        "Value_cp": 500,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Net",
+        "Value_cp": 100,
+        "Category": "hazards_traps"
+    },
+    {
+        "Name": "Oil",
+        "Value_cp": 10,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Paper",
+        "Value_cp": 20,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Parchment",
+        "Value_cp": 10,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Perfume",
+        "Value_cp": 500,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Basic poison",
+        "Value_cp": 10000,
+        "Category": "hazards_traps"
+    },
+    {
+        "Name": "Pole",
+        "Value_cp": 5,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Iron pot",
+        "Value_cp": 200,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Potion of healing",
+        "Value_cp": 5000,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Pouch",
+        "Value_cp": 50,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Priest's pack",
+        "Value_cp": 3300,
+        "Category": "adventurers_kits_packs"
+    },
+    {
+        "Name": "Quiver",
+        "Value_cp": 100,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Portable ram",
+        "Value_cp": 400,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Rations",
+        "Value_cp": 50,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Robe",
+        "Value_cp": 100,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Rope",
+        "Value_cp": 100,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Sack",
+        "Value_cp": 1,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Scholar's pack",
+        "Value_cp": 4000,
+        "Category": "adventurers_kits_packs"
+    },
+    {
+        "Name": "Shovel",
+        "Value_cp": 200,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Signal whistle",
+        "Value_cp": 5,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Spell scroll (cantrip)",
+        "Value_cp": 3000,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Spell scroll (level 1)",
+        "Value_cp": 5000,
+        "Category": "magical_items_alchemy"
+    },
+    {
+        "Name": "Iron spikes",
+        "Value_cp": 100,
+        "Category": "hazards_traps"
+    },
+    {
+        "Name": "Spyglass",
+        "Value_cp": 100000,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "String",
+        "Value_cp": 10,
+        "Category": "miscellaneous_equipment"
+    },
+    {
+        "Name": "Tent",
+        "Value_cp": 200,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Tinderbox",
+        "Value_cp": 50,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Torch",
+        "Value_cp": 1,
+        "Category": "adventuring_essentials"
+    },
+    {
+        "Name": "Vial",
+        "Value_cp": 100,
+        "Category": "containers_storage"
+    },
+    {
+        "Name": "Waterskin",
+        "Value_cp": 20,
+        "Category": "adventuring_essentials"
+    }
+]

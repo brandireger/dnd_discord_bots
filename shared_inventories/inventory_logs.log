@@ -1,0 +1,392 @@
+2025-02-22 20:31:08 - INFO - Market inventory generated: {'Lavender Sprig': 1, 'Cactus Juice': 1, 'Fennel Silk': 4, 'Chromus Slime': 4, 'Wild Sageroot': 3}
+2025-02-22 20:31:08 - INFO - Shard ID None has connected to Gateway (Session ID: a3d6829ba471c0563b821e994c181bdc).
+2025-02-22 20:31:42 - ERROR - Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1151, in wrapper
+    await self._call(interaction)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1283, in _call
+    command, options = self._get_app_command_options(data)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1187, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'alchemy' not found
+2025-02-22 20:35:59 - INFO - Market inventory generated: {'Hydrathistle': 3, 'Bloodgrass': 1, 'Dried Ephedra': 3, 'Lavender Sprig': 2, 'Gengko Brush': 5}
+2025-02-22 20:36:00 - INFO - Shard ID None has connected to Gateway (Session ID: 8645c4a95b574bc7655190dc4fb99119).
+2025-02-22 20:36:22 - ERROR - Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1151, in wrapper
+    await self._call(interaction)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1283, in _call
+    command, options = self._get_app_command_options(data)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1187, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'alchemy' not found
+2025-02-22 20:43:10 - INFO - Market inventory generated: {'Wild Sageroot': 2, 'Arctic Creeper': 1, 'Dried Ephedra': 5, 'Gengko Brush': 3, 'Amanita Cap': 3}
+2025-02-22 20:43:10 - INFO - Shard ID None has connected to Gateway (Session ID: 6603cd7aeb80923f3a6e2f10cbecbd8f).
+2025-02-22 20:43:22 - ERROR - Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1151, in wrapper
+    await self._call(interaction)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1283, in _call
+    command, options = self._get_app_command_options(data)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1187, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'alchemy' not found
+2025-02-22 20:43:46 - ERROR - Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1151, in wrapper
+    await self._call(interaction)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1283, in _call
+    command, options = self._get_app_command_options(data)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1187, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'alchemy' not found
+2025-02-22 20:44:27 - INFO - Market inventory generated: {'Hydrathistle': 2, 'Wyrmtongue Petals': 2, 'Bloodgrass': 1, 'Primordial Balm': 4, 'Fiend’s Ivy': 3}
+2025-02-22 20:44:27 - INFO - Shard ID None has connected to Gateway (Session ID: 71d3dd3b64b3ca215e42c25ee31e54fd).
+2025-02-22 20:44:51 - ERROR - Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1151, in wrapper
+    await self._call(interaction)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1283, in _call
+    command, options = self._get_app_command_options(data)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1187, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'alchemy' not found
+2025-02-22 20:58:14 - INFO - Market inventory generated: {'Lavender Sprig': 3, 'Fennel Silk': 1, 'Fiend’s Ivy': 4, 'Dried Ephedra': 2, 'Bloodgrass': 5}
+2025-02-22 20:58:14 - INFO - Shard ID None has connected to Gateway (Session ID: 97d8e736640e4604ebdba4530e256984).
+2025-02-22 20:59:29 - INFO - Market inventory generated: {'Amanita Cap': 5, 'Primordial Balm': 4, 'Arctic Creeper': 4, 'Dried Ephedra': 3, 'Lavender Sprig': 3}
+2025-02-22 20:59:29 - INFO - Shard ID None has connected to Gateway (Session ID: 3f20e629e2f7b2826ac844d5994556cc).
+2025-02-22 21:06:38 - INFO - Market inventory generated: {'Dried Ephedra': 3, 'Bloodgrass': 3, 'Voidroot': 1, 'Chromus Slime': 5, 'Arctic Creeper': 1}
+2025-02-22 21:06:39 - INFO - Shard ID None has connected to Gateway (Session ID: 4114981812c812b5532897a4150a0656).
+2025-02-22 21:07:15 - INFO - Market inventory generated: {'Cactus Juice': 3, 'Wyrmtongue Petals': 1, 'Voidroot': 4, 'Fiend’s Ivy': 4, 'Dried Ephedra': 2}
+2025-02-22 21:07:15 - INFO - Shard ID None has connected to Gateway (Session ID: 78759e8cfa54e00f7a27e4269c2ed7dc).
+2025-02-22 21:09:49 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "inventory" is not found
+2025-02-22 21:09:59 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "craft_potion" is not found
+2025-02-22 21:23:24 - WARNING - ⚠️ Created a new `market.json` file with random items.
+2025-02-22 21:23:24 - INFO - Shard ID None has connected to Gateway (Session ID: 386277f7657f28f56ae17f072888e827).
+2025-02-22 21:23:56 - INFO - Shard ID None has connected to Gateway (Session ID: c586b43630845aa9f1091371c07e4339).
+2025-02-22 21:24:44 - INFO - Shard ID None has connected to Gateway (Session ID: 8203d7821901b4f64e68c7286d872fc8).
+2025-02-22 21:25:03 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "inventory" is not found
+2025-02-22 21:25:09 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "craft_potion" is not found
+2025-02-22 21:25:37 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "inve" is not found
+2025-02-23 09:09:40 - INFO - Shard ID None has connected to Gateway (Session ID: 270feb875c1aaf81775fc59816464e90).
+2025-02-23 09:10:27 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "craft_potion" is not found
+2025-02-23 09:14:26 - INFO - Shard ID None has connected to Gateway (Session ID: 01a87349c7e57d85202054bb24c2ec7c).
+2025-02-23 09:39:38 - INFO - Shard ID None session has been invalidated.
+2025-02-23 09:39:43 - INFO - Shard ID None has connected to Gateway (Session ID: e24da6fb0d31b7f962bef0f7821ff8d7).
+2025-02-23 09:40:22 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "craft_potion" is not found
+2025-02-23 10:00:26 - INFO - Shard ID None has connected to Gateway (Session ID: 72332bab97b685c82f44f9017cda0d55).
+2025-02-23 10:10:12 - WARNING - Can't keep up, shard ID None websocket is 17.1s behind.
+2025-02-23 10:27:46 - INFO - Shard ID None session has been invalidated.
+2025-02-23 10:27:52 - INFO - Shard ID None has connected to Gateway (Session ID: 023edc923f53753bd4cfd9de925a985b).
+2025-02-23 10:47:02 - INFO - Shard ID None session has been invalidated.
+2025-02-23 10:47:08 - INFO - Shard ID None has connected to Gateway (Session ID: 2699e2daf5872c05c274704fa95c4055).
+2025-02-23 11:05:59 - INFO - Shard ID None session has been invalidated.
+2025-02-23 11:06:05 - INFO - Shard ID None has connected to Gateway (Session ID: b58c736f4738d7b82f6fdddc4043dcf1).
+2025-02-23 11:28:06 - INFO - Shard ID None session has been invalidated.
+2025-02-23 11:28:11 - INFO - Shard ID None has connected to Gateway (Session ID: 298f43c1c28f72ab20707c362f3ce7ee).
+2025-02-23 11:44:24 - INFO - Shard ID None session has been invalidated.
+2025-02-23 11:44:29 - INFO - Shard ID None has connected to Gateway (Session ID: 51977f384710cdbbc0304347894598ba).
+2025-02-23 12:03:41 - INFO - Shard ID None session has been invalidated.
+2025-02-23 12:03:46 - INFO - Shard ID None has connected to Gateway (Session ID: 09ad8425351ebba72b833c6f939240af).
+2025-02-23 12:21:54 - INFO - Shard ID None session has been invalidated.
+2025-02-23 12:21:59 - INFO - Shard ID None has connected to Gateway (Session ID: b49ccf9f1249000c7e0af66df315a799).
+2025-02-23 12:38:10 - INFO - Shard ID None session has been invalidated.
+2025-02-23 12:38:16 - INFO - Shard ID None has connected to Gateway (Session ID: 5abea77224fed72c4ed7b520d8a475bf).
+2025-02-23 12:52:03 - INFO - Shard ID None session has been invalidated.
+2025-02-23 12:52:09 - INFO - Shard ID None has connected to Gateway (Session ID: afca623cee6108e2dd51b3f5fb028036).
+2025-02-23 16:37:20 - INFO - Shard ID None has successfully RESUMED session afca623cee6108e2dd51b3f5fb028036.
+2025-02-23 17:05:58 - INFO - Shard ID None session has been invalidated.
+2025-02-23 17:06:04 - INFO - Shard ID None has connected to Gateway (Session ID: bca9a1889eb09a22fb6451faccfce96d).
+2025-02-23 17:07:34 - WARNING - User tgbkitty attempted to craft an unknown poison: Potion of flying
+2025-02-23 17:07:50 - WARNING - User tgbkitty attempted to craft an unknown potion: Potion of flying
+2025-02-23 17:08:14 - WARNING - User tgbkitty attempted to craft an unknown potion: Potion of flying
+2025-02-23 17:19:14 - INFO - Shard ID None has connected to Gateway (Session ID: fb0f0efc284e4c651262920775b55d5a).
+2025-02-23 18:27:50 - INFO - 🔄 One week has passed, refreshing market prices...
+2025-02-23 18:28:51 - INFO - Shard ID None has connected to Gateway (Session ID: 5b6b56cd548f4021d71cb5aa5a404cbb).
+2025-02-23 18:45:17 - INFO - Shard ID None has connected to Gateway (Session ID: 5808112215a144c1e6bbf403dad0c817).
+2025-02-23 19:03:36 - INFO - Shard ID None session has been invalidated.
+2025-02-23 19:03:41 - INFO - Shard ID None has connected to Gateway (Session ID: 49e08488913184d93916fcd6d741e361).
+2025-02-23 19:20:41 - INFO - Shard ID None session has been invalidated.
+2025-02-23 19:20:46 - INFO - Shard ID None has connected to Gateway (Session ID: 87773027afa193c2bac9654a481fcb9f).
+2025-02-23 19:32:24 - INFO - Shard ID None session has been invalidated.
+2025-02-23 19:32:30 - INFO - Shard ID None has connected to Gateway (Session ID: f5636f78f41a3dac671b0df2f616ce64).
+2025-02-23 19:38:11 - INFO - Shard ID None has connected to Gateway (Session ID: b8cf2fc60957ca12bb72f163e0789a34).
+2025-02-23 20:12:56 - INFO - Shard ID None has successfully RESUMED session b8cf2fc60957ca12bb72f163e0789a34.
+2025-02-24 16:07:41 - WARNING - ⚠️ `in_game_time.json` was missing! Created an empty one.
+2025-02-24 16:07:41 - WARNING - ⚠️ `player_cooldowns.json` was missing! Created an empty one.
+2025-02-24 16:09:42 - INFO - Shard ID None has connected to Gateway (Session ID: 248a6bb60d14121a2ac96a36d30f3c5f).
+2025-02-24 16:29:04 - INFO - Shard ID None has connected to Gateway (Session ID: c3797f40f40066f84cec5aac1e65c182).
+2025-02-24 16:57:18 - INFO - Shard ID None has connected to Gateway (Session ID: 85ae5b925c979e3aac04c964206c2748).
+2025-02-25 08:28:55 - INFO - Shard ID None has connected to Gateway (Session ID: 4483ceac490373d8391acc871ab0da52).
+2025-02-25 08:37:51 - INFO - Shard ID None session has been invalidated.
+2025-02-25 08:37:57 - INFO - Shard ID None has connected to Gateway (Session ID: a9ba88eaf7689cb61a841612d0c01c26).
+2025-02-25 08:59:44 - INFO - Shard ID None session has been invalidated.
+2025-02-25 08:59:49 - INFO - Shard ID None has connected to Gateway (Session ID: 2944242f85109ec17d168716b364b3e2).
+2025-02-25 09:06:30 - INFO - Shard ID None has connected to Gateway (Session ID: 068b80b93ae7d6bc8c36e0f8f0c201e6).
+2025-02-25 09:13:16 - INFO - Shard ID None has connected to Gateway (Session ID: 02f6b24245702cd4a07fe033fff134f7).
+2025-02-25 09:22:13 - INFO - Shard ID None has connected to Gateway (Session ID: c96155c245f6d654950a087f629f0e42).
+2025-02-25 09:23:35 - ERROR - Ignoring exception in command 'basil_help'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 66, in basil_help
+    if hasattr(cmd, "default_permissions") and cmd.default_permissions.administrator:
+AttributeError: 'NoneType' object has no attribute 'administrator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'basil_help' raised an exception: AttributeError: 'NoneType' object has no attribute 'administrator'
+2025-02-25 09:28:51 - INFO - Shard ID None has connected to Gateway (Session ID: d9d457174c93e8043a7c180d10cf4849).
+2025-02-25 09:34:12 - INFO - Shard ID None has connected to Gateway (Session ID: 83ace72d89b5fdf83671433a29aabadc).
+2025-02-25 09:34:36 - ERROR - Ignoring exception in command 'basil_help'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in basil_help
+    await interaction.response.send_message(embed=embed)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/interactions.py", line 1004, in send_message
+    response = await adapter.create_interaction_response(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/webhook/async_.py", line 226, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In data.embeds.0.fields.0.value: Must be 1024 or fewer in length.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'basil_help' raised an exception: HTTPException: 400 Bad Request (error code: 50035): Invalid Form Body
+In data.embeds.0.fields.0.value: Must be 1024 or fewer in length.
+2025-02-25 09:43:31 - INFO - Shard ID None has connected to Gateway (Session ID: f9b86fd07b8efad48fabe39989abe52c).
+2025-02-25 09:49:41 - INFO - Shard ID None session has been invalidated.
+2025-02-25 09:49:46 - INFO - Shard ID None has connected to Gateway (Session ID: 8d6c1aae105b501f4eb58f944cc980bc).
+2025-02-25 10:37:34 - INFO - Shard ID None has connected to Gateway (Session ID: 481636a40e6d5ad4105756bcc9141cbe).
+2025-02-25 10:50:43 - INFO - Shard ID None has successfully RESUMED session 481636a40e6d5ad4105756bcc9141cbe.
+2025-02-25 10:53:42 - ERROR - Ignoring exception in command 'open_shop'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 196, in open_shop
+    await self.reset_data(interaction, "all")
+TypeError: 'Command' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'open_shop' raised an exception: TypeError: 'Command' object is not callable
+2025-02-25 11:02:34 - INFO - Shard ID None has connected to Gateway (Session ID: 716342497baa8fdbfe5979731ac4362a).
+2025-02-25 11:15:38 - INFO - Shard ID None session has been invalidated.
+2025-02-25 11:15:43 - INFO - Shard ID None has connected to Gateway (Session ID: 4226e22e13f6ac4544e434f9a61ed559).
+2025-02-25 11:15:56 - INFO - Admin tgbkitty reset the recipe list.
+2025-02-25 11:15:56 - INFO - Admin tgbkitty reset the ingredient list.
+2025-02-25 11:15:56 - ERROR - Ignoring exception in command 'open_shop'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 196, in open_shop
+    await self.reset_data.callback(self, interaction, "all")
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 165, in reset_data
+    await interaction.response.send_message(f"✅ **{target.capitalize()} reset successfully!**")
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/interactions.py", line 976, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'open_shop' raised an exception: InteractionResponded: This interaction has already been responded to before
+2025-02-25 11:26:47 - INFO - Shard ID None has connected to Gateway (Session ID: eef14ea0595693807922b95eb36a88b3).
+2025-02-25 11:27:22 - ERROR - Ignoring exception in command 'open_shop'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 200, in open_shop
+    reset_message = await self.reset_data(interaction, "all")
+TypeError: 'Command' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'open_shop' raised an exception: TypeError: 'Command' object is not callable
+2025-02-25 12:23:52 - INFO - Shard ID None has connected to Gateway (Session ID: bcbf9b12870aa46941bccceccab2af95).
+2025-02-25 12:37:56 - INFO - Shard ID None session has been invalidated.
+2025-02-25 12:38:02 - INFO - Shard ID None has connected to Gateway (Session ID: 76cd624e5ed70bc8130e471b18534d21).
+2025-02-25 12:43:23 - INFO - Shard ID None session has been invalidated.
+2025-02-25 12:43:29 - INFO - Shard ID None has connected to Gateway (Session ID: 7444e4f87d4b40fc6daa9456dc0adc82).
+2025-02-25 12:43:52 - INFO - Recipes reset to default.
+2025-02-25 12:43:52 - INFO - Ingredients reset to default.
+2025-02-25 12:43:52 - ERROR - Ignoring exception in command 'open_shop'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 196, in open_shop
+    self.bot.get_cog("Economy").market = generate_market()
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/economy.py", line 52, in generate_market
+    save_market(market)
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/economy.py", line 68, in save_market
+    save_json(MARKET_FILE, market_data)
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/data_manager.py", line 70, in save_json
+    with open(file_path, "w", encoding="utf-8") as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'inventory/inventory/market.json'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'open_shop' raised an exception: FileNotFoundError: [Errno 2] No such file or directory: 'inventory/inventory/market.json'
+2025-02-25 12:48:32 - INFO - Shard ID None has connected to Gateway (Session ID: 0b5ff84b5e64f900d3af5acd21111185).
+2025-02-25 12:50:10 - INFO - Recipes reset to default.
+2025-02-25 12:50:10 - INFO - Ingredients reset to default.
+2025-02-25 12:50:10 - INFO - ✅ Market state saved.
+2025-02-25 12:50:10 - INFO - ✅ Market state saved.
+2025-02-25 12:50:10 - WARNING - Admin tgbkitty reset the shop.
+2025-02-25 12:52:44 - ERROR - Ignoring exception in command 'advance_time'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 67, in advance_time
+    for player_id in get_all_players():
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/inventory.py", line 33, in get_all_players
+    inventory_data = load_json("shared_inventories/player_inventories.json", {})
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/data_manager.py", line 53, in load_json
+    ensure_file_exists(filename, folder)
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/data_manager.py", line 33, in ensure_file_exists
+    file_path = os.path.join(folder, filename)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/posixpath.py", line 76, in join
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not dict
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'advance_time' raised an exception: TypeError: expected str, bytes or os.PathLike object, not dict
+2025-02-25 13:00:27 - ERROR - Attempting a reconnect in 1.58s
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 1021, in _ws_connect
+    raise WSServerHandshakeError(
+aiohttp.client_exceptions.WSServerHandshakeError: 520, message='Invalid response status', url='wss://gateway.discord.gg/?v=10&encoding=json&compress=zlib-stream'
+2025-02-25 13:03:56 - INFO - Shard ID None has connected to Gateway (Session ID: d8afa3eea7c0e8f38a400aadd7c92068).
+2025-02-25 13:29:01 - INFO - Shard ID None session has been invalidated.
+2025-02-25 13:29:07 - INFO - Shard ID None has connected to Gateway (Session ID: 156303c501acdcef795427825537f1ab).
+2025-02-25 13:46:49 - INFO - Shard ID None session has been invalidated.
+2025-02-25 13:46:54 - INFO - Shard ID None has connected to Gateway (Session ID: 4ba390c300e19e8a654bdf9235940bb5).
+2025-02-25 14:03:42 - INFO - Shard ID None session has been invalidated.
+2025-02-25 14:03:48 - INFO - Shard ID None has connected to Gateway (Session ID: 7a868759f9aef03e5f951a15faba1105).
+2025-02-25 14:22:01 - INFO - Shard ID None session has been invalidated.
+2025-02-25 14:22:06 - INFO - Shard ID None has connected to Gateway (Session ID: ed582570fb7fc28d368adcb4120ceb7e).
+2025-02-25 14:38:53 - INFO - Shard ID None session has been invalidated.
+2025-02-25 14:38:58 - INFO - Shard ID None has connected to Gateway (Session ID: faaed77661860356735b8ae92e698c04).
+2025-02-25 14:49:19 - INFO - Shard ID None session has been invalidated.
+2025-02-25 14:49:25 - INFO - Shard ID None has connected to Gateway (Session ID: 4f33846a038fac503a6badb9d69d5478).
+2025-02-25 14:58:39 - INFO - Shard ID None has connected to Gateway (Session ID: 0bfdd9d194fc1ba183d8897c5511db74).
+2025-02-25 15:02:11 - ERROR - Ignoring exception in command 'advance_time'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 67, in advance_time
+    for player_id in get_all_players():
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/inventory.py", line 33, in get_all_players
+    inventory_data = load_json("shared_inventories/player_inventories.json", {})
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/data_manager.py", line 53, in load_json
+    ensure_file_exists(filename, folder)
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/data_manager.py", line 33, in ensure_file_exists
+    file_path = os.path.join(folder, filename)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/posixpath.py", line 76, in join
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not dict
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'advance_time' raised an exception: TypeError: expected str, bytes or os.PathLike object, not dict
+2025-02-25 15:06:43 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 202.71 seconds.
+2025-02-25 15:08:13 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 112.52 seconds.
+2025-02-25 15:10:06 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 431.55 seconds.
+2025-02-25 15:17:18 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 431.74 seconds.
+2025-02-25 15:29:12 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 149.61 seconds.
+2025-02-25 15:30:38 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 63.29 seconds.
+2025-02-25 15:31:42 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 431.81 seconds.
+2025-02-25 15:41:09 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 296.87 seconds.
+2025-02-25 15:43:17 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 168.89 seconds.
+2025-02-25 15:52:30 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 47.32 seconds.
+2025-02-25 15:54:02 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 388.02 seconds.
+2025-02-25 16:02:22 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 319.90 seconds.
+2025-02-25 16:06:06 - INFO - Shard ID None has connected to Gateway (Session ID: e5b15e8e887ddd8dc5b4d82c07664103).
+2025-02-25 16:06:44 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "open_shop" is not found
+2025-02-25 16:07:37 - INFO - Shard ID None has connected to Gateway (Session ID: 84fb5dff3ac1c933d3ef3f0b0a92f20d).
+2025-02-25 16:08:05 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "advance_time" is not found
+2025-02-25 16:09:03 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "open_shop" is not found
+2025-02-25 16:18:19 - INFO - Shard ID None has connected to Gateway (Session ID: a8c5c2c36b8ae7d17f69b51548152683).
+2025-02-25 16:18:58 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "market" is not found
+2025-02-25 16:19:02 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "inventory" is not found
+2025-02-25 16:19:25 - WARNING - We are being rate limited. PUT https://discord.com/api/v10/applications/1342267438678540371/commands responded with 429. Retrying in 160.68 seconds.
+2025-02-25 16:31:20 - INFO - Shard ID None has connected to Gateway (Session ID: bbef242d38a1237f25edb4b9b1ec0506).
+2025-02-25 16:44:49 - INFO - Shard ID None session has been invalidated.
+2025-02-25 16:44:54 - INFO - Shard ID None has connected to Gateway (Session ID: 9ab4c19c6411fbc5e4a8afb196e6d511).

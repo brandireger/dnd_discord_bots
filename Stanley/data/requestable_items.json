@@ -1,0 +1,406 @@
+{
+    "consumables": {
+        "spell scroll level 0": {
+            "price_gp": 10,
+            "rarity": "Common"
+        },
+        "potion of healing": {
+            "price_gp": 50,
+            "rarity": "Common"
+        },
+        "spell scroll level 1": {
+            "price_gp": 60,
+            "rarity": "Common"
+        },
+        "philter of love": {
+            "price_gp": 90,
+            "rarity": "Uncommon"
+        },
+        "potion of poison": {
+            "price_gp": 100,
+            "rarity": "Uncommon"
+        },
+        "dust of dryness (1 pellet)": {
+            "price_gp": 120,
+            "rarity": "Uncommon"
+        },
+        "spell scroll level 2": {
+            "price_gp": 120,
+            "rarity": "Uncommon"
+        },
+        "potion of fire breath": {
+            "price_gp": 150,
+            "rarity": "Uncommon"
+        },
+        "potion of greater healing": {
+            "price_gp": 150,
+            "rarity": "Uncommon"
+        },
+        "potion of climbing": {
+            "price_gp": 180,
+            "rarity": "Common"
+        },
+        "potion of heroism": {
+            "price_gp": 180,
+            "rarity": "Rare"
+        },
+        "potion of invisibility": {
+            "price_gp": 180,
+            "rarity": "Very Rare"
+        },
+        "potion of mind reading": {
+            "price_gp": 180,
+            "rarity": "Rare"
+        },
+        "potion of water breathing": {
+            "price_gp": 180,
+            "rarity": "Uncommon"
+        },
+        "scroll of protection": {
+            "price_gp": 180,
+            "rarity": "Rare"
+        },
+        "potion of animal friendship": {
+            "price_gp": 200,
+            "rarity": "Uncommon"
+        },
+        "spell scroll level 3": {
+            "price_gp": 200,
+            "rarity": "Uncommon"
+        },
+        "potion of diminution": {
+            "price_gp": 270,
+            "rarity": "Rare"
+        },
+        "potion of growth": {
+            "price_gp": 270,
+            "rarity": "Uncommon"
+        },
+        "dust of disappearance": {
+            "price_gp": 300,
+            "rarity": "Uncommon"
+        },
+        "potion of gaseous form": {
+            "price_gp": 300,
+            "rarity": "Rare"
+        },
+        "potion of resistance": {
+            "price_gp": 300,
+            "rarity": "Uncommon"
+        },
+        "spell scroll level 4": {
+            "price_gp": 320,
+            "rarity": "Rare"
+        },
+        "potion of speed": {
+            "price_gp": 400,
+            "rarity": "Very Rare"
+        },
+        "potion of superior healing": {
+            "price_gp": 450,
+            "rarity": "Very Rare"
+        },
+        "dust of sneezing and choking": {
+            "price_gp": 480,
+            "rarity": "Uncommon"
+        },
+        "oil of slipperiness": {
+            "price_gp": 480,
+            "rarity": "Uncommon"
+        },
+        "potion of flying": {
+            "price_gp": 500,
+            "rarity": "Very Rare"
+        },
+        "spell scroll level 5": {
+            "price_gp": 640,
+            "rarity": "Rare"
+        },
+        "potion of clairvoyance": {
+            "price_gp": 960,
+            "rarity": "Rare"
+        },
+        "potion of vitality": {
+            "price_gp": 960,
+            "rarity": "Very Rare"
+        },
+        "spell scroll level 6": {
+            "price_gp": 1280,
+            "rarity": "Very Rare"
+        },
+        "potion of supreme healing": {
+            "price_gp": 1350,
+            "rarity": "Very Rare"
+        }
+    },
+    "non_combat": {
+        "helm of comprehend languages": {
+            "price_gp": 500,
+            "rarity": "Uncommon"
+        },
+        "ring of warmth": {
+            "price_gp": 1000,
+            "rarity": "Uncommon"
+        },
+        "ring of x-ray vision": {
+            "price_gp": 6000,
+            "rarity": "Rare"
+        },
+        "boots of the winterlands": {
+            "price_gp": 10000,
+            "rarity": "Uncommon"
+        },
+        "ring of invisibility": {
+            "price_gp": 10000,
+            "rarity": "Legendary"
+        },
+        "helm of telepathy": {
+            "price_gp": 12000,
+            "rarity": "Uncommon"
+        },
+        "ring of mind shielding": {
+            "price_gp": 16000,
+            "rarity": "Uncommon"
+        },
+        "amulet of proof against detection and location": {
+            "price_gp": 20000,
+            "rarity": "Uncommon"
+        }
+    },
+    "combat": {
+        "trident of fish command": {
+            "price_gp": 8000,
+            "rarity": "Uncommon"
+        },
+        "weapon +1": {
+            "price_gp": 1000,
+            "rarity": "Uncommon"
+        },
+        "weapon +2": {
+            "price_gp": 4000,
+            "rarity": "Rare"
+        },
+        "weapon +3": {
+            "price_gp": 16000,
+            "rarity": "Very Rare"
+        },
+        "shield +1": {
+            "price_gp": 1500,
+            "rarity": "Uncommon"
+        },
+        "shield +2": {
+            "price_gp": 6000,
+            "rarity": "Rare"
+        },
+        "shield +3": {
+            "price_gp": 24000,
+            "rarity": "Very Rare"
+        },
+        "dagger of venom": {
+            "price_gp": 8000,
+            "rarity": "Rare"
+        },
+        "mace of disruption": {
+            "price_gp": 8000,
+            "rarity": "Rare"
+        },
+        "mace of smiting": {
+            "price_gp": 8000,
+            "rarity": "Rare"
+        },
+        "mace of terror": {
+            "price_gp": 8000,
+            "rarity": "Rare"
+        },
+        "sword of life stealing": {
+            "price_gp": 8000,
+            "rarity": "Rare"
+        },
+        "sword of wounding": {
+            "price_gp": 8000,
+            "rarity": "Rare"
+        },
+        "dancing sword": {
+            "price_gp": 15000,
+            "rarity": "Very Rare"
+        }
+    },
+    "miscellaneous": {
+        "ammunition +1 (each)": {
+            "price_gp": 25,
+            "rarity": "Uncommon"
+        },
+        "quaal's feather token anchor": {
+            "price_gp": 50,
+            "rarity": "Rare"
+        },
+        "ammunition +2 (each)": {
+            "price_gp": 100,
+            "rarity": "Rare"
+        },
+        "elixir of health": {
+            "price_gp": 120,
+            "rarity": "Rare"
+        },
+        "keoghtom's ointment (per dose)": {
+            "price_gp": 120,
+            "rarity": "Uncommon"
+        },
+        "nolzur's marvelous pigments": {
+            "price_gp": 200,
+            "rarity": "Very Rare"
+        },
+        "quaal's feather token fan": {
+            "price_gp": 250,
+            "rarity": "Rare"
+        },
+        "quaal's feather token whip": {
+            "price_gp": 250,
+            "rarity": "Rare"
+        },
+        "necklace of fireballs (one bead)": {
+            "price_gp": 300,
+            "rarity": "Rare"
+        },
+        "universal solvent": {
+            "price_gp": 300,
+            "rarity": "Legendary"
+        },
+        "ammunition +3 (each)": {
+            "price_gp": 400,
+            "rarity": "Very Rare"
+        },
+        "sovereign glue": {
+            "price_gp": 400,
+            "rarity": "Legendary"
+        },
+        "horn of blasting": {
+            "price_gp": 450,
+            "rarity": "Rare"
+        },
+        "necklace of fireballs (two beads)": {
+            "price_gp": 480,
+            "rarity": "Rare"
+        },
+        "arrow of slaying (each)": {
+            "price_gp": 600,
+            "rarity": "Very Rare"
+        },
+        "bead of force": {
+            "price_gp": 960,
+            "rarity": "Rare"
+        },
+        "elemental gem": {
+            "price_gp": 960,
+            "rarity": "Uncommon"
+        },
+        "necklace of fireballs (three beads)": {
+            "price_gp": 960,
+            "rarity": "Rare"
+        },
+        "chime of opening": {
+            "price_gp": 1500,
+            "rarity": "Rare"
+        },
+        "driftglobe": {
+            "price_gp": 750,
+            "rarity": "Uncommon"
+        },
+        "cap of water breathing": {
+            "price_gp": 1000,
+            "rarity": "Uncommon"
+        },
+        "eversmoking bottle": {
+            "price_gp": 1000,
+            "rarity": "Uncommon"
+        },
+        "quiver of ehlonna": {
+            "price_gp": 1000,
+            "rarity": "Uncommon"
+        },
+        "ioun stone sustenance": {
+            "price_gp": 1000,
+            "rarity": "Rare"
+        },
+        "goggles of night": {
+            "price_gp": 1500,
+            "rarity": "Uncommon"
+        },
+        "horseshoes of the zephyr": {
+            "price_gp": 1500,
+            "rarity": "Very Rare"
+        },
+        "cape of the mountebank": {
+            "price_gp": 8000,
+            "rarity": "Rare"
+        },
+        "portable hole": {
+            "price_gp": 8000,
+            "rarity": "Rare"
+        },
+        "apparatus of kwalish": {
+            "price_gp": 10000,
+            "rarity": "Legendary"
+        },
+        "folding boat": {
+            "price_gp": 10000,
+            "rarity": "Rare"
+        },
+        "cube of force": {
+            "price_gp": 16000,
+            "rarity": "Rare"
+        },
+        "rod of rulership": {
+            "price_gp": 16000,
+            "rarity": "Rare"
+        },
+        "mirror of life trapping": {
+            "price_gp": 18000,
+            "rarity": "Very Rare"
+        },
+        "robe of eyes": {
+            "price_gp": 30000,
+            "rarity": "Rare"
+        },
+        "gem of seeing": {
+            "price_gp": 32000,
+            "rarity": "Rare"
+        },
+        "plate armor of etherealness": {
+            "price_gp": 48000,
+            "rarity": "Legendary"
+        },
+        "bracers of archery": {
+            "price_gp": 4000,
+            "rarity": "Uncommon"
+        },
+        "berserker axe": {
+            "price_gp": 10000,
+            "rarity": "Rare"
+        },
+        "flame tongue": {
+            "price_gp": 10000,
+            "rarity": "Rare"
+        },
+        "frost brand": {
+            "price_gp": 10000,
+            "rarity": "Very Rare"
+        },
+        "sun blade": {
+            "price_gp": 12000,
+            "rarity": "Rare"
+        },
+        "defender": {
+            "price_gp": 18000,
+            "rarity": "Legendary"
+        },
+        "hammer of thunderbolts": {
+            "price_gp": 25000,
+            "rarity": "Legendary"
+        },
+        "holy avenger": {
+            "price_gp": 50000,
+            "rarity": "Legendary"
+        }
+    }
+}

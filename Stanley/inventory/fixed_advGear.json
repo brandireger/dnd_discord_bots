@@ -1,0 +1,98 @@
+{
+    "magical_items_alchemy": {
+        "acid": 2500,
+        "alchemist's fire": 5000,
+        "antitoxin": 5000,
+        "component pouch": 2500,
+        "holy water": 2500,
+        "ink": 1000,
+        "ink pen": 2,
+        "oil": 10,
+        "paper": 20,
+        "parchment": 10,
+        "potion of healing": 5000,
+        "spell scroll (cantrip)": 3000,
+        "spell scroll (level 1)": 5000
+    },
+    "containers_storage": {
+        "backpack": 200,
+        "barrel": 200,
+        "basket": 40,
+        "glass bottle": 200,
+        "bucket": 5,
+        "crossbow bolt case": 100,
+        "map or scroll case": 100,
+        "chest": 500,
+        "flask": 2,
+        "jug": 2,
+        "iron pot": 200,
+        "pouch": 50,
+        "quiver": 100,
+        "sack": 1,
+        "vial": 100
+    },
+    "hazards_traps": {
+        "ball bearings": 100,
+        "caltrops": 100,
+        "hunting trap": 500,
+        "net": 100,
+        "basic poison": 10000,
+        "iron spikes": 100
+    },
+    "adventuring_essentials": {
+        "bedroll": 100,
+        "blanket": 50,
+        "candle": 1,
+        "lamp": 50,
+        "pole": 5,
+        "rations": 50,
+        "rope": 100,
+        "shovel": 200,
+        "tent": 200,
+        "tinderbox": 50,
+        "torch": 1,
+        "waterskin": 20
+    },
+    "miscellaneous_equipment": {
+        "bell": 100,
+        "book": 2500,
+        "chain": 500,
+        "fine clothes": 1500,
+        "traveler's clothes": 200,
+        "costume": 500,
+        "ladder": 10,
+        "bullseye lantern": 1000,
+        "hooded lantern": 500,
+        "magnifying glass": 10000,
+        "map": 100,
+        "mirror": 500,
+        "perfume": 500,
+        "portable ram": 400,
+        "robe": 100,
+        "signal whistle": 5,
+        "spyglass": 100000,
+        "string": 10
+    },
+    "utility_tools_climbing": {
+        "block and tackle": 100,
+        "crowbar": 200,
+        "grappling hook": 200
+    },
+    "adventurers_kits_packs": {
+        "burglar's pack": 1600,
+        "climber's kit": 2500,
+        "diplomat's pack": 3900,
+        "dungeoneer's pack": 1200,
+        "entertainer's pack": 4000,
+        "explorer's pack": 1000,
+        "healer's kit": 500,
+        "priest's pack": 3300,
+        "scholar's pack": 4000
+    },
+    "lockpicking_security": {
+        "lock": 1000
+    },
+    "armor_restraints": {
+        "manacles": 200
+    }
+}

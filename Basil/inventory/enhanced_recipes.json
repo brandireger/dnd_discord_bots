@@ -1,0 +1,218 @@
+{
+  "Enhanced Potion of Healing": {
+    "base": "Wild Sageroot",
+    "modifiers": ["Milkweed Seeds"],
+    "DC": 12,
+    "enhancements": [
+      "Heals 3d4 + Alchemy Modifier HP",
+      "Heals 1d4 HP per round for 1 minute",
+      "Removes minor poison effects upon consumption",
+      "Grants two doses instead of one"
+    ],
+    "effect": "A more potent healing potion that restores additional health and can neutralize minor poisons."
+  },
+  "Enhanced Potion of Greater Healing": {
+    "base": "Wild Sageroot",
+    "modifiers": ["Dried Ephedra"],
+    "DC": 16,
+    "enhancements": [
+      "Heals 6d4 + Alchemy Modifier HP",
+      "Heals 1d6 HP per round for 1 minute",
+      "Removes moderate poison effects upon consumption",
+      "Grants two doses instead of one"
+    ],
+    "effect": "A superior healing potion that provides significant health restoration and neutralizes moderate poisons."
+  },
+  "Enhanced Potion of Superior Healing": {
+    "base": "Wild Sageroot",
+    "modifiers": ["Milkweed Seeds", "Dried Ephedra"],
+    "DC": 20,
+    "enhancements": [
+      "Heals 8d4 + Alchemy Modifier HP",
+      "Heals 2d4 HP per round for 1 minute",
+      "Removes major poison effects upon consumption",
+      "Grants two doses instead of one"
+    ],
+    "effect": "An advanced healing potion offering substantial health recovery and counteracting major poisons."
+  },
+  "Enhanced Potion of Supreme Healing": {
+    "base": "Wild Sageroot",
+    "modifiers": ["Gengko Brush", "Dried Ephedra", "Milkweed Seeds"],
+    "DC": 24,
+    "enhancements": [
+      "Heals 10d4 + Alchemy Modifier HP",
+      "Heals 2d6 HP per round for 1 minute",
+      "Removes all poison effects and grants resistance to poison for 1 hour",
+      "Grants two doses instead of one"
+    ],
+    "effect": "The pinnacle of healing potions, providing exceptional health restoration and prolonged poison resistance."
+  },
+  "Enhanced Potion of Water Breathing": {
+    "base": "Hydrathistle",
+    "modifiers": ["River Moss"],
+    "DC": 14,
+    "enhancements": [
+      "Allows breathing underwater for 2 hours",
+      "Grants a swimming speed equal to walking speed",
+      "Provides clear vision underwater up to 60 feet",
+      "Grants two doses instead of one"
+    ],
+    "effect": "An improved potion enabling extended underwater breathing, enhanced swimming speed, and clear underwater vision."
+  },
+  "Enhanced Potion of Invisibility": {
+    "base": "Wisp Stalks",
+    "modifiers": ["Moon Lotus"],
+    "DC": 20,
+    "enhancements": [
+      "Invisibility lasts for 2 hours",
+      "Grants advantage on Stealth checks while invisible",
+      "Allows silent movement, preventing detection by sound",
+      "Grants two doses instead of one"
+    ],
+    "effect": "A refined potion that extends invisibility duration, enhances stealth capabilities, and silences movement."
+  },
+  "Enhanced Potion of Giant Strength": {
+    "base": "Primordial Balm",
+    "modifiers": ["Giant’s Toe"],
+    "DC": 22,
+    "enhancements": [
+      "Increases Strength score to 25 for 1 hour",
+      "Grants advantage on Strength-based checks and saving throws",
+      "Reduces physical exhaustion levels by one upon consumption",
+      "Grants two doses instead of one"
+    ],
+    "effect": "A powerful potion that significantly boosts strength, enhances physical prowess, and alleviates exhaustion."
+  },
+  "Enhanced Potion of Mind Reading": {
+    "base": "Mindflayer Tendril",
+    "modifiers": ["Eldritch Essence"],
+    "DC": 18,
+    "enhancements": [
+      "Allows reading surface thoughts of creatures within 60 feet for 1 hour",
+      "Grants advantage on Insight checks during the effect",
+      "Enables telepathic communication with willing creatures within range",
+      "Grants two doses instead of one"
+    ],
+    "effect": "An enhanced potion that extends mind-reading capabilities, improves insight, and facilitates telepathic communication."
+  },
+  "Enhanced Potion of Clairvoyance": {
+    "base": "Seer’s Sage",
+    "modifiers": ["Oracle’s Root"],
+    "DC": 18,
+    "enhancements": [
+      "Allows the casting of the Clairvoyance spell without concentration",
+      "Duration of the effect is extended to 1 hour",
+      "Grants a +2 bonus to Perception checks during the effect",
+      "Grants two doses instead of one"
+    ],
+    "effect": "A superior potion that enhances clairvoyant abilities, extends duration, and sharpens perception."
+  },
+  "Enhanced Potion of Heroism": {
+    "base": "Lion’s Mane Fungus",
+    "modifiers": ["Valor Vine"],
+    "DC": 20,
+    "enhancements": [
+      "Grants 15 temporary HP for 1 hour",
+      "Provides immunity to fear effects during the duration",
+      "Adds a +2 bonus to attack rolls and saving throws",
+      "Grants two doses instead of one"
+    ],
+    "effect": "A potent potion that bolsters courage, grants temporary health, and enhances combat effectiveness."
+  },
+  "Enhanced Potion of Flying": {
+    "base": "Feathered Fern",
+    "modifiers": ["Sky Blossom"],
+    "DC": 22,
+    "enhancements": [
+      "Increases flying speed to 80 feet for 1 hour",
+      "Grants hover ability, preventing fall damage",
+      "Allows flying in difficult conditions such as strong winds",
+      "Grants two doses instead of one"
+    ],
+    "effect": "An improved potion that greatly enhances flight speed, maneuverability, and endurance in harsh conditions."
+  },
+  "Enhanced Potion of Fire Resistance": {
+    "base": "Emberleaf",
+    "modifiers": ["Dragon's Tongue"],
+    "DC": 16,
+    "enhancements": [
+      "Provides immunity to fire damage for 1 hour",
+      "Increases duration of resistance to 2 hours",
+      "Grants resistance to both fire and acid damage",
+      "Grants two doses instead of one"
+    ],
+    "effect": "A fortified potion that grants stronger fire resistance, extended duration, or additional elemental protection."
+  },
+  "Enhanced Potion of Speed": {
+    "base": "Cheetah’s Root",
+    "modifiers": ["Storm Petal"],
+    "DC": 20,
+    "enhancements": [
+      "Doubles movement speed and grants an extra action for 2 minutes",
+      "Removes penalties for difficult terrain while active",
+      "Grants +2 AC and advantage on Dexterity saving throws",
+      "Grants two doses instead of one"
+    ],
+    "effect": "An enhanced potion that significantly boosts speed, agility, and reaction time."
+  },
+  "Enhanced Potion of Strength": {
+    "base": "Titan’s Bulb",
+    "modifiers": ["Giant’s Toe"],
+    "DC": 18,
+    "enhancements": [
+      "Increases Strength score to 23 for 1 hour",
+      "Doubles carrying capacity while active",
+      "Grants a +2 bonus to Athletics checks",
+      "Grants two doses instead of one"
+    ],
+    "effect": "A stronger potion that enhances raw power and improves athletic performance."
+  },
+  "Enhanced Potion of Night Vision": {
+    "base": "Glowmoss",
+    "modifiers": ["Owlfeather Bloom"],
+    "DC": 14,
+    "enhancements": [
+      "Grants darkvision up to 120 feet",
+      "Removes disadvantage on Perception checks in dim light",
+      "Allows seeing through magical darkness within 30 feet",
+      "Grants two doses instead of one"
+    ],
+    "effect": "An advanced potion that extends night vision, improves perception, and pierces magical darkness."
+  },
+  "Enhanced Poison": {
+    "base": "Deathcap Mushroom",
+    "modifiers": ["Nightshade"],
+    "DC": 19,
+    "enhancements": [
+      "Deals additional poison damage",
+      "Lasts twice as long on weapons",
+      "Applies an additional debuff like Weakness or Blindness",
+      "Creates two doses instead of one"
+    ],
+    "effect": "A more potent poison with additional effects."
+  },
+  "Enhanced Death’s Bite (Poison)": {
+    "base": "Wyrmtongue Petals",
+    "modifiers": ["Arctic Creeper", "Spineflower Berries", "Quicksilver Lichen"],
+    "DC": 22,
+    "enhancements": [
+      "Deals 3d6 + Alchemy Modifier necrotic damage per round",
+      "Poison lasts 1 minute instead of 30 seconds",
+      "Inflicts an additional 1d6 Constitution damage",
+      "Grants two doses instead of one"
+    ],
+    "effect": "A lethal poison that causes necrotic decay and significant Constitution damage."
+  },
+  "Enhanced Potion of Frost Resistance": {
+    "base": "Fennel Silk",
+    "modifiers": ["Lavender Sprig"],
+    "DC": 16,
+    "enhancements": [
+      "Provides immunity to cold damage for 1 hour",
+      "Duration increased to 2 hours",
+      "Provides resistance to cold and fire damage",
+      "Grants two doses instead of one"
+    ],
+    "effect": "A superior potion that not only resists cold but also grants additional elemental protection."
+  }
+}
