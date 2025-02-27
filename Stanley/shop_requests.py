@@ -1,6 +1,16 @@
 import discord
+from discord import app_commands
 from discord.ext import commands
-from data_manager import load_json, save_json, get_response, REQUESTS_FILE, REQUESTABLE_ITEMS_FILE
+import logging
+import os
+from data_manager import load_json, save_json, get_response
+
+logger = logging.getLogger(__name__)
+
+# ✅ Define shared directory paths
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SHARED_DIR = os.path.join(BASE_DIR, "..", "shared_inventories")
+STANLEY_DATA_DIR = os.path.join(BASE_DIR, "stanley_data")
 
 class ShopRequests(commands.Cog):
     """Handles item requests and broker interactions."""
@@ -17,12 +27,9 @@ class ShopRequests(commands.Cog):
         user_id = str(interaction.user.id)
 
         # Load requestable items
-        requestable_items = load_json(REQUESTABLE_ITEMS_FILE, {})
+        requestable_items = load_json("requestable_items.json", folder=STANLEY_DATA_DIR)
+        valid_items = {name.lower(): category for category, items in requestable_items.items() for name in items.keys()}
 
-        # Flatten categories into a single list of requestable item names
-        valid_items = {item_name.lower(): category for category in requestable_items.values() for item_name in category}
-
-        # Check if item exists in requestable list
         if item not in valid_items:
             await interaction.followup.send(
                 f"❌ `{item}` is not a requestable item.\n"
@@ -32,19 +39,15 @@ class ShopRequests(commands.Cog):
             return
 
         # Load existing requests
-        requests_data = load_json(REQUESTS_FILE, {})
+        requests_data = load_json("requests.json", folder=SHARED_DIR)
+        requests_data.setdefault(item, [])
 
-        if item not in requests_data:
-            requests_data[item] = []
-
-        # Check if user already requested the item
         if user_id in requests_data[item]:
             await interaction.followup.send(f"📜 **Stanley sighs.**\n_\"You've already requested `{item}`. Patience, adventurer!\"_")
             return
 
-        # Add request
         requests_data[item].append(user_id)
-        save_json(REQUESTS_FILE, requests_data)
+        save_json("requests.json", requests_data, folder=SHARED_DIR)
 
         await interaction.followup.send(f"📜 **Stanley records your request.**\n_\"Give me some time, and I’ll see what I can do.\"_\nYour request for `{item}` has been added.")
 
@@ -53,49 +56,28 @@ class ShopRequests(commands.Cog):
         """Lists all items that can be requested from Stanley."""
         await interaction.response.defer(thinking=True)
 
-        requestable_items = load_json(REQUESTABLE_ITEMS_FILE, {})
+        requestable_items = load_json("requestable_items.json", folder=STANLEY_DATA_DIR)
 
         if not requestable_items:
             await interaction.followup.send("📜 **Stanley shrugs.**\n_\"Nothing is requestable at the moment!\"_")
             return
 
-        # Format the list for display
         request_lines = ["📜 **Items Available for Request:**"]
         for category, items in requestable_items.items():
-            item_list = ", ".join(f"`{item}`" for item in items)
-            request_lines.append(f"**{category.title()}**: {item_list}")
+            if items:  # ✅ Skip empty categories
+                item_list = ", ".join(f"`{name}`" for name in items.keys())
+                request_lines.append(f"**{category.title()}**: {item_list}")
 
-        # Discord 2000-character limit handling
-        message_chunks = []
-        chunk = ""
-
-        for line in request_lines:
-            if len(chunk) + len(line) + 2 > 2000:  # +2 for newline characters
-                message_chunks.append(chunk)
-                chunk = ""
-            chunk += line + "\n"
-
-        if chunk:
-            message_chunks.append(chunk)  # Add the last chunk
-
-        # Send messages in multiple parts
-        first_chunk = message_chunks.pop(0)  # Send the first chunk
-        await interaction.followup.send(first_chunk)
-
-        for idx, msg in enumerate(message_chunks):
-            if idx == 0:
-                await interaction.followup.send(msg)  # First message
-            else:
-                await interaction.followup.send(msg)  # Send remaining chunks
+        await interaction.followup.send("\n".join(request_lines))
 
     @discord.app_commands.command(name="all_requests", description="View all pending item requests.")
     async def all_requests(self, interaction: discord.Interaction):
         """Shows all pending item requests."""
         await interaction.response.defer(thinking=True)
 
-        requests_data = load_json(REQUESTS_FILE, {})
+        requests_data = load_json("requests.json", folder=SHARED_DIR)
 
-        if not requests_data or all(not users for users in requests_data.values()):
+        if not any(requests_data.values()):
             await interaction.followup.send(get_response("requests_none"))
             return
 
@@ -104,10 +86,7 @@ class ShopRequests(commands.Cog):
             if users:
                 request_lines.append(f"• **{item.capitalize()}** → {', '.join(f'<@{u}>' for u in users)}")
 
-        if len(request_lines) == 1:
-            await interaction.followup.send("📜 **Stanley flips through his ledger.**\n_\"Strangely quiet lately... No requests at all!\"_")
-        else:
-            await interaction.followup.send("\n".join(request_lines))
+        await interaction.followup.send("\n".join(request_lines))
 
     @discord.app_commands.command(name="request_add", description="(Admin) Add a new item to the requestable list.")
     @commands.has_permissions(administrator=True)  # ✅ Admins only
@@ -118,25 +97,15 @@ class ShopRequests(commands.Cog):
         item = item.lower().strip()
         category = category.lower().strip()
 
-        # Load existing requestable items
-        requestable_items = load_json(REQUESTABLE_ITEMS_FILE, {})
+        requestable_items = load_json("requestable_items.json", folder=STANLEY_DATA_DIR)
+        requestable_items.setdefault(category, {})
 
-        # Validate category
-        valid_categories = requestable_items.keys()  # Uses existing categories
-        if category not in valid_categories:
-            await interaction.followup.send(f"❌ `{category}` is not a valid category.\n"
-                                            "📜 **Stanley grumbles.**\n"
-                                            "_\"Choose an existing category from `/requests_available`.\"_")
-            return
-
-        # Check if item already exists
         if item in requestable_items[category]:
             await interaction.followup.send(f"⚠️ `{item}` is already in the requestable items list.")
             return
 
-        # Add new item
         requestable_items[category][item] = {"price_gp": price_gp, "rarity": rarity}
-        save_json(REQUESTABLE_ITEMS_FILE, requestable_items)
+        save_json("requestable_items.json", requestable_items, folder=STANLEY_DATA_DIR)
 
         await interaction.followup.send(f"✅ **{item.capitalize()}** has been added to the **requestable items list** under `{category}`!")
 
@@ -148,12 +117,10 @@ class ShopRequests(commands.Cog):
 
         item = item.lower().strip()
 
-        # Load request & shop data
-        requests_data = load_json(REQUESTS_FILE, {})
-        shop_data = load_json(SHOP_FILE, {})
-        requestable_items = load_json(REQUESTABLE_ITEMS_FILE, {})
+        requests_data = load_json("requests.json", folder=SHARED_DIR)
+        shop_data = load_json("stanley_shop.json", folder=SHARED_DIR)
+        requestable_items = load_json("requestable_items.json", folder=STANLEY_DATA_DIR)
 
-        # Check if item is in the request list
         if item not in requests_data or not requests_data[item]:
             await interaction.followup.send(f"❌ `{item}` is not in the request list!")
             return
@@ -161,68 +128,25 @@ class ShopRequests(commands.Cog):
             await interaction.followup.send(f"❌ Cannot approve `{item}` with zero stock!")
             return
 
-        # Find the item details in the requestable items list
-        found_category = None
-        found_item = None
-
-        for category, items in requestable_items.items():
-            if item in items:
-                found_category = category
-                found_item = items[item]
-                break
-
-        if not found_item:
+        found_category = next((cat for cat, items in requestable_items.items() if item in items), None)
+        if not found_category:
             await interaction.followup.send(f"❌ `{item}` is not a valid requestable item.")
             return
 
-        # Add item to the shop
-        if found_category not in shop_data:
-            shop_data[found_category] = {}
-
-        shop_data[found_category][item] = {
-            "price_cp": found_item["price_gp"] * 100,  # Convert GP to CP
+        shop_data.setdefault(found_category, {})[item] = {
+            "price_cp": requestable_items[found_category][item]["price_gp"] * 100,
             "stock": stock,
-            "rarity": found_item["rarity"]
+            "rarity": requestable_items[found_category][item]["rarity"]
         }
 
-        # Save changes
-        save_json(SHOP_FILE, shop_data)
-        save_json(REQUESTS_FILE, requests_data)
-
-        # Remove item from requests list
-        del requests_data[item]
+        del requests_data[item]  # ✅ Remove the request
+        save_json("stanley_shop.json", shop_data, folder=SHARED_DIR)
+        save_json("requests.json", requests_data, folder=SHARED_DIR)
 
         await interaction.followup.send(f"✅ **{item.capitalize()}** has been approved and added to Stanley's shop with `{stock}` in stock!")
 
 async def setup(bot):
-    print("🔍 Debug: Loading ShopRequests cog...")
-    cog = ShopRequests(bot)
-    await bot.add_cog(cog)
-    print("✅ ShopRequests cog loaded!")
-
-    if not bot.tree.get_command("request"):
-        bot.tree.add_command(cog.request_item)
-        print("🔄 Manually adding `/request`...")
-
-    if not bot.tree.get_command("requests_available"):
-        bot.tree.add_command(cog.requests_available)
-        print("🔄 Manually adding `/requests_available`...")
-
-    if not bot.tree.get_command("all_requests"):
-        bot.tree.add_command(cog.all_requests)
-        print("🔄 Manually adding `/all_requests`...")
-
-    if not bot.tree.get_command("request_add"):
-        bot.tree.add_command(cog.request_add)
-        print("🔄 Manually adding `/request_add`...")
-
-    if not bot.tree.get_command("request_approve"):
-        bot.tree.add_command(cog.request_approve)
-        print("🔄 Manually adding `/request_approve`...")
-
-    print("🔄 Syncing shop request commands...")
-    try:
-        synced = await bot.tree.sync()
-        print(f"✅ Synced {len(synced)} commands successfully!")
-    except Exception as e:
-        print(f"❌ Error syncing commands: {e}")
+    """Loads the ShopRequests cog into the bot."""
+    logger.info("🔍 Loading ShopRequests cog...")
+    await bot.add_cog(ShopRequests(bot))
+    logger.info("✅ ShopRequests cog loaded!")

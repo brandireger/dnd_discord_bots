@@ -1,9 +1,10 @@
 {
     "621349758010654730": {
         "lock": 1,
-        "Common Ingredient": 3,
+        "Common Ingredient": 6,
         "Hydrathistle": 1,
         "Harrada Leaf": 3,
-        "Arrow Root": 8
+        "Arrow Root": 8,
+        "Wild Sageroot": 1
     }
 }

@@ -59,3 +59,12 @@
 2025-02-25 21:07:08,817 - INFO - User tgbkitty searched in Forest but found nothing.
 2025-02-25 21:07:20,087 - INFO - User tgbkitty rolled 9 = 0 (stat) + 0 (prof) + 0 (kit). Found: Arrow Root.
 2025-02-25 21:07:20,090 - INFO - User tgbkitty gathered 4x Arrow Root in Forest.
+2025-02-26 11:57:08,910 - INFO - User tgbkitty rolled 7 = 0 (stat) + 0 (prof) + 0 (kit). Found: Common Ingredient.
+2025-02-26 11:57:08,915 - INFO - User tgbkitty gathered 4x Common Ingredient in Forest.
+2025-02-26 13:40:44,345 - INFO - User tgbkitty rolled 20 vs DC 10 to identify Wild Sageroot.
+2025-02-26 13:40:44,346 - INFO - User tgbkitty successfully identified Wild Sageroot.
+2025-02-26 13:42:12,298 - INFO - User tgbkitty rolled 11 vs DC 10 to identify Mandrake Root.
+2025-02-26 13:42:12,301 - INFO - User tgbkitty successfully identified Mandrake Root.
+2025-02-26 13:59:47,548 - ERROR - ⚠️ Milkweed Seeds exists in name matching but is missing from INGREDIENTS data!
+2025-02-26 14:07:09,012 - INFO - User tgbkitty rolled 15 vs DC 10 to identify Wild Sageroot.
+2025-02-26 14:07:09,013 - INFO - User tgbkitty successfully identified Wild Sageroot.

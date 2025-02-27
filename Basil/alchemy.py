@@ -196,18 +196,33 @@ class Alchemy(commands.Cog):
             await interaction.response.send_message("❌ Your inventory is empty! Gather some ingredients first.")
             return
 
-        craftable_recipes = [
-            recipe_name for recipe_name, recipe_data in RECIPES.items()
-            if inventory.get(recipe_data["base"], 0) > 0 and 
-               all(inventory.get(mod, 0) > 0 for mod in recipe_data.get("modifiers", []))
-        ]
+        craftable_recipes = []
+        
+        for recipe_name, recipe_data in RECIPES.items():
+            base_ingredient = recipe_data.get("base")
+            modifiers = recipe_data.get("modifiers", [])
+
+            if not base_ingredient:
+                continue  # Skip recipes with missing data
+
+            # ✅ Check if the player has the base ingredient
+            if inventory.get(base_ingredient, 0) > 0:
+                # ✅ Allow crafting even if modifiers are missing
+                missing_modifiers = [mod for mod in modifiers if inventory.get(mod, 0) == 0]
+
+                # If all modifiers are missing, don't list it
+                if len(missing_modifiers) < len(modifiers):
+                    craftable_recipes.append((recipe_name, missing_modifiers))
 
         if not craftable_recipes:
             await interaction.response.send_message("🧪 You don’t have enough ingredients to craft any potions or poisons yet.")
             return
 
         embed = discord.Embed(title="🧪 Craftable Potions & Poisons", color=discord.Color.purple())
-        embed.add_field(name="You can craft:", value="\n".join(f"• **{r}**" for r in craftable_recipes), inline=False)
+    
+        for recipe_name, missing_mods in craftable_recipes:
+            missing_text = f"\n⚠️ Missing: {', '.join(missing_mods)}" if missing_mods else ""
+            embed.add_field(name=f"• **{recipe_name}**", value=f"✅ Craftable!{missing_text}", inline=False)
         
         await interaction.response.send_message(embed=embed)
 

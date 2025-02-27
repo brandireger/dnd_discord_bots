@@ -9,7 +9,7 @@ from logging.handlers import RotatingFileHandler
 import sys
 import os
 from data_manager import load_json, save_json
-from inventory_functions import add_item
+from inventory_functions import add_item, remove_item
 
 # Configure logging
 logger = getLogger(__name__)
@@ -99,45 +99,62 @@ class Herbalism(commands.Cog):
         """Allows players to identify herbs using their stats."""
         player_id = str(interaction.user.id)
         stats = load_json(STATS_FILE).get(player_id, {})
-        ingredient = ingredient.capitalize()
+        ingredient = ingredient.lower().strip()
 
-        # ✅ Ensure in-game time is tracked
-        if "days" not in IN_GAME_TIME:
-            IN_GAME_TIME["days"] = 0
-            save_json("in_game_time.json", IN_GAME_TIME)
+        # ✅ Normalize common ingredient names
+        if "common ingredient" in ingredient:
+            possible_common_ingredients = ["Wild Sageroot", "Mandrake Root", "Bloodgrass", "Milkweed Seeds"]
+            identified_ingredient = random.choice(possible_common_ingredients)  # Pick one at random
+            ingredient_to_remove = "Common Ingredient"  # Correct name in inventory
+        else:
+            identified_ingredient = next((key for key in INGREDIENTS.keys() if key.lower() == ingredient), None)
+            ingredient_to_remove = identified_ingredient
 
-        if ingredient not in INGREDIENTS:
+        if not identified_ingredient:
             logger.warning(f"User {interaction.user} tried to identify an unknown ingredient: {ingredient}")
-            await interaction.response.send_message("That ingredient does not exist in my records.")
+            await interaction.response.send_message("❌ That ingredient does not exist in my records.")
             return
-        
+
+        # ✅ Prevent KeyError: Ensure the ingredient exists in INGREDIENTS before accessing it
+        ingredient_data = INGREDIENTS.get(identified_ingredient, None)
+        if not ingredient_data:
+            logger.error(f"⚠️ {identified_ingredient} exists in name matching but is missing from INGREDIENTS data!")
+            await interaction.response.send_message("❌ I can't seem to find details on this ingredient. Check your spelling!")
+            return
+
         # ✅ Check last identify time
         last_identify_day = PLAYER_COOLDOWNS.get(player_id, {}).get(f"identify_{ingredient}_day", -999)
-        required_days = 1  # Players can identify **once per in-game day**
-
-        if IN_GAME_TIME["days"] - last_identify_day < required_days:
+        if IN_GAME_TIME["days"] - last_identify_day < 1:
             await interaction.response.send_message(f"❌ You have already attempted to identify **{ingredient}** today. Try again tomorrow.")
             return
-    
+
         # ✅ Determine best stat (Wisdom OR Intelligence)
         best_mod = max(stats.get("wisdom", 0), stats.get("intelligence", 0))
-
-        # ✅ Apply proficiency and herbalism kit bonuses
         proficiency_bonus = stats.get("proficiency", 0) if stats.get("proficient", False) else 0
         kit_bonus = 2 if stats.get("herbalism_kit", False) else 0
 
-        dc = 10 + INGREDIENTS[ingredient].get("DC", 0)
+        # ✅ Set Difficulty
+        dc = 10 + ingredient_data.get("DC", 0)
         roll = random.randint(1, 20) + best_mod + proficiency_bonus + kit_bonus
 
-        logger.info(f"User {interaction.user} rolled {roll} = {best_mod} (stat) + {proficiency_bonus} (prof) + {kit_bonus} (kit) vs DC {dc} to identify {ingredient}.")
+        logger.info(f"User {interaction.user} rolled {roll} vs DC {dc} to identify {identified_ingredient}.")
 
         if roll >= dc:
-            logger.info(f"User {interaction.user} successfully identified {ingredient}.")
-            await interaction.response.send_message(f"✅ Success! You identify **{ingredient}**: {INGREDIENTS[ingredient]['effect']}")
-        else:
-            logger.info(f"User {interaction.user} failed to identify {ingredient}.")
-            await interaction.response.send_message("❌ You failed to identify the herb. Try again later!")
+            # ✅ Success: Update inventory
+            logger.info(f"User {interaction.user} successfully identified {identified_ingredient}.")
+            remove_item(player_id, ingredient_to_remove, 1)  # Remove the unidentified version
+            add_item(player_id, identified_ingredient, 1)  # Add identified herb
+            PLAYER_COOLDOWNS.setdefault(player_id, {})[f"identify_{ingredient}_day"] = IN_GAME_TIME["days"]
+            save_json("player_cooldowns.json", PLAYER_COOLDOWNS)
 
+            await interaction.response.send_message(f"✅ Success! You identify **{identified_ingredient}**: {INGREDIENTS[identified_ingredient]['effect']}")
+        else:
+            # ❌ Failure
+            logger.info(f"User {interaction.user} failed to identify {ingredient}.")
+            PLAYER_COOLDOWNS.setdefault(player_id, {})[f"identify_{ingredient}_day"] = IN_GAME_TIME["days"]
+            save_json("player_cooldowns.json", PLAYER_COOLDOWNS)
+            await interaction.response.send_message("❌ You failed to identify the herb. Try again later!")
+            
 async def gather_execute(interaction: discord.Interaction, terrain: str):
     """Handles the actual herb gathering logic."""
     player_id = str(interaction.user.id)

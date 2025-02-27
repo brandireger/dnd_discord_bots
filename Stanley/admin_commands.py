@@ -1,7 +1,8 @@
 import discord
 from discord.ext import commands
+from discord import app_commands
 
-class SyncCommands(commands.Cog):
+class AdminCommands(commands.Cog):
     """Cog for syncing commands."""
 
     def __init__(self, bot):
@@ -52,7 +53,34 @@ class SyncCommands(commands.Cog):
             await ctx.send(f"❌ Failed to clear commands: {e}")
             print(f"❌ Failed to clear commands: {e}")
 
+    @app_commands.command(name="audit_log", description="(Admin) View recent shop transactions.")
+    @commands.has_permissions(administrator=True)  # ✅ Admins only
+    async def audit_log(self, interaction: discord.Interaction, limit: int = 10):
+        """Allows admins to view recent shop transactions."""
+        await interaction.response.defer(thinking=True)
+
+        # Load audit log
+        audit_data = load_json("inventory_logs.json")
+
+        if not audit_data:
+            await interaction.followup.send(get_response("audit_log_empty"))
+            return
+
+        # Limit number of transactions displayed
+        audit_data = audit_data[-limit:]
+        log_lines = ["📜 **Recent Transactions:**"]
+        for entry in reversed(audit_data):  # Reverse so latest is at the top
+            log_lines.append(
+                f"• `{entry['timestamp'].split('T')[0]}` - **{entry['user']}** {entry['action']} `{entry['item']}` for `{entry['price_gp']} gp`"
+            )
+            
+        # Ensure message fits Discord limits
+        message_chunks = [log_lines[i : i + 10] for i in range(0, len(log_lines), 10)]
+        for chunk in message_chunks:
+            await interaction.followup.send("\n".join(chunk))
+
+
 async def setup(bot):
-    print("🔍 Debug: Loading SyncCommands cog...")
-    await bot.add_cog(SyncCommands(bot))  
-    print("✅ SyncCommands cog loaded!")
+    print("🔍 Debug: Loading AdminCommands cog...")
+    await bot.add_cog(AdminCommands(bot))  
+    print("✅ AdminCommands cog loaded!")
