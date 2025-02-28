@@ -10,18 +10,9 @@ import logging
 from logging import getLogger
 from logging.handlers import RotatingFileHandler
 from data_manager import load_json, save_json
+from bot_logging import logger
 
-# Configure logging
-logger = getLogger(__name__)
-handler = RotatingFileHandler("logs/basil_bot.log", maxBytes=5000000, backupCount=2)
-formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-handler.setFormatter(formatter)
-logger.addHandler(handler)
-logger.setLevel(logging.INFO)
-
-console_handler = logging.StreamHandler()
-console_handler.setFormatter(formatter)
-logger.addHandler(console_handler)
+logger.info("✅ BasilCraft module initialized")
 
 # File Paths
 BASIL_INVENTORY_FILE = "basil_inventory.json"
@@ -30,7 +21,7 @@ CRAFTED_ITEMS_FILE = "crafted_items.json"
 ENHANCED_RECIPES_FILE = "enhanced_recipes.json"
 
 # Load Recipes
-RECIPES = load_json(RECIPES_FILE, folder="inventory") or {}
+RECIPES = load_json(RECIPES_FILE) or {}
 
 class BasilCrafting(commands.Cog):
     """Handles Basil's automatic crafting system."""
@@ -47,10 +38,10 @@ class BasilCrafting(commands.Cog):
             return
 
         # Load Basil's ingredient inventory
-        basil_inventory = load_json(BASIL_INVENTORY_FILE, folder="shared_inventories") or {}
-        crafted_items = load_json(CRAFTED_ITEMS_FILE, folder="shared_inventories") or {}
-        recipes = load_json(RECIPES_FILE, folder="inventory") or {}
-        enhanced_recipes = load_json(ENHANCED_RECIPES_FILE, folder="inventory") or {}
+        basil_inventory = load_json(BASIL_INVENTORY_FILE) or {}
+        crafted_items = load_json(CRAFTED_ITEMS_FILE) or {}
+        recipes = load_json(RECIPES_FILE) or {}
+        enhanced_recipes = load_json(ENHANCED_RECIPES_FILE) or {}
 
         # Determine the number of potions Basil can attempt
         craft_attempts = max(1, int(days * random.uniform(0.8, 1.2)))  # Adds slight randomness
@@ -127,8 +118,8 @@ class BasilCrafting(commands.Cog):
                 logger.info(f"Basil successfully crafted {recipe}.")
 
         # Save updated inventories
-        save_json(BASIL_INVENTORY_FILE, basil_inventory, folder="shared_inventories")
-        save_json(CRAFTED_ITEMS_FILE, crafted_items, folder="shared_inventories")
+        save_json(BASIL_INVENTORY_FILE, basil_inventory)
+        save_json(CRAFTED_ITEMS_FILE, crafted_items)
 
         # ✅ Generate crafting summary
         result_text = f"🔬 **Basil crafted for {days} in-game days.**\n\n"

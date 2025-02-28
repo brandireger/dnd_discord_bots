@@ -68,3 +68,1465 @@
 2025-02-26 13:59:47,548 - ERROR - ⚠️ Milkweed Seeds exists in name matching but is missing from INGREDIENTS data!
 2025-02-26 14:07:09,012 - INFO - User tgbkitty rolled 15 vs DC 10 to identify Wild Sageroot.
 2025-02-26 14:07:09,013 - INFO - User tgbkitty successfully identified Wild Sageroot.
+2025-02-27 13:58:12,418 - ERROR - ⚠️ `basil_inventory` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 13:58:12,419 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 13:58:12,420 - INFO - 🚀 Starting Basil...
+2025-02-27 13:58:12,420 - INFO - logging in using static token
+2025-02-27 13:58:13,230 - INFO - Shard ID None has connected to Gateway (Session ID: ac65de00e74e9fcfb299a37d73ff17f6).
+2025-02-27 13:58:15,232 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 13:58:15,232 - ERROR - Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/client.py", line 481, in _run_event
+    await coro(*args, **kwargs)
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 72, in on_ready
+    await bot.change_presence(activity=discord.Game(name=random.choice(PRESENCE_MESSAGES)))
+NameError: name 'random' is not defined
+2025-02-27 13:58:36,158 - ERROR - ⚠️ `basil_inventory` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 13:58:36,159 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 13:58:36,159 - INFO - 🚀 Starting Basil...
+2025-02-27 13:58:36,159 - INFO - logging in using static token
+2025-02-27 13:58:37,023 - INFO - Shard ID None has connected to Gateway (Session ID: 98cfa4ca6414f8271e9638a935898dc2).
+2025-02-27 13:58:39,027 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 13:58:39,033 - INFO - ✅ Economy module initialized
+2025-02-27 13:58:39,033 - INFO - ✅ Economy module initialized
+2025-02-27 13:58:39,035 - ERROR - ❌ Failed to load admin_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 5, in <module>
+    from economy import save_market, generate_market
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/economy.py", line 23, in <module>
+    INGREDIENTS = load_json("ingredients.json", folder=BASIL_DATA_FOLDER) or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'admin_commands' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 13:58:39,036 - INFO - ✅ Alchemy module initialized
+2025-02-27 13:58:39,036 - INFO - ✅ Alchemy module initialized
+2025-02-27 13:58:39,036 - ERROR - ❌ Failed to load alchemy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/alchemy.py", line 17, in <module>
+    INGREDIENTS = load_json("ingredients.json", folder=SHARED_FOLDER) or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'alchemy' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 13:58:39,039 - INFO - ✅ BasilCraft module initialized
+2025-02-27 13:58:39,039 - INFO - ✅ BasilCraft module initialized
+2025-02-27 13:58:39,039 - ERROR - ❌ Failed to load basil_craft.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_craft.py", line 24, in <module>
+    RECIPES = load_json(RECIPES_FILE, folder="inventory") or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'basil_craft' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 13:58:39,040 - INFO - ✅ Economy module initialized
+2025-02-27 13:58:39,040 - INFO - ✅ Economy module initialized
+2025-02-27 13:58:39,040 - ERROR - ❌ Failed to load economy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/economy.py", line 23, in <module>
+    INGREDIENTS = load_json("ingredients.json", folder=BASIL_DATA_FOLDER) or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'economy' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 13:58:39,040 - INFO - ✅ Herbalism module initialized
+2025-02-27 13:58:39,040 - INFO - ✅ Herbalism module initialized
+2025-02-27 13:58:39,041 - ERROR - ❌ Failed to load herbalism.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/herbalism.py", line 22, in <module>
+    INGREDIENTS = load_json("ingredients.json", folder=BASIL_DATA_FOLDER) or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'herbalism' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 13:58:39,043 - INFO - ✅ Inventory module initialized
+2025-02-27 13:58:39,043 - INFO - ✅ Inventory module initialized
+2025-02-27 13:58:39,044 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 13:58:39,045 - INFO - ✅ PlayerStats module initialized
+2025-02-27 13:58:39,045 - INFO - ✅ PlayerStats module initialized
+2025-02-27 13:58:39,045 - INFO - ✅ Loaded player_stats.py
+2025-02-27 13:58:39,047 - ERROR - ❌ Failed to load responses.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/responses.py", line 11, in <module>
+    RESPONSES = load_json("responses.json", folder=BASIL_DATA_FOLDER) or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'responses' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 13:58:39,047 - INFO - 🔄 Syncing bot commands...
+2025-02-27 13:58:39,225 - INFO - ✅ Synced 6 commands successfully!
+2025-02-27 14:35:07,720 - INFO - Shard ID None session has been invalidated.
+2025-02-27 14:52:56,781 - INFO - Shard ID None session has been invalidated.
+2025-02-27 15:02:06,468 - INFO - Shard ID None session has been invalidated.
+2025-02-27 15:02:11,802 - INFO - Shard ID None has connected to Gateway (Session ID: af01cfc7b08c152856b34f124e0c79fd).
+2025-02-27 15:02:13,806 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 15:02:13,812 - INFO - ✅ Economy module initialized
+2025-02-27 15:02:13,812 - INFO - ✅ Economy module initialized
+2025-02-27 15:02:13,814 - ERROR - ❌ Failed to load admin_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 5, in <module>
+    from economy import save_market, generate_market
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/economy.py", line 23, in <module>
+    INGREDIENTS = load_json("ingredients.json", folder=BASIL_DATA_FOLDER) or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'admin_commands' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 15:02:13,815 - INFO - ✅ Alchemy module initialized
+2025-02-27 15:02:13,815 - INFO - ✅ Alchemy module initialized
+2025-02-27 15:02:13,816 - ERROR - ❌ Failed to load alchemy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/alchemy.py", line 17, in <module>
+    INGREDIENTS = load_json("ingredients.json", folder=SHARED_FOLDER) or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'alchemy' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 15:02:13,817 - INFO - ✅ BasilCraft module initialized
+2025-02-27 15:02:13,817 - INFO - ✅ BasilCraft module initialized
+2025-02-27 15:02:13,818 - ERROR - ❌ Failed to load basil_craft.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_craft.py", line 24, in <module>
+    RECIPES = load_json(RECIPES_FILE, folder="inventory") or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'basil_craft' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 15:02:13,819 - INFO - ✅ Economy module initialized
+2025-02-27 15:02:13,819 - INFO - ✅ Economy module initialized
+2025-02-27 15:02:13,820 - ERROR - ❌ Failed to load economy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/economy.py", line 23, in <module>
+    INGREDIENTS = load_json("ingredients.json", folder=BASIL_DATA_FOLDER) or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'economy' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 15:02:13,821 - INFO - ✅ Herbalism module initialized
+2025-02-27 15:02:13,821 - INFO - ✅ Herbalism module initialized
+2025-02-27 15:02:13,822 - ERROR - ❌ Failed to load herbalism.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/herbalism.py", line 22, in <module>
+    INGREDIENTS = load_json("ingredients.json", folder=BASIL_DATA_FOLDER) or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'herbalism' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 15:02:13,822 - ERROR - ❌ Failed to load inventory_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'inventory_commands' is already loaded.
+
+2025-02-27 15:02:13,822 - ERROR - ❌ Failed to load player_stats.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'player_stats' is already loaded.
+
+2025-02-27 15:02:13,823 - ERROR - ❌ Failed to load responses.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 951, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/responses.py", line 11, in <module>
+    RESPONSES = load_json("responses.json", folder=BASIL_DATA_FOLDER) or {}
+TypeError: load_json() got an unexpected keyword argument 'folder'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1029, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 954, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'responses' raised an error: TypeError: load_json() got an unexpected keyword argument 'folder'
+
+2025-02-27 15:02:13,823 - INFO - 🔄 Syncing bot commands...
+2025-02-27 15:02:14,050 - INFO - ✅ Synced 6 commands successfully!
+2025-02-27 15:15:51,953 - ERROR - ⚠️ `basil_inventory` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 15:15:51,954 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 15:15:51,954 - INFO - 🚀 Starting Basil...
+2025-02-27 15:15:51,955 - INFO - logging in using static token
+2025-02-27 15:15:52,754 - INFO - Shard ID None has connected to Gateway (Session ID: 648238b92155f7a3ad3f246a0e59fe04).
+2025-02-27 15:15:54,763 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 15:15:54,784 - INFO - ✅ Economy module initialized
+2025-02-27 15:15:54,784 - INFO - ✅ Economy module initialized
+2025-02-27 15:15:54,787 - INFO - ✅ AdminCommands module initialized
+2025-02-27 15:15:54,787 - INFO - ✅ AdminCommands module initialized
+2025-02-27 15:15:54,788 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 15:15:54,791 - INFO - ✅ Alchemy module initialized
+2025-02-27 15:15:54,791 - INFO - ✅ Alchemy module initialized
+2025-02-27 15:15:54,792 - ERROR - ⚠️ `enhanced_recipes.json` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 15:15:54,793 - INFO - ✅ Loaded alchemy.py
+2025-02-27 15:15:54,796 - INFO - ✅ BasilCraft module initialized
+2025-02-27 15:15:54,796 - INFO - ✅ BasilCraft module initialized
+2025-02-27 15:15:54,797 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 15:15:54,797 - INFO - ✅ Economy module initialized
+2025-02-27 15:15:54,797 - INFO - ✅ Economy module initialized
+2025-02-27 15:15:54,799 - INFO - 📄 Created `market.json` from defaults.
+2025-02-27 15:15:54,799 - INFO - ✅ Loaded economy.py
+2025-02-27 15:15:54,802 - INFO - ✅ Herbalism module initialized
+2025-02-27 15:15:54,802 - INFO - ✅ Herbalism module initialized
+2025-02-27 15:15:54,803 - INFO - ✅ Loaded herbalism.py
+2025-02-27 15:15:54,805 - INFO - ✅ Inventory module initialized
+2025-02-27 15:15:54,805 - INFO - ✅ Inventory module initialized
+2025-02-27 15:15:54,805 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 15:15:54,807 - INFO - ✅ PlayerStats module initialized
+2025-02-27 15:15:54,807 - INFO - ✅ PlayerStats module initialized
+2025-02-27 15:15:54,807 - INFO - ✅ Loaded player_stats.py
+2025-02-27 15:15:54,808 - ERROR - ⚠️ `responses.json` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 15:15:54,808 - INFO - ✅ Responses module initialized
+2025-02-27 15:15:54,808 - INFO - ✅ Responses module initialized
+2025-02-27 15:15:54,809 - INFO - ✅ Loaded responses.py
+2025-02-27 15:15:54,809 - INFO - 🔄 Syncing bot commands...
+2025-02-27 15:15:55,044 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 15:19:38,965 - ERROR - ⚠️ `basil_inventory` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 15:19:38,966 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 15:19:38,966 - INFO - 🚀 Starting Basil...
+2025-02-27 15:19:38,966 - INFO - logging in using static token
+2025-02-27 15:19:39,590 - INFO - Shard ID None has connected to Gateway (Session ID: d24572f733545c3bdae93e89364d177c).
+2025-02-27 15:19:41,597 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 15:19:41,600 - INFO - ✅ Economy module initialized
+2025-02-27 15:19:41,600 - INFO - ✅ Economy module initialized
+2025-02-27 15:19:41,601 - INFO - ✅ AdminCommands module initialized
+2025-02-27 15:19:41,601 - INFO - ✅ AdminCommands module initialized
+2025-02-27 15:19:41,601 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 15:19:41,602 - INFO - ✅ Alchemy module initialized
+2025-02-27 15:19:41,602 - INFO - ✅ Alchemy module initialized
+2025-02-27 15:19:41,603 - INFO - ✅ Loaded alchemy.py
+2025-02-27 15:19:41,604 - INFO - ✅ BasilCraft module initialized
+2025-02-27 15:19:41,604 - INFO - ✅ BasilCraft module initialized
+2025-02-27 15:19:41,604 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 15:19:41,604 - INFO - ✅ Economy module initialized
+2025-02-27 15:19:41,604 - INFO - ✅ Economy module initialized
+2025-02-27 15:19:41,605 - INFO - ✅ Loaded economy.py
+2025-02-27 15:19:41,605 - INFO - ✅ Herbalism module initialized
+2025-02-27 15:19:41,605 - INFO - ✅ Herbalism module initialized
+2025-02-27 15:19:41,606 - INFO - ✅ Loaded herbalism.py
+2025-02-27 15:19:41,606 - INFO - ✅ Inventory module initialized
+2025-02-27 15:19:41,606 - INFO - ✅ Inventory module initialized
+2025-02-27 15:19:41,607 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 15:19:41,607 - INFO - ✅ PlayerStats module initialized
+2025-02-27 15:19:41,607 - INFO - ✅ PlayerStats module initialized
+2025-02-27 15:19:41,607 - INFO - ✅ Loaded player_stats.py
+2025-02-27 15:19:41,608 - ERROR - ⚠️ `responses.json` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 15:19:41,608 - INFO - ✅ Responses module initialized
+2025-02-27 15:19:41,608 - INFO - ✅ Responses module initialized
+2025-02-27 15:19:41,608 - INFO - ✅ Loaded responses.py
+2025-02-27 15:19:41,608 - INFO - 🔄 Syncing bot commands...
+2025-02-27 15:19:41,755 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 15:20:37,048 - ERROR - ⚠️ `basil_inventory` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 15:20:37,048 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 15:20:37,048 - INFO - 🚀 Starting Basil...
+2025-02-27 15:20:37,049 - INFO - logging in using static token
+2025-02-27 15:20:38,047 - INFO - Shard ID None has connected to Gateway (Session ID: 2eaa50403fbf8fca2f565c1806984344).
+2025-02-27 15:20:40,052 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 15:20:40,055 - INFO - ✅ Economy module initialized
+2025-02-27 15:20:40,055 - INFO - ✅ Economy module initialized
+2025-02-27 15:20:40,056 - INFO - ✅ AdminCommands module initialized
+2025-02-27 15:20:40,056 - INFO - ✅ AdminCommands module initialized
+2025-02-27 15:20:40,057 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 15:20:40,057 - INFO - ✅ Alchemy module initialized
+2025-02-27 15:20:40,057 - INFO - ✅ Alchemy module initialized
+2025-02-27 15:20:40,059 - INFO - ✅ Loaded alchemy.py
+2025-02-27 15:20:40,060 - INFO - ✅ BasilCraft module initialized
+2025-02-27 15:20:40,060 - INFO - ✅ BasilCraft module initialized
+2025-02-27 15:20:40,060 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 15:20:40,060 - INFO - ✅ Economy module initialized
+2025-02-27 15:20:40,060 - INFO - ✅ Economy module initialized
+2025-02-27 15:20:40,061 - INFO - ✅ Loaded economy.py
+2025-02-27 15:20:40,062 - INFO - ✅ Herbalism module initialized
+2025-02-27 15:20:40,062 - INFO - ✅ Herbalism module initialized
+2025-02-27 15:20:40,063 - INFO - ✅ Loaded herbalism.py
+2025-02-27 15:20:40,064 - INFO - ✅ Inventory module initialized
+2025-02-27 15:20:40,064 - INFO - ✅ Inventory module initialized
+2025-02-27 15:20:40,064 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 15:20:40,064 - INFO - ✅ PlayerStats module initialized
+2025-02-27 15:20:40,064 - INFO - ✅ PlayerStats module initialized
+2025-02-27 15:20:40,065 - INFO - ✅ Loaded player_stats.py
+2025-02-27 15:20:40,065 - INFO - ✅ Responses module initialized
+2025-02-27 15:20:40,065 - INFO - ✅ Responses module initialized
+2025-02-27 15:20:40,065 - INFO - ✅ Loaded responses.py
+2025-02-27 15:20:40,065 - INFO - 🔄 Syncing bot commands...
+2025-02-27 15:20:40,189 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 15:22:32,174 - INFO - ✅ Saved `player_cooldowns.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 15:22:35,332 - INFO - User tgbkitty rolled 13 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-27 15:22:35,332 - INFO - User tgbkitty rolled 13 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-27 15:22:35,333 - INFO - User tgbkitty searched in Forest but found nothing.
+2025-02-27 15:22:35,333 - INFO - User tgbkitty searched in Forest but found nothing.
+2025-02-27 15:22:42,310 - INFO - ✅ Saved `player_cooldowns.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 15:22:44,839 - INFO - User tgbkitty rolled 18 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-27 15:22:44,839 - INFO - User tgbkitty rolled 18 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-27 15:22:44,839 - INFO - User tgbkitty searched in Forest but found nothing.
+2025-02-27 15:22:44,839 - INFO - User tgbkitty searched in Forest but found nothing.
+2025-02-27 15:46:21,904 - INFO - Shard ID None session has been invalidated.
+2025-02-27 15:46:27,207 - INFO - Shard ID None has connected to Gateway (Session ID: c87b200d8798a042cb2592da75015759).
+2025-02-27 15:46:29,217 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 15:46:29,222 - ERROR - ❌ Failed to load admin_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'admin_commands' is already loaded.
+
+2025-02-27 15:46:29,223 - ERROR - ❌ Failed to load alchemy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'alchemy' is already loaded.
+
+2025-02-27 15:46:29,223 - ERROR - ❌ Failed to load basil_craft.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'basil_craft' is already loaded.
+
+2025-02-27 15:46:29,223 - ERROR - ❌ Failed to load economy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'economy' is already loaded.
+
+2025-02-27 15:46:29,223 - ERROR - ❌ Failed to load herbalism.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'herbalism' is already loaded.
+
+2025-02-27 15:46:29,223 - ERROR - ❌ Failed to load inventory_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'inventory_commands' is already loaded.
+
+2025-02-27 15:46:29,223 - ERROR - ❌ Failed to load player_stats.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'player_stats' is already loaded.
+
+2025-02-27 15:46:29,224 - ERROR - ❌ Failed to load responses.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 77, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'responses' is already loaded.
+
+2025-02-27 15:46:29,224 - INFO - 🔄 Syncing bot commands...
+2025-02-27 15:46:29,515 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 15:59:13,509 - ERROR - ⚠️ `basil_inventory` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 15:59:13,510 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 15:59:13,510 - INFO - 🚀 Starting Basil...
+2025-02-27 15:59:13,510 - INFO - logging in using static token
+2025-02-27 15:59:14,718 - INFO - Shard ID None has connected to Gateway (Session ID: 534a4d6e4fb443cfee82c5a1e724355d).
+2025-02-27 15:59:16,723 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 15:59:16,727 - INFO - ✅ Economy module initialized
+2025-02-27 15:59:16,727 - INFO - ✅ Economy module initialized
+2025-02-27 15:59:16,729 - INFO - ✅ AdminCommands module initialized
+2025-02-27 15:59:16,729 - INFO - ✅ AdminCommands module initialized
+2025-02-27 15:59:16,730 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 15:59:16,731 - INFO - ✅ Alchemy module initialized
+2025-02-27 15:59:16,731 - INFO - ✅ Alchemy module initialized
+2025-02-27 15:59:16,733 - INFO - ✅ Loaded alchemy.py
+2025-02-27 15:59:16,734 - INFO - ✅ BasilCraft module initialized
+2025-02-27 15:59:16,734 - INFO - ✅ BasilCraft module initialized
+2025-02-27 15:59:16,735 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 15:59:16,735 - INFO - ✅ Economy module initialized
+2025-02-27 15:59:16,735 - INFO - ✅ Economy module initialized
+2025-02-27 15:59:16,736 - INFO - ✅ Loaded economy.py
+2025-02-27 15:59:16,740 - INFO - ✅ Herbalism module initialized
+2025-02-27 15:59:16,740 - INFO - ✅ Herbalism module initialized
+2025-02-27 15:59:16,741 - INFO - ✅ Loaded herbalism.py
+2025-02-27 15:59:16,741 - INFO - ✅ Inventory module initialized
+2025-02-27 15:59:16,741 - INFO - ✅ Inventory module initialized
+2025-02-27 15:59:16,742 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 15:59:16,743 - INFO - ✅ PlayerStats module initialized
+2025-02-27 15:59:16,743 - INFO - ✅ PlayerStats module initialized
+2025-02-27 15:59:16,743 - INFO - ✅ Loaded player_stats.py
+2025-02-27 15:59:16,744 - INFO - ✅ Responses module initialized
+2025-02-27 15:59:16,744 - INFO - ✅ Responses module initialized
+2025-02-27 15:59:16,744 - INFO - ✅ Loaded responses.py
+2025-02-27 15:59:16,744 - INFO - 🔄 Syncing bot commands...
+2025-02-27 15:59:16,961 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 16:22:57,385 - ERROR - ⚠️ `basil_inventory` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 16:22:57,387 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 16:22:57,387 - INFO - 🚀 Starting Basil...
+2025-02-27 16:22:57,387 - INFO - logging in using static token
+2025-02-27 16:22:58,194 - INFO - Shard ID None has connected to Gateway (Session ID: 753b0ab96c1e67ac77b0a672f264fd97).
+2025-02-27 16:23:00,196 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 16:23:00,200 - INFO - ✅ Economy module initialized
+2025-02-27 16:23:00,200 - INFO - ✅ Economy module initialized
+2025-02-27 16:23:00,201 - INFO - ✅ AdminCommands module initialized
+2025-02-27 16:23:00,201 - INFO - ✅ AdminCommands module initialized
+2025-02-27 16:23:00,203 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 16:23:00,203 - INFO - ✅ Alchemy module initialized
+2025-02-27 16:23:00,203 - INFO - ✅ Alchemy module initialized
+2025-02-27 16:23:00,206 - INFO - ✅ Loaded alchemy.py
+2025-02-27 16:23:00,206 - INFO - ✅ BasilCraft module initialized
+2025-02-27 16:23:00,206 - INFO - ✅ BasilCraft module initialized
+2025-02-27 16:23:00,207 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 16:23:00,207 - INFO - ✅ Economy module initialized
+2025-02-27 16:23:00,207 - INFO - ✅ Economy module initialized
+2025-02-27 16:23:00,208 - INFO - ✅ Loaded economy.py
+2025-02-27 16:23:00,209 - INFO - ✅ Herbalism module initialized
+2025-02-27 16:23:00,209 - INFO - ✅ Herbalism module initialized
+2025-02-27 16:23:00,210 - INFO - ✅ Loaded herbalism.py
+2025-02-27 16:23:00,212 - INFO - ✅ Inventory module initialized
+2025-02-27 16:23:00,212 - INFO - ✅ Inventory module initialized
+2025-02-27 16:23:00,213 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 16:23:00,214 - INFO - ✅ PlayerStats module initialized
+2025-02-27 16:23:00,214 - INFO - ✅ PlayerStats module initialized
+2025-02-27 16:23:00,214 - INFO - ✅ Loaded player_stats.py
+2025-02-27 16:23:00,215 - INFO - ✅ Responses module initialized
+2025-02-27 16:23:00,215 - INFO - ✅ Responses module initialized
+2025-02-27 16:23:00,216 - INFO - ✅ Loaded responses.py
+2025-02-27 16:23:00,216 - INFO - 🔄 Syncing bot commands...
+2025-02-27 16:23:00,398 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 16:25:47,284 - ERROR - ⚠️ `basil_inventory` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 16:25:47,286 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 16:25:47,286 - INFO - 🚀 Starting Basil...
+2025-02-27 16:25:47,286 - INFO - logging in using static token
+2025-02-27 16:25:48,995 - INFO - Shard ID None has connected to Gateway (Session ID: 478c9f809f9b51d48ed5f86c3866f2e7).
+2025-02-27 16:25:51,000 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 16:25:51,010 - INFO - ✅ Economy module initialized
+2025-02-27 16:25:51,010 - INFO - ✅ Economy module initialized
+2025-02-27 16:25:51,012 - INFO - ✅ AdminCommands module initialized
+2025-02-27 16:25:51,012 - INFO - ✅ AdminCommands module initialized
+2025-02-27 16:25:51,013 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 16:25:51,014 - INFO - ✅ Alchemy module initialized
+2025-02-27 16:25:51,014 - INFO - ✅ Alchemy module initialized
+2025-02-27 16:25:51,016 - INFO - ✅ Loaded alchemy.py
+2025-02-27 16:25:51,017 - INFO - ✅ BasilCraft module initialized
+2025-02-27 16:25:51,017 - INFO - ✅ BasilCraft module initialized
+2025-02-27 16:25:51,017 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 16:25:51,018 - INFO - ✅ Economy module initialized
+2025-02-27 16:25:51,018 - INFO - ✅ Economy module initialized
+2025-02-27 16:25:51,019 - INFO - ✅ Loaded economy.py
+2025-02-27 16:25:51,019 - INFO - ✅ Herbalism module initialized
+2025-02-27 16:25:51,019 - INFO - ✅ Herbalism module initialized
+2025-02-27 16:25:51,020 - INFO - ✅ Loaded herbalism.py
+2025-02-27 16:25:51,021 - INFO - ✅ Inventory module initialized
+2025-02-27 16:25:51,021 - INFO - ✅ Inventory module initialized
+2025-02-27 16:25:51,022 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 16:25:51,022 - INFO - ✅ PlayerStats module initialized
+2025-02-27 16:25:51,022 - INFO - ✅ PlayerStats module initialized
+2025-02-27 16:25:51,023 - INFO - ✅ Loaded player_stats.py
+2025-02-27 16:25:51,023 - INFO - ✅ Responses module initialized
+2025-02-27 16:25:51,023 - INFO - ✅ Responses module initialized
+2025-02-27 16:25:51,024 - INFO - ✅ Loaded responses.py
+2025-02-27 16:25:51,024 - INFO - 🔄 Syncing bot commands...
+2025-02-27 16:25:51,216 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 16:25:51,219 - INFO - 🚀 Stanley fully loaded in 0.21 seconds!
+2025-02-27 16:25:59,862 - ERROR - ⚠️ `player_inventories.json` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 16:26:06,611 - ERROR - Ignoring exception in command 'open_shop'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 167, in open_shop
+    await self.reset_data(interaction, "all")
+TypeError: 'Command' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'open_shop' raised an exception: TypeError: 'Command' object is not callable
+2025-02-27 16:31:56,841 - ERROR - ⚠️ `basil_inventory` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 16:31:56,842 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 16:31:56,842 - INFO - 🚀 Starting Basil...
+2025-02-27 16:31:56,842 - INFO - logging in using static token
+2025-02-27 16:31:57,849 - INFO - Shard ID None has connected to Gateway (Session ID: a2efa78eb573f48874c76ecba44d1cc9).
+2025-02-27 16:31:59,853 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 16:31:59,862 - INFO - ✅ Economy module initialized
+2025-02-27 16:31:59,862 - INFO - ✅ Economy module initialized
+2025-02-27 16:31:59,863 - INFO - ✅ AdminCommands module initialized
+2025-02-27 16:31:59,863 - INFO - ✅ AdminCommands module initialized
+2025-02-27 16:31:59,865 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 16:31:59,866 - INFO - ✅ Alchemy module initialized
+2025-02-27 16:31:59,866 - INFO - ✅ Alchemy module initialized
+2025-02-27 16:31:59,868 - INFO - ✅ Loaded alchemy.py
+2025-02-27 16:31:59,868 - INFO - ✅ BasilCraft module initialized
+2025-02-27 16:31:59,868 - INFO - ✅ BasilCraft module initialized
+2025-02-27 16:31:59,869 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 16:31:59,870 - INFO - ✅ Economy module initialized
+2025-02-27 16:31:59,870 - INFO - ✅ Economy module initialized
+2025-02-27 16:31:59,871 - INFO - ✅ Loaded economy.py
+2025-02-27 16:31:59,875 - INFO - ✅ Herbalism module initialized
+2025-02-27 16:31:59,875 - INFO - ✅ Herbalism module initialized
+2025-02-27 16:31:59,875 - INFO - ✅ Loaded herbalism.py
+2025-02-27 16:31:59,876 - INFO - ✅ Inventory module initialized
+2025-02-27 16:31:59,876 - INFO - ✅ Inventory module initialized
+2025-02-27 16:31:59,876 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 16:31:59,877 - INFO - ✅ PlayerStats module initialized
+2025-02-27 16:31:59,877 - INFO - ✅ PlayerStats module initialized
+2025-02-27 16:31:59,877 - INFO - ✅ Loaded player_stats.py
+2025-02-27 16:31:59,878 - INFO - ✅ Responses module initialized
+2025-02-27 16:31:59,878 - INFO - ✅ Responses module initialized
+2025-02-27 16:31:59,878 - INFO - ✅ Loaded responses.py
+2025-02-27 16:31:59,878 - INFO - 🔄 Syncing bot commands...
+2025-02-27 16:32:00,016 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 16:32:00,017 - INFO - 🚀 Stanley fully loaded in 0.16 seconds!
+2025-02-27 16:36:52,667 - ERROR - ⚠️ `basil_inventory` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 16:36:52,668 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 16:36:52,668 - INFO - 🚀 Starting Basil...
+2025-02-27 16:36:52,669 - INFO - logging in using static token
+2025-02-27 16:36:54,128 - INFO - Shard ID None has connected to Gateway (Session ID: 22df4ecc8c9eac450ed21ac67feeecd9).
+2025-02-27 16:36:56,133 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 16:36:56,140 - INFO - ✅ Economy module initialized
+2025-02-27 16:36:56,140 - INFO - ✅ Economy module initialized
+2025-02-27 16:36:56,142 - INFO - ✅ AdminCommands module initialized
+2025-02-27 16:36:56,142 - INFO - ✅ AdminCommands module initialized
+2025-02-27 16:36:56,143 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 16:36:56,144 - INFO - ✅ Alchemy module initialized
+2025-02-27 16:36:56,144 - INFO - ✅ Alchemy module initialized
+2025-02-27 16:36:56,147 - INFO - ✅ Loaded alchemy.py
+2025-02-27 16:36:56,147 - INFO - ✅ BasilCraft module initialized
+2025-02-27 16:36:56,147 - INFO - ✅ BasilCraft module initialized
+2025-02-27 16:36:56,148 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 16:36:56,148 - INFO - ✅ Economy module initialized
+2025-02-27 16:36:56,148 - INFO - ✅ Economy module initialized
+2025-02-27 16:36:56,149 - INFO - ✅ Loaded economy.py
+2025-02-27 16:36:56,150 - INFO - ✅ Herbalism module initialized
+2025-02-27 16:36:56,150 - INFO - ✅ Herbalism module initialized
+2025-02-27 16:36:56,151 - INFO - ✅ Loaded herbalism.py
+2025-02-27 16:36:56,152 - INFO - ✅ Inventory module initialized
+2025-02-27 16:36:56,152 - INFO - ✅ Inventory module initialized
+2025-02-27 16:36:56,153 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 16:36:56,154 - INFO - ✅ PlayerStats module initialized
+2025-02-27 16:36:56,154 - INFO - ✅ PlayerStats module initialized
+2025-02-27 16:36:56,154 - INFO - ✅ Loaded player_stats.py
+2025-02-27 16:36:56,155 - INFO - ✅ Responses module initialized
+2025-02-27 16:36:56,155 - INFO - ✅ Responses module initialized
+2025-02-27 16:36:56,155 - INFO - ✅ Loaded responses.py
+2025-02-27 16:36:56,155 - INFO - 🔄 Syncing bot commands...
+2025-02-27 16:36:56,309 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 16:36:56,310 - INFO - 🚀 Stanley fully loaded in 0.17 seconds!
+2025-02-27 16:43:34,497 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 16:43:34,498 - INFO - 🚀 Starting Basil...
+2025-02-27 16:43:34,498 - INFO - logging in using static token
+2025-02-27 16:43:35,264 - INFO - Shard ID None has connected to Gateway (Session ID: 114790a348fa13e9ba90e438e97535f1).
+2025-02-27 16:43:37,267 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 16:43:37,274 - INFO - ✅ Economy module initialized
+2025-02-27 16:43:37,274 - INFO - ✅ Economy module initialized
+2025-02-27 16:43:37,277 - INFO - ✅ AdminCommands module initialized
+2025-02-27 16:43:37,277 - INFO - ✅ AdminCommands module initialized
+2025-02-27 16:43:37,278 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 16:43:37,279 - INFO - ✅ Alchemy module initialized
+2025-02-27 16:43:37,279 - INFO - ✅ Alchemy module initialized
+2025-02-27 16:43:37,281 - INFO - ✅ Loaded alchemy.py
+2025-02-27 16:43:37,282 - INFO - ✅ BasilCraft module initialized
+2025-02-27 16:43:37,282 - INFO - ✅ BasilCraft module initialized
+2025-02-27 16:43:37,283 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 16:43:37,283 - INFO - ✅ Economy module initialized
+2025-02-27 16:43:37,283 - INFO - ✅ Economy module initialized
+2025-02-27 16:43:37,284 - INFO - ✅ Loaded economy.py
+2025-02-27 16:43:37,285 - INFO - ✅ Herbalism module initialized
+2025-02-27 16:43:37,285 - INFO - ✅ Herbalism module initialized
+2025-02-27 16:43:37,286 - INFO - ✅ Loaded herbalism.py
+2025-02-27 16:43:37,286 - INFO - ✅ Inventory module initialized
+2025-02-27 16:43:37,286 - INFO - ✅ Inventory module initialized
+2025-02-27 16:43:37,287 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 16:43:37,287 - INFO - ✅ PlayerStats module initialized
+2025-02-27 16:43:37,287 - INFO - ✅ PlayerStats module initialized
+2025-02-27 16:43:37,288 - INFO - ✅ Loaded player_stats.py
+2025-02-27 16:43:37,289 - INFO - ✅ Responses module initialized
+2025-02-27 16:43:37,289 - INFO - ✅ Responses module initialized
+2025-02-27 16:43:37,289 - INFO - ✅ Loaded responses.py
+2025-02-27 16:43:37,289 - INFO - 🔄 Syncing bot commands...
+2025-02-27 16:43:37,464 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 16:43:37,465 - INFO - 🚀 Basil fully loaded in 0.19 seconds!
+2025-02-27 16:48:14,337 - INFO - Shard ID None has successfully RESUMED session 114790a348fa13e9ba90e438e97535f1.
+2025-02-27 17:05:17,756 - INFO - Shard ID None session has been invalidated.
+2025-02-27 17:21:10,064 - INFO - Shard ID None session has been invalidated.
+2025-02-27 17:23:48,763 - INFO - Shard ID None session has been invalidated.
+2025-02-27 17:23:54,183 - INFO - Shard ID None has connected to Gateway (Session ID: 5720e5813e26e1f13465f08c0e9e0d92).
+2025-02-27 17:23:56,213 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 17:23:56,218 - ERROR - ❌ Failed to load admin_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'admin_commands' is already loaded.
+
+2025-02-27 17:23:56,218 - ERROR - ❌ Failed to load alchemy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'alchemy' is already loaded.
+
+2025-02-27 17:23:56,218 - ERROR - ❌ Failed to load basil_craft.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'basil_craft' is already loaded.
+
+2025-02-27 17:23:56,219 - ERROR - ❌ Failed to load economy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'economy' is already loaded.
+
+2025-02-27 17:23:56,219 - ERROR - ❌ Failed to load herbalism.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'herbalism' is already loaded.
+
+2025-02-27 17:23:56,219 - ERROR - ❌ Failed to load inventory_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'inventory_commands' is already loaded.
+
+2025-02-27 17:23:56,219 - ERROR - ❌ Failed to load player_stats.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'player_stats' is already loaded.
+
+2025-02-27 17:23:56,219 - ERROR - ❌ Failed to load responses.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'responses' is already loaded.
+
+2025-02-27 17:23:56,219 - INFO - 🔄 Syncing bot commands...
+2025-02-27 17:23:56,720 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 17:23:56,720 - INFO - 🚀 Basil fully loaded in 0.51 seconds!
+2025-02-27 17:35:29,331 - INFO - Shard ID None session has been invalidated.
+2025-02-27 17:35:34,864 - INFO - Shard ID None has connected to Gateway (Session ID: daceecf0b5db16b1d936ecfd921272a0).
+2025-02-27 17:35:36,874 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 17:35:36,888 - ERROR - ❌ Failed to load admin_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'admin_commands' is already loaded.
+
+2025-02-27 17:35:36,888 - ERROR - ❌ Failed to load alchemy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'alchemy' is already loaded.
+
+2025-02-27 17:35:36,888 - ERROR - ❌ Failed to load basil_craft.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'basil_craft' is already loaded.
+
+2025-02-27 17:35:36,889 - ERROR - ❌ Failed to load economy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'economy' is already loaded.
+
+2025-02-27 17:35:36,889 - ERROR - ❌ Failed to load herbalism.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'herbalism' is already loaded.
+
+2025-02-27 17:35:36,889 - ERROR - ❌ Failed to load inventory_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'inventory_commands' is already loaded.
+
+2025-02-27 17:35:36,889 - ERROR - ❌ Failed to load player_stats.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'player_stats' is already loaded.
+
+2025-02-27 17:35:36,889 - ERROR - ❌ Failed to load responses.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'responses' is already loaded.
+
+2025-02-27 17:35:36,889 - INFO - 🔄 Syncing bot commands...
+2025-02-27 17:35:37,099 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 17:35:37,100 - INFO - 🚀 Basil fully loaded in 0.22 seconds!
+2025-02-27 17:36:13,028 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 17:36:13,029 - INFO - 🚀 Starting Basil...
+2025-02-27 17:36:13,029 - INFO - logging in using static token
+2025-02-27 17:36:14,011 - INFO - Shard ID None has connected to Gateway (Session ID: 7135db7660e1610ea828e142e626fd0e).
+2025-02-27 17:36:16,018 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 17:36:16,024 - INFO - ✅ Economy module initialized
+2025-02-27 17:36:16,024 - INFO - ✅ Economy module initialized
+2025-02-27 17:36:16,026 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:36:16,026 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:36:16,028 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 17:36:16,029 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:36:16,029 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:36:16,032 - INFO - ✅ Loaded alchemy.py
+2025-02-27 17:36:16,033 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:36:16,033 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:36:16,033 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 17:36:16,034 - INFO - ✅ Economy module initialized
+2025-02-27 17:36:16,034 - INFO - ✅ Economy module initialized
+2025-02-27 17:36:16,035 - INFO - ✅ Loaded economy.py
+2025-02-27 17:36:16,036 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:36:16,036 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:36:16,036 - INFO - ✅ Loaded herbalism.py
+2025-02-27 17:36:16,037 - INFO - ✅ Inventory module initialized
+2025-02-27 17:36:16,037 - INFO - ✅ Inventory module initialized
+2025-02-27 17:36:16,038 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 17:36:16,038 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:36:16,038 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:36:16,039 - INFO - ✅ Loaded player_stats.py
+2025-02-27 17:36:16,040 - INFO - ✅ Responses module initialized
+2025-02-27 17:36:16,040 - INFO - ✅ Responses module initialized
+2025-02-27 17:36:16,040 - INFO - ✅ Loaded responses.py
+2025-02-27 17:36:16,040 - INFO - 🔄 Syncing bot commands...
+2025-02-27 17:36:16,330 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 17:36:16,330 - INFO - 🚀 Basil fully loaded in 0.31 seconds!
+2025-02-27 17:37:45,766 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 17:37:45,767 - INFO - 🚀 Starting Basil...
+2025-02-27 17:37:45,767 - INFO - logging in using static token
+2025-02-27 17:37:46,705 - INFO - Shard ID None has connected to Gateway (Session ID: 62e8f05f9d9620cff36c08c9025cc0c6).
+2025-02-27 17:37:48,709 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 17:37:48,718 - INFO - ✅ Economy module initialized
+2025-02-27 17:37:48,718 - INFO - ✅ Economy module initialized
+2025-02-27 17:37:48,720 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:37:48,720 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:37:48,722 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 17:37:48,722 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:37:48,722 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:37:48,724 - INFO - ✅ Loaded alchemy.py
+2025-02-27 17:37:48,725 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:37:48,725 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:37:48,726 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 17:37:48,726 - INFO - ✅ Economy module initialized
+2025-02-27 17:37:48,726 - INFO - ✅ Economy module initialized
+2025-02-27 17:37:48,727 - INFO - ✅ Loaded economy.py
+2025-02-27 17:37:48,728 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:37:48,728 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:37:48,728 - INFO - ✅ Loaded herbalism.py
+2025-02-27 17:37:48,729 - INFO - ✅ Inventory module initialized
+2025-02-27 17:37:48,729 - INFO - ✅ Inventory module initialized
+2025-02-27 17:37:48,730 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 17:37:48,730 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:37:48,730 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:37:48,731 - INFO - ✅ Loaded player_stats.py
+2025-02-27 17:37:48,731 - INFO - ✅ Responses module initialized
+2025-02-27 17:37:48,731 - INFO - ✅ Responses module initialized
+2025-02-27 17:37:48,732 - INFO - ✅ Loaded responses.py
+2025-02-27 17:37:48,732 - INFO - 🔄 Syncing bot commands...
+2025-02-27 17:37:48,914 - INFO - ✅ Synced 22 commands successfully!
+2025-02-27 17:37:48,914 - INFO - 🚀 Basil fully loaded in 0.20 seconds!
+2025-02-27 17:37:56,724 - ERROR - Ignoring exception in command 'open_shop'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 167, in open_shop
+    await self.reset_data(interaction, "all")
+TypeError: 'Command' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'open_shop' raised an exception: TypeError: 'Command' object is not callable
+2025-02-27 17:41:47,578 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 17:41:47,580 - INFO - 🚀 Starting Basil...
+2025-02-27 17:41:47,580 - INFO - logging in using static token
+2025-02-27 17:41:48,243 - INFO - Shard ID None has connected to Gateway (Session ID: cfed1905dbf09b4185b4802dfc46086a).
+2025-02-27 17:41:50,270 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 17:41:50,277 - INFO - ✅ Economy module initialized
+2025-02-27 17:41:50,277 - INFO - ✅ Economy module initialized
+2025-02-27 17:41:50,278 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:41:50,278 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:41:50,279 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 17:41:50,279 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:41:50,279 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:41:50,281 - INFO - ✅ Loaded alchemy.py
+2025-02-27 17:41:50,281 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:41:50,281 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:41:50,282 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 17:41:50,282 - INFO - ✅ Economy module initialized
+2025-02-27 17:41:50,282 - INFO - ✅ Economy module initialized
+2025-02-27 17:41:50,283 - INFO - ✅ Loaded economy.py
+2025-02-27 17:41:50,284 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:41:50,284 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:41:50,284 - INFO - ✅ Loaded herbalism.py
+2025-02-27 17:41:50,284 - INFO - ✅ Inventory module initialized
+2025-02-27 17:41:50,284 - INFO - ✅ Inventory module initialized
+2025-02-27 17:41:50,285 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 17:41:50,285 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:41:50,285 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:41:50,286 - INFO - ✅ Loaded player_stats.py
+2025-02-27 17:41:50,286 - INFO - ✅ Responses module initialized
+2025-02-27 17:41:50,286 - INFO - ✅ Responses module initialized
+2025-02-27 17:41:50,287 - INFO - ✅ Loaded responses.py
+2025-02-27 17:41:50,287 - INFO - 🔄 Syncing bot commands...
+2025-02-27 17:41:50,439 - INFO - ✅ Synced 21 commands successfully!
+2025-02-27 17:41:50,440 - INFO - 🚀 Basil fully loaded in 0.17 seconds!
+2025-02-27 17:42:07,491 - ERROR - Ignoring exception in command 'open_shop'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 151, in open_shop
+    await admin_cog.reset_data(interaction, "all")
+AttributeError: 'AdminCommands' object has no attribute 'reset_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'open_shop' raised an exception: AttributeError: 'AdminCommands' object has no attribute 'reset_data'
+2025-02-27 17:43:12,247 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 17:43:12,249 - INFO - 🚀 Starting Basil...
+2025-02-27 17:43:12,249 - INFO - logging in using static token
+2025-02-27 17:43:12,926 - INFO - Shard ID None has connected to Gateway (Session ID: 4480cbffafabd7034931f3f828f84208).
+2025-02-27 17:43:14,933 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 17:43:14,946 - INFO - ✅ Economy module initialized
+2025-02-27 17:43:14,946 - INFO - ✅ Economy module initialized
+2025-02-27 17:43:14,948 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:43:14,948 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:43:14,949 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 17:43:14,950 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:43:14,950 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:43:14,953 - INFO - ✅ Loaded alchemy.py
+2025-02-27 17:43:14,953 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:43:14,953 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:43:14,954 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 17:43:14,954 - INFO - ✅ Economy module initialized
+2025-02-27 17:43:14,954 - INFO - ✅ Economy module initialized
+2025-02-27 17:43:14,955 - INFO - ✅ Loaded economy.py
+2025-02-27 17:43:14,956 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:43:14,956 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:43:14,956 - INFO - ✅ Loaded herbalism.py
+2025-02-27 17:43:14,957 - INFO - ✅ Inventory module initialized
+2025-02-27 17:43:14,957 - INFO - ✅ Inventory module initialized
+2025-02-27 17:43:14,957 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 17:43:14,958 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:43:14,958 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:43:14,958 - INFO - ✅ Loaded player_stats.py
+2025-02-27 17:43:14,959 - INFO - ✅ Responses module initialized
+2025-02-27 17:43:14,959 - INFO - ✅ Responses module initialized
+2025-02-27 17:43:14,960 - INFO - ✅ Loaded responses.py
+2025-02-27 17:43:14,960 - INFO - 🔄 Syncing bot commands...
+2025-02-27 17:43:15,109 - INFO - ✅ Synced 21 commands successfully!
+2025-02-27 17:43:15,110 - INFO - 🚀 Basil fully loaded in 0.17 seconds!
+2025-02-27 17:43:28,726 - ERROR - Ignoring exception in command 'open_shop'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 152, in open_shop
+    await admin_cog.reset_data(interaction, "all")
+AttributeError: 'AdminCommands' object has no attribute 'reset_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'open_shop' raised an exception: AttributeError: 'AdminCommands' object has no attribute 'reset_data'
+2025-02-27 17:46:26,064 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 17:46:26,065 - INFO - 🚀 Starting Basil...
+2025-02-27 17:46:26,066 - INFO - logging in using static token
+2025-02-27 17:46:26,954 - INFO - Shard ID None has connected to Gateway (Session ID: 068408dc291ed38ed4ae963434777f78).
+2025-02-27 17:46:28,956 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 17:46:28,959 - INFO - ✅ Economy module initialized
+2025-02-27 17:46:28,959 - INFO - ✅ Economy module initialized
+2025-02-27 17:46:28,961 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:46:28,961 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:46:28,961 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 17:46:28,962 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:46:28,962 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:46:28,964 - INFO - ✅ Loaded alchemy.py
+2025-02-27 17:46:28,964 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:46:28,964 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:46:28,965 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 17:46:28,965 - INFO - ✅ Economy module initialized
+2025-02-27 17:46:28,965 - INFO - ✅ Economy module initialized
+2025-02-27 17:46:28,966 - INFO - ✅ Loaded economy.py
+2025-02-27 17:46:28,967 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:46:28,967 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:46:28,967 - INFO - ✅ Loaded herbalism.py
+2025-02-27 17:46:28,967 - INFO - ✅ Inventory module initialized
+2025-02-27 17:46:28,967 - INFO - ✅ Inventory module initialized
+2025-02-27 17:46:28,968 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 17:46:28,968 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:46:28,968 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:46:28,969 - INFO - ✅ Loaded player_stats.py
+2025-02-27 17:46:28,969 - INFO - ✅ Responses module initialized
+2025-02-27 17:46:28,969 - INFO - ✅ Responses module initialized
+2025-02-27 17:46:28,969 - INFO - ✅ Loaded responses.py
+2025-02-27 17:46:28,969 - INFO - 🔄 Syncing bot commands...
+2025-02-27 17:46:29,126 - INFO - ✅ Synced 21 commands successfully!
+2025-02-27 17:46:29,126 - INFO - 🚀 Basil fully loaded in 0.17 seconds!
+2025-02-27 17:46:35,169 - ERROR - Ignoring exception in command 'open_shop'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 152, in open_shop
+    await admin_cog.reset_data(interaction, "all")
+AttributeError: 'AdminCommands' object has no attribute 'reset_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'open_shop' raised an exception: AttributeError: 'AdminCommands' object has no attribute 'reset_data'
+2025-02-27 17:57:30,801 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 17:57:30,804 - INFO - 🚀 Starting Basil...
+2025-02-27 17:57:30,804 - INFO - logging in using static token
+2025-02-27 17:57:31,838 - INFO - Shard ID None has connected to Gateway (Session ID: 9fd2195f0c9d15aaa57baefa0889087d).
+2025-02-27 17:57:33,842 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 17:57:33,855 - INFO - ✅ Economy module initialized
+2025-02-27 17:57:33,855 - INFO - ✅ Economy module initialized
+2025-02-27 17:57:33,856 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:57:33,856 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:57:33,858 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 17:57:33,858 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:57:33,858 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:57:33,861 - INFO - ✅ Loaded alchemy.py
+2025-02-27 17:57:33,861 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:57:33,861 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:57:33,862 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 17:57:33,862 - INFO - ✅ Economy module initialized
+2025-02-27 17:57:33,862 - INFO - ✅ Economy module initialized
+2025-02-27 17:57:33,863 - INFO - ✅ Loaded economy.py
+2025-02-27 17:57:33,864 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:57:33,864 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:57:33,865 - INFO - ✅ Loaded herbalism.py
+2025-02-27 17:57:33,865 - INFO - ✅ Inventory module initialized
+2025-02-27 17:57:33,865 - INFO - ✅ Inventory module initialized
+2025-02-27 17:57:33,866 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 17:57:33,867 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:57:33,867 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:57:33,867 - INFO - ✅ Loaded player_stats.py
+2025-02-27 17:57:33,868 - INFO - ✅ Responses module initialized
+2025-02-27 17:57:33,868 - INFO - ✅ Responses module initialized
+2025-02-27 17:57:33,868 - INFO - ✅ Loaded responses.py
+2025-02-27 17:57:33,868 - INFO - 🔄 Syncing bot commands...
+2025-02-27 17:57:34,042 - INFO - ✅ Synced 20 commands successfully!
+2025-02-27 17:57:34,042 - INFO - 🚀 Basil fully loaded in 0.20 seconds!
+2025-02-27 17:57:41,899 - INFO - ✅ Saved `recipes.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 17:57:41,901 - INFO - Recipes reset to default.
+2025-02-27 17:57:41,905 - INFO - ✅ Saved `ingredients.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 17:57:41,905 - INFO - Ingredients reset to default.
+2025-02-27 17:57:41,911 - INFO - ✅ Saved `market.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/shared_inventories`.
+2025-02-27 17:57:41,911 - INFO - ✅ Market state saved.
+2025-02-27 17:57:41,911 - INFO - ✅ Market state saved.
+2025-02-27 17:57:41,913 - INFO - ✅ Saved `market.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/shared_inventories`.
+2025-02-27 17:57:41,913 - INFO - ✅ Market state saved.
+2025-02-27 17:57:41,913 - INFO - ✅ Market state saved.
+2025-02-27 17:57:41,913 - ERROR - ⚠️ `basil_shop.json` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 17:57:41,914 - WARNING - ⚠️ `crafted_items.json` was missing! Created an empty one.
+2025-02-27 17:57:41,914 - ERROR - ⚠️ `basil_shop.json` is not in REQUIRED_FILES! Check path definitions.
+2025-02-27 17:57:41,914 - INFO - Admin tgbkitty reset Basil's shop inventory.
+2025-02-27 17:57:41,914 - INFO - Admin tgbkitty reset Basil's shop inventory.
+2025-02-27 17:57:48,103 - INFO - ✅ Saved `player_cooldowns.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 17:57:51,262 - INFO - User tgbkitty rolled 1 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-27 17:57:51,262 - INFO - User tgbkitty rolled 1 = 0 (stat) + 0 (prof) + 0 (kit). Found: Nothing found.
+2025-02-27 17:57:51,262 - INFO - User tgbkitty searched in Forest but found nothing.
+2025-02-27 17:57:51,262 - INFO - User tgbkitty searched in Forest but found nothing.
+2025-02-27 17:58:04,608 - INFO - ✅ Saved `player_cooldowns.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 17:58:07,423 - INFO - User tgbkitty rolled 2 = 0 (stat) + 0 (prof) + 0 (kit). Found: Harrada Leaf.
+2025-02-27 17:58:07,423 - INFO - User tgbkitty rolled 2 = 0 (stat) + 0 (prof) + 0 (kit). Found: Harrada Leaf.
+2025-02-27 17:58:07,427 - INFO - ✅ Saved `player_inventories.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/shared_inventories`.
+2025-02-27 17:58:07,428 - ERROR - Ignoring exception in view <TerrainView timeout=180.0 children=1> for item <TerrainSelect placeholder='Choose a terrain to gather herbs...' min_values=1 max_values=1 disabled=False>
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ui/view.py", line 435, in _scheduled_task
+    await item.callback(interaction)
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/herbalism.py", line 28, in callback
+    await gather_execute(interaction, selected_terrain)
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/herbalism.py", line 177, in gather_execute
+    add_item(player_id, ingredient_name, quantity)  # Add the gathered items to the player's inventory.
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/inventory_functions.py", line 29, in add_item
+    logger.info(f"Added {quantity}x {item} to {player_id}'s inventory.")
+NameError: name 'logger' is not defined
+2025-02-27 17:58:44,546 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 17:58:44,547 - INFO - 🚀 Starting Basil...
+2025-02-27 17:58:44,547 - INFO - logging in using static token
+2025-02-27 17:58:45,227 - INFO - Shard ID None has connected to Gateway (Session ID: 40209fea8ae4a7c13eda704051d8b03d).
+2025-02-27 17:58:47,234 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 17:58:47,242 - INFO - ✅ Economy module initialized
+2025-02-27 17:58:47,242 - INFO - ✅ Economy module initialized
+2025-02-27 17:58:47,244 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:58:47,244 - INFO - ✅ AdminCommands module initialized
+2025-02-27 17:58:47,246 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 17:58:47,246 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:58:47,246 - INFO - ✅ Alchemy module initialized
+2025-02-27 17:58:47,248 - INFO - ✅ Loaded alchemy.py
+2025-02-27 17:58:47,249 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:58:47,249 - INFO - ✅ BasilCraft module initialized
+2025-02-27 17:58:47,250 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 17:58:47,250 - INFO - ✅ Economy module initialized
+2025-02-27 17:58:47,250 - INFO - ✅ Economy module initialized
+2025-02-27 17:58:47,251 - INFO - ✅ Loaded economy.py
+2025-02-27 17:58:47,252 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:58:47,252 - INFO - ✅ Herbalism module initialized
+2025-02-27 17:58:47,252 - INFO - ✅ Loaded herbalism.py
+2025-02-27 17:58:47,253 - INFO - ✅ Inventory module initialized
+2025-02-27 17:58:47,253 - INFO - ✅ Inventory module initialized
+2025-02-27 17:58:47,253 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 17:58:47,254 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:58:47,254 - INFO - ✅ PlayerStats module initialized
+2025-02-27 17:58:47,254 - INFO - ✅ Loaded player_stats.py
+2025-02-27 17:58:47,255 - INFO - ✅ Responses module initialized
+2025-02-27 17:58:47,255 - INFO - ✅ Responses module initialized
+2025-02-27 17:58:47,255 - INFO - ✅ Loaded responses.py
+2025-02-27 17:58:47,255 - INFO - 🔄 Syncing bot commands...
+2025-02-27 17:58:47,489 - INFO - ✅ Synced 20 commands successfully!
+2025-02-27 17:58:47,489 - INFO - 🚀 Basil fully loaded in 0.25 seconds!
+2025-02-27 17:58:51,934 - INFO - ✅ Saved `player_cooldowns.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 17:58:54,658 - INFO - User tgbkitty rolled 7 = 0 (stat) + 0 (prof) + 0 (kit). Found: Common Ingredient.
+2025-02-27 17:58:54,658 - INFO - User tgbkitty rolled 7 = 0 (stat) + 0 (prof) + 0 (kit). Found: Common Ingredient.
+2025-02-27 17:58:54,659 - INFO - ✅ Saved `player_inventories.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/shared_inventories`.
+2025-02-27 17:58:54,659 - INFO - Added 3x Common Ingredient to 621349758010654730's inventory.
+2025-02-27 17:58:54,659 - INFO - Added 3x Common Ingredient to 621349758010654730's inventory.
+2025-02-27 17:58:54,660 - INFO - User tgbkitty gathered 3x Common Ingredient in Forest.
+2025-02-27 17:58:54,660 - INFO - User tgbkitty gathered 3x Common Ingredient in Forest.
+2025-02-27 17:59:03,189 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "identify" is not found
+2025-02-27 18:18:55,246 - INFO - Shard ID None session has been invalidated.
+2025-02-27 18:19:00,544 - INFO - Shard ID None has connected to Gateway (Session ID: 987d87a5eef0a21ebc42901ec4ef9dfa).
+2025-02-27 18:19:02,551 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 18:19:02,562 - ERROR - ❌ Failed to load admin_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'admin_commands' is already loaded.
+
+2025-02-27 18:19:02,563 - ERROR - ❌ Failed to load alchemy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'alchemy' is already loaded.
+
+2025-02-27 18:19:02,563 - ERROR - ❌ Failed to load basil_craft.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'basil_craft' is already loaded.
+
+2025-02-27 18:19:02,563 - ERROR - ❌ Failed to load economy.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'economy' is already loaded.
+
+2025-02-27 18:19:02,564 - ERROR - ❌ Failed to load herbalism.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'herbalism' is already loaded.
+
+2025-02-27 18:19:02,565 - ERROR - ❌ Failed to load inventory_commands.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'inventory_commands' is already loaded.
+
+2025-02-27 18:19:02,565 - ERROR - ❌ Failed to load player_stats.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'player_stats' is already loaded.
+
+2025-02-27 18:19:02,565 - ERROR - ❌ Failed to load responses.py:
+Traceback (most recent call last):
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 81, in on_ready
+    await bot.load_extension(cog)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/ext/commands/bot.py", line 1023, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'responses' is already loaded.
+
+2025-02-27 18:19:02,567 - INFO - 🔄 Syncing bot commands...
+2025-02-27 18:19:02,767 - INFO - ✅ Synced 20 commands successfully!
+2025-02-27 18:19:02,768 - INFO - 🚀 Basil fully loaded in 0.21 seconds!
+2025-02-27 18:19:14,489 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "advance" is not found
+2025-02-27 18:19:20,347 - INFO - ✅ Saved `in_game_time.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 18:19:20,352 - INFO - ✅ Saved `player_cooldowns.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 18:19:20,387 - ERROR - Ignoring exception in command 'advance_time'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 857, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 53, in advance_time
+    crafted_potions, failures = await self.process_basil_crafting(interaction, hours)
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/admin_commands.py", line 76, in process_basil_crafting
+    crafting_result = await basil_cog.basil_crafting(interaction, 1)
+TypeError: 'Command' object is not callable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 872, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'advance_time' raised an exception: TypeError: 'Command' object is not callable
+2025-02-27 18:25:37,141 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 18:25:37,142 - INFO - 🚀 Starting Basil...
+2025-02-27 18:25:37,142 - INFO - logging in using static token
+2025-02-27 18:25:37,782 - INFO - Shard ID None has connected to Gateway (Session ID: e2396a7334b147456e38206fe34c2f7a).
+2025-02-27 18:25:39,788 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 18:25:39,798 - INFO - ✅ Economy module initialized
+2025-02-27 18:25:39,798 - INFO - ✅ Economy module initialized
+2025-02-27 18:25:39,800 - INFO - ✅ AdminCommands module initialized
+2025-02-27 18:25:39,800 - INFO - ✅ AdminCommands module initialized
+2025-02-27 18:25:39,801 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 18:25:39,802 - INFO - ✅ Alchemy module initialized
+2025-02-27 18:25:39,802 - INFO - ✅ Alchemy module initialized
+2025-02-27 18:25:39,804 - INFO - ✅ Loaded alchemy.py
+2025-02-27 18:25:39,804 - INFO - ✅ BasilCraft module initialized
+2025-02-27 18:25:39,804 - INFO - ✅ BasilCraft module initialized
+2025-02-27 18:25:39,805 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 18:25:39,805 - INFO - ✅ Economy module initialized
+2025-02-27 18:25:39,805 - INFO - ✅ Economy module initialized
+2025-02-27 18:25:39,806 - INFO - ✅ Loaded economy.py
+2025-02-27 18:25:39,807 - INFO - ✅ Herbalism module initialized
+2025-02-27 18:25:39,807 - INFO - ✅ Herbalism module initialized
+2025-02-27 18:25:39,808 - INFO - ✅ Loaded herbalism.py
+2025-02-27 18:25:39,808 - INFO - ✅ Inventory module initialized
+2025-02-27 18:25:39,808 - INFO - ✅ Inventory module initialized
+2025-02-27 18:25:39,809 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 18:25:39,809 - INFO - ✅ PlayerStats module initialized
+2025-02-27 18:25:39,809 - INFO - ✅ PlayerStats module initialized
+2025-02-27 18:25:39,810 - INFO - ✅ Loaded player_stats.py
+2025-02-27 18:25:39,811 - INFO - ✅ Responses module initialized
+2025-02-27 18:25:39,811 - INFO - ✅ Responses module initialized
+2025-02-27 18:25:39,811 - INFO - ✅ Loaded responses.py
+2025-02-27 18:25:39,811 - INFO - 🔄 Syncing bot commands...
+2025-02-27 18:25:39,968 - INFO - ✅ Synced 20 commands successfully!
+2025-02-27 18:25:39,968 - INFO - 🚀 Basil fully loaded in 0.18 seconds!
+2025-02-27 18:25:53,143 - INFO - ✅ Saved `in_game_time.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 18:25:53,147 - INFO - ✅ Saved `player_cooldowns.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 18:25:53,147 - ERROR - ❌ Basil crafting command not found!
+2025-02-27 18:25:53,147 - ERROR - ❌ Basil crafting command not found!
+2025-02-27 18:25:53,148 - INFO - Admin tgbkitty advanced time by 8 hours. New time: 0h, 5d.
+2025-02-27 18:25:53,148 - INFO - Admin tgbkitty advanced time by 8 hours. New time: 0h, 5d.
+2025-02-27 18:26:08,735 - INFO - User tgbkitty rolled 9 vs DC 12 to identify Milkweed Seeds.
+2025-02-27 18:26:08,735 - INFO - User tgbkitty rolled 9 vs DC 12 to identify Milkweed Seeds.
+2025-02-27 18:26:08,735 - INFO - User tgbkitty failed to identify common ingredient.
+2025-02-27 18:26:08,735 - INFO - User tgbkitty failed to identify common ingredient.
+2025-02-27 18:26:08,736 - INFO - ✅ Saved `player_cooldowns.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_data`.
+2025-02-27 18:29:52,547 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 18:29:52,548 - INFO - 🚀 Starting Basil...
+2025-02-27 18:29:52,549 - INFO - logging in using static token
+2025-02-27 18:29:53,172 - INFO - Shard ID None has connected to Gateway (Session ID: aa4564c3500acb2545b46d3486ffc5c1).
+2025-02-27 18:29:55,180 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 18:29:55,186 - INFO - ✅ Economy module initialized
+2025-02-27 18:29:55,186 - INFO - ✅ Economy module initialized
+2025-02-27 18:29:55,188 - INFO - ✅ AdminCommands module initialized
+2025-02-27 18:29:55,188 - INFO - ✅ AdminCommands module initialized
+2025-02-27 18:29:55,189 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 18:29:55,190 - INFO - ✅ Alchemy module initialized
+2025-02-27 18:29:55,190 - INFO - ✅ Alchemy module initialized
+2025-02-27 18:29:55,192 - INFO - ✅ Loaded alchemy.py
+2025-02-27 18:29:55,193 - INFO - ✅ BasilCraft module initialized
+2025-02-27 18:29:55,193 - INFO - ✅ BasilCraft module initialized
+2025-02-27 18:29:55,194 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 18:29:55,194 - INFO - ✅ Economy module initialized
+2025-02-27 18:29:55,194 - INFO - ✅ Economy module initialized
+2025-02-27 18:29:55,195 - INFO - ✅ Loaded economy.py
+2025-02-27 18:29:55,196 - INFO - ✅ Herbalism module initialized
+2025-02-27 18:29:55,196 - INFO - ✅ Herbalism module initialized
+2025-02-27 18:29:55,197 - INFO - ✅ Loaded herbalism.py
+2025-02-27 18:29:55,199 - INFO - ✅ Inventory module initialized
+2025-02-27 18:29:55,199 - INFO - ✅ Inventory module initialized
+2025-02-27 18:29:55,200 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 18:29:55,200 - INFO - ✅ PlayerStats module initialized
+2025-02-27 18:29:55,200 - INFO - ✅ PlayerStats module initialized
+2025-02-27 18:29:55,201 - INFO - ✅ Loaded player_stats.py
+2025-02-27 18:29:55,202 - INFO - ✅ Responses module initialized
+2025-02-27 18:29:55,202 - INFO - ✅ Responses module initialized
+2025-02-27 18:29:55,202 - INFO - ✅ Loaded responses.py
+2025-02-27 18:29:55,202 - INFO - 🔄 Syncing bot commands...
+2025-02-27 18:29:55,373 - INFO - ✅ Synced 20 commands successfully!
+2025-02-27 18:29:55,373 - INFO - 🚀 Basil fully loaded in 0.19 seconds!
+2025-02-27 18:30:23,247 - ERROR - Ignoring exception in command 'basil_help'
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+  File "/Users/brandireger/Documents/Radiant Citadel/BotScripts/Basil/basil_bot.py", line 114, in basil_help
+    if isinstance(cmd, app_commands.Command) and cmd.default_permissions and cmd.default_permissions.administrator:
+NameError: name 'app_commands' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'basil_help' raised an exception: NameError: name 'app_commands' is not defined
+2025-02-27 18:31:25,757 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 18:31:25,758 - INFO - 🚀 Starting Basil...
+2025-02-27 18:31:25,758 - INFO - logging in using static token
+2025-02-27 18:31:26,604 - INFO - Shard ID None has connected to Gateway (Session ID: 2bd4c3c2f8aa7db99b1884b20643ee67).
+2025-02-27 18:31:28,610 - INFO - 🌿 Basil is online! Logged in as Basil Beakermancer#8255
+2025-02-27 18:31:28,615 - INFO - ✅ Economy module initialized
+2025-02-27 18:31:28,615 - INFO - ✅ Economy module initialized
+2025-02-27 18:31:28,617 - INFO - ✅ AdminCommands module initialized
+2025-02-27 18:31:28,617 - INFO - ✅ AdminCommands module initialized
+2025-02-27 18:31:28,618 - INFO - ✅ Loaded admin_commands.py
+2025-02-27 18:31:28,619 - INFO - ✅ Alchemy module initialized
+2025-02-27 18:31:28,619 - INFO - ✅ Alchemy module initialized
+2025-02-27 18:31:28,621 - INFO - ✅ Loaded alchemy.py
+2025-02-27 18:31:28,622 - INFO - ✅ BasilCraft module initialized
+2025-02-27 18:31:28,622 - INFO - ✅ BasilCraft module initialized
+2025-02-27 18:31:28,622 - INFO - ✅ Loaded basil_craft.py
+2025-02-27 18:31:28,623 - INFO - ✅ Economy module initialized
+2025-02-27 18:31:28,623 - INFO - ✅ Economy module initialized
+2025-02-27 18:31:28,624 - INFO - ✅ Loaded economy.py
+2025-02-27 18:31:28,624 - INFO - ✅ Herbalism module initialized
+2025-02-27 18:31:28,624 - INFO - ✅ Herbalism module initialized
+2025-02-27 18:31:28,625 - INFO - ✅ Loaded herbalism.py
+2025-02-27 18:31:28,626 - INFO - ✅ Inventory module initialized
+2025-02-27 18:31:28,626 - INFO - ✅ Inventory module initialized
+2025-02-27 18:31:28,626 - INFO - ✅ Loaded inventory_commands.py
+2025-02-27 18:31:28,627 - INFO - ✅ PlayerStats module initialized
+2025-02-27 18:31:28,627 - INFO - ✅ PlayerStats module initialized
+2025-02-27 18:31:28,627 - INFO - ✅ Loaded player_stats.py
+2025-02-27 18:31:28,628 - INFO - ✅ Responses module initialized
+2025-02-27 18:31:28,628 - INFO - ✅ Responses module initialized
+2025-02-27 18:31:28,628 - INFO - ✅ Loaded responses.py
+2025-02-27 18:31:28,628 - INFO - 🔄 Syncing bot commands...
+2025-02-27 18:31:28,787 - INFO - ✅ Synced 20 commands successfully!
+2025-02-27 18:31:28,788 - INFO - 🚀 Basil fully loaded in 0.18 seconds!
+2025-02-27 18:32:00,125 - INFO - User tgbkitty viewed the market inventory.
+2025-02-27 18:32:00,125 - INFO - User tgbkitty viewed the market inventory.

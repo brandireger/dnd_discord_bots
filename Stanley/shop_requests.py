@@ -2,15 +2,9 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 import logging
-import os
 from data_manager import load_json, save_json, get_response
 
 logger = logging.getLogger(__name__)
-
-# ✅ Define shared directory paths
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SHARED_DIR = os.path.join(BASE_DIR, "..", "shared_inventories")
-STANLEY_DATA_DIR = os.path.join(BASE_DIR, "stanley_data")
 
 class ShopRequests(commands.Cog):
     """Handles item requests and broker interactions."""
@@ -27,7 +21,7 @@ class ShopRequests(commands.Cog):
         user_id = str(interaction.user.id)
 
         # Load requestable items
-        requestable_items = load_json("requestable_items.json", folder=STANLEY_DATA_DIR)
+        requestable_items = load_json("requestable_items.json")
         valid_items = {name.lower(): category for category, items in requestable_items.items() for name in items.keys()}
 
         if item not in valid_items:
@@ -39,7 +33,7 @@ class ShopRequests(commands.Cog):
             return
 
         # Load existing requests
-        requests_data = load_json("requests.json", folder=SHARED_DIR)
+        requests_data = load_json("requests.json")
         requests_data.setdefault(item, [])
 
         if user_id in requests_data[item]:
@@ -47,7 +41,7 @@ class ShopRequests(commands.Cog):
             return
 
         requests_data[item].append(user_id)
-        save_json("requests.json", requests_data, folder=SHARED_DIR)
+        save_json("requests.json", requests_data)
 
         await interaction.followup.send(f"📜 **Stanley records your request.**\n_\"Give me some time, and I’ll see what I can do.\"_\nYour request for `{item}` has been added.")
 
@@ -56,7 +50,7 @@ class ShopRequests(commands.Cog):
         """Lists all items that can be requested from Stanley."""
         await interaction.response.defer(thinking=True)
 
-        requestable_items = load_json("requestable_items.json", folder=STANLEY_DATA_DIR)
+        requestable_items = load_json("requestable_items.json")
 
         if not requestable_items:
             await interaction.followup.send("📜 **Stanley shrugs.**\n_\"Nothing is requestable at the moment!\"_")
@@ -75,7 +69,7 @@ class ShopRequests(commands.Cog):
         """Shows all pending item requests."""
         await interaction.response.defer(thinking=True)
 
-        requests_data = load_json("requests.json", folder=SHARED_DIR)
+        requests_data = load_json("requests.json")
 
         if not any(requests_data.values()):
             await interaction.followup.send(get_response("requests_none"))
@@ -97,7 +91,7 @@ class ShopRequests(commands.Cog):
         item = item.lower().strip()
         category = category.lower().strip()
 
-        requestable_items = load_json("requestable_items.json", folder=STANLEY_DATA_DIR)
+        requestable_items = load_json("requestable_items.json")
         requestable_items.setdefault(category, {})
 
         if item in requestable_items[category]:
@@ -105,7 +99,7 @@ class ShopRequests(commands.Cog):
             return
 
         requestable_items[category][item] = {"price_gp": price_gp, "rarity": rarity}
-        save_json("requestable_items.json", requestable_items, folder=STANLEY_DATA_DIR)
+        save_json("requestable_items.json", requestable_items)
 
         await interaction.followup.send(f"✅ **{item.capitalize()}** has been added to the **requestable items list** under `{category}`!")
 
@@ -117,9 +111,9 @@ class ShopRequests(commands.Cog):
 
         item = item.lower().strip()
 
-        requests_data = load_json("requests.json", folder=SHARED_DIR)
-        shop_data = load_json("stanley_shop.json", folder=SHARED_DIR)
-        requestable_items = load_json("requestable_items.json", folder=STANLEY_DATA_DIR)
+        requests_data = load_json("requests.json")
+        shop_data = load_json("stanley_shop.json")
+        requestable_items = load_json("requestable_items.json")
 
         if item not in requests_data or not requests_data[item]:
             await interaction.followup.send(f"❌ `{item}` is not in the request list!")
@@ -147,6 +141,6 @@ class ShopRequests(commands.Cog):
 
 async def setup(bot):
     """Loads the ShopRequests cog into the bot."""
-    logger.info("🔍 Loading ShopRequests cog...")
-    await bot.add_cog(ShopRequests(bot))
-    logger.info("✅ ShopRequests cog loaded!")
+    cog = ShopRequests(bot)
+    await bot.add_cog(cog)  
+    print(f"✅ {cog} cog loaded!")

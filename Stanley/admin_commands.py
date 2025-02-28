@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
+from data_manager import load_json
 
 class AdminCommands(commands.Cog):
     """Cog for syncing commands."""
@@ -81,6 +82,6 @@ class AdminCommands(commands.Cog):
 
 
 async def setup(bot):
-    print("🔍 Debug: Loading AdminCommands cog...")
-    await bot.add_cog(AdminCommands(bot))  
-    print("✅ AdminCommands cog loaded!")
+    cog = AdminCommands(bot)
+    await bot.add_cog(cog)  
+    print(f"✅ {cog} cog loaded!")

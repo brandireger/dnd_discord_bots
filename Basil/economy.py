@@ -4,34 +4,18 @@ from discord.ext import commands
 import random
 import time
 import os
-import json
-import logging
-from logging import getLogger
-from logging.handlers import RotatingFileHandler
-import sys
 from data_manager import load_json, save_json 
 from inventory_functions import add_item, remove_item, get_inventory
+from bot_logging import logger
 
-# Configure logging
-logger = getLogger(__name__)
-handler = RotatingFileHandler("logs/basil_bot.log", maxBytes=5000000, backupCount=2)
-formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-handler.setFormatter(formatter)
-logger.addHandler(handler)
-logger.setLevel(logging.INFO)
-
-console_handler = logging.StreamHandler()
-console_handler.setFormatter(formatter)
-logger.addHandler(console_handler)
+logger.info("✅ Economy module initialized")
 
 # ✅ File paths
-MARKET_FILE = os.path.join("inventory", "market.json")
-INGREDIENTS_FILE = os.path.join("inventory", "ingredients.json")
-GOLD_FILE = os.path.join("shared_inventories", "gold_data.json")
-STATS_FILE = os.path.join("shared_inventories", "player_stats.json")
+MARKET_FILE = "market.json"
+GOLD_FILE = "gold_data.json"
+STATS_FILE = "player_stats.json"
 
-# ✅ Load ingredient data
-INGREDIENTS = load_json(INGREDIENTS_FILE) or {}
+INGREDIENTS = load_json("ingredients.json") or {}
 
 def generate_market():
     """Generates a fresh market with randomized base prices that last for one week."""
@@ -69,9 +53,7 @@ def save_market(market_data):
 class Economy(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.market = load_market()
-        if not self.market:
-            self.market = generate_market()
+        self.market = load_market() or generate_market()
 
     @app_commands.command(name="market", description="View available ingredients for purchase.")
     async def market(self, interaction: discord.Interaction):
@@ -115,9 +97,7 @@ class Economy(commands.Cog):
         gold_data = load_json(GOLD_FILE) or {}
 
         # ✅ Ensure player gold entry exists
-        if user_id not in gold_data:
-            gold_data[user_id] = {"gp": 0, "sp": 0, "cp": 0}
-            save_json(GOLD_FILE, gold_data)
+        gold_data.setdefault(user_id, {"gp": 0, "sp": 0, "cp": 0})
 
         # ✅ Check if the item is in the market
         if ingredient not in self.market or self.market[ingredient]["stock"] <= 0:
@@ -132,12 +112,12 @@ class Economy(commands.Cog):
 
         # ✅ Deduct gold and update inventory
         gold_data[user_id]["gp"] -= price
-        save_json(GOLD_FILE, gold_data)
+        save_json(GOLD_FILE, gold_data, folder=SHARED_FOLDER)
         add_item(user_id, ingredient, 1)
 
         # ✅ Reduce stock in market
         self.market[ingredient]["stock"] -= 1
-        save_json(MARKET_FILE, self.market)
+        save_market(self.market)
 
         logger.info(f"User {interaction.user} purchased {ingredient} for {price} gp.")
         await interaction.response.send_message(f"✅ You purchased **{ingredient}** for `{price} gp`!")
@@ -147,14 +127,8 @@ class Economy(commands.Cog):
         """Allows players to sell ingredients to the market."""
         ingredient = ingredient.capitalize()
         user_id = str(interaction.user.id)
-        gold_data = load_json(GOLD_FILE) or {"gp": 0, "sp": 0, "cp": 0}
+        gold_data = load_json(GOLD_FILE) or {}
         stats = load_json(STATS_FILE).get(user_id, {})
-
-        # ✅ Check if the ingredient exists
-        if ingredient not in INGREDIENTS:
-            logger.warning(f"User {interaction.user} attempted to sell an unknown item: {ingredient}")
-            await interaction.response.send_message("❌ That ingredient does not exist.")
-            return
 
         # ✅ Check if the player owns the item
         player_inventory = get_inventory(user_id)
@@ -164,8 +138,7 @@ class Economy(commands.Cog):
             return
 
         # ✅ Get base market price
-        if ingredient not in self.market:
-            self.market[ingredient] = {"base_price": INGREDIENTS.get(ingredient, {}).get("base_price", 10), "stock": 0}
+        self.market.setdefault(ingredient, {"base_price": INGREDIENTS.get(ingredient, {}).get("base_price", 10), "stock": 0})
 
         base_price = self.market[ingredient]["base_price"]
 
@@ -177,11 +150,11 @@ class Economy(commands.Cog):
         # ✅ Remove item & add gold
         remove_item(user_id, ingredient, 1)
         gold_data[user_id]["gp"] += final_price
-        save_json(GOLD_FILE, gold_data)
+        save_json(GOLD_FILE, gold_data, folder=SHARED_FOLDER)
 
         # ✅ Add item to market
         self.market[ingredient]["stock"] += 1
-        save_json(MARKET_FILE, self.market, folder="inventory")
+        save_market(self.market)
 
         logger.info(f"User {interaction.user} (ID: {user_id}) sold {ingredient} for {final_price} gp.")
         await interaction.response.send_message(f"💰 You sold **{ingredient}** for `{final_price} gp`.")

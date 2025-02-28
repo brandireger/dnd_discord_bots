@@ -19,6 +19,22 @@ GUILD_ID = os.getenv("GUILD_ID")
 # ✅ Define Paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# ✅ Ensure logs directory exists
+if not os.path.exists("logs"):
+    os.makedirs("logs")
+
+# ✅ Configure logging
+logging.basicConfig(
+    level=logging.INFO,  # Set to DEBUG for more details
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("logs/stanley_bot.log"),  # ✅ Save logs to a file
+        logging.StreamHandler()  # ✅ Show logs in the terminal
+    ]
+)
+
+logger = logging.getLogger(__name__)
+
 COGS = [
     "admin_commands", 
     "economy", 
@@ -26,6 +42,17 @@ COGS = [
     "shop_requests", 
     "shop_transactions"
     ]
+
+PRESENCE_MESSAGES = [
+    "Counting gold and overcharging adventurers...",
+    "Stocking shelves with rare and 'totally legit' artifacts...",
+    "Polishing my wares... and my sales pitch.",
+    "Negotiating with goblins over potion prices...",
+    "Inspecting a 'gently used' magic sword...",
+    "Debating if I should restock or just scam customers...",
+    "Filling out paperwork for a very 'legal' business deal...",
+    "Wondering if anyone will notice a cursed item in the shop...",
+]
 
 CLEAR_COMMANDS_ON_START = False 
 
@@ -41,28 +68,46 @@ def split_text(text, max_length=1024):
 
 @bot.event
 async def on_ready():
-    """Confirms that the bot is online."""
-    print("🔄 Running setup_hook()...")
-    if CLEAR_COMMANDS_ON_START:
-        print("🚨 Clearing all slash commands before syncing...")
-        await bot.tree.clear_commands(guild=discord.Object(id=YOUR_GUILD_ID))
+    """Confirms that the bot is online and syncs commands if needed."""
+    logger.info(f"🎩 {bot.user.name} is online! Logged in as {bot.user}")
+    await bot.change_presence(activity=discord.Game(name=random.choice(PRESENCE_MESSAGES)))
 
-    # Load cogs
+    # Track setup timing
+    start_time = time.time()
+
+    logger.info("🔄 Running setup_hook()...")
+
+    if CLEAR_COMMANDS_ON_START:
+        logger.info("🚨 Clearing all slash commands before syncing...")
+        await bot.tree.clear_commands(guild=discord.Object(id=GUILD_ID))
+
+    # Load cogs dynamically
     for cog in COGS:
         try:
             await bot.load_extension(cog)
-            print(f"✅ Loaded {cog}.py")
+            logger.info(f"✅ Successfully loaded {cog}.py")
         except Exception as e:
-            print(f"❌ Failed to load {cog}.py: {e}")
+            logger.error(f"❌ Failed to load {cog}.py: {e}")
 
-    print("🔄 Syncing bot commands...")
-    try:
-        bot.tree.copy_global_to(guild=discord.Object(id=GUILD_ID))  # ✅ Force sync to your guild
-        synced = await bot.tree.sync(guild=discord.Object(id=GUILD_ID))  
-        print(f"✅ Synced {len(synced)} commands successfully!")
-    except Exception as e:
-        print(f"❌ Error syncing commands: {e}")
+    # **Check if syncing is needed**
+    # try:        
+    #     logger.info("🔍 Fetching existing bot commands...")
+    #     existing_commands = await bot.tree.fetch_commands(guild=discord.Object(id=GUILD_ID))
+    #     logger.info(f"✅ Found {len(existing_commands)} existing commands.")
+        
+    #     if not existing_commands:
+    #         logger.info("🔄 No commands found! Syncing bot commands...")
+    #         synced = await bot.tree.sync(guild=discord.Object(id=GUILD_ID))
+    #         logger.info(f"✅ Synced {len(synced)} commands successfully!")
+    #     else:
+    #         logger.info(f"✅ {len(existing_commands)} commands already exist. Skipping unnecessary sync.")
+    # except Exception as e:
+        # logger.error(f"❌ Error checking/syncing commands: {e}")
 
+    # Calculate total startup time
+    elapsed_time = time.time() - start_time
+    logger.info(f"🚀 Stanley fully loaded in {elapsed_time:.2f} seconds!")
+    
 @bot.tree.command(name="ping", description="Test if the bot is working")
 async def slash_ping(interaction: discord.Interaction):
     """Simple test slash command."""
@@ -110,6 +155,6 @@ async def stanley_help(interaction: discord.Interaction):
 try:
     bot.run(TOKEN)
 except discord.errors.LoginFailure:
-    print("❌ Error: Invalid bot token! Check your `.env` file.")
+    logger.error("❌ Error: Invalid bot token! Check your `.env` file.")
 except Exception as e:
-    print(f"❌ Critical Error: {e}")
+    logger.error(f"❌ Critical Error: {e}")

@@ -2,13 +2,9 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 import logging
-import os
 from data_manager import load_json, save_json, get_response
 
 logger = logging.getLogger(__name__)
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SHARED_DIR = os.path.join(BASE_DIR, "..", "shared_inventories")
 
 class ShopTransactions(commands.Cog):
     """Cog for handling purchases in Stanley's shop."""
@@ -23,9 +19,9 @@ class ShopTransactions(commands.Cog):
 
         user_id = str(interaction.user.id)
 
-        shop_data = load_json("stanley_shop.json", folder=SHARED_DIR)
-        gold_data = load_json("gold_data.json", folder=SHARED_DIR)
-        inventory_data = load_json("player_inventories.json", folder=SHARED_DIR)
+        shop_data = load_json("stanley_shop.json")
+        gold_data = load_json("gold_data.json")
+        inventory_data = load_json("player_inventories.json")
 
         item = item.lower().strip()
         logger.info(f"🔍 {interaction.user.name} is attempting to buy `{item}`.")
@@ -56,16 +52,16 @@ class ShopTransactions(commands.Cog):
         # Deduct price from player's gold
         player_cp -= found_item["price_cp"]
         gold_data[user_id] = {"gp": player_cp // 100, "sp": (player_cp % 100) // 10, "cp": player_cp % 10}
-        save_json("gold_data.json", gold_data, folder=SHARED_DIR)
+        save_json("gold_data.json", gold_data)
 
         # Deduct stock
         found_item["stock"] -= 1
-        save_json("stanley_shop.json", shop_data, folder=SHARED_DIR)
+        save_json("stanley_shop.json", shop_data)
 
         # Add item to player's inventory
         inventory_data.setdefault(user_id, {})
         inventory_data[user_id][item] = inventory_data[user_id].get(item, 0) + 1
-        save_json("player_inventories.json", inventory_data, folder=shared_dir)
+        save_json("player_inventories.json", inventory_data)
 
         logger.info(f"✅ {interaction.user.name} successfully bought `{item}`.")
         await interaction.followup.send(get_response("buy_success", user=interaction.user.name, item=item))
@@ -76,9 +72,9 @@ class ShopTransactions(commands.Cog):
         await interaction.response.defer(thinking=True)
 
         user_id = str(interaction.user.id)
-        shop_data = load_json("stanley_shop.json", folder=SHARED_DIR)
-        gold_data = load_json("gold_data.json", folder=SHARED_DIR)
-        inventory_data = load_json("player_inventories.json", folder=SHARED_DIR)
+        shop_data = load_json("stanley_shop.json")
+        gold_data = load_json("gold_data.json")
+        inventory_data = load_json("player_inventories.json")
 
         logger.info(f"🔍 {interaction.user.name} is attempting to sell `{item}`.")
 
@@ -111,7 +107,7 @@ class ShopTransactions(commands.Cog):
         inventory_data[user_id][item] -= 1
         if inventory_data[user_id][item] <= 0:
             del inventory_data[user_id][item]  # Remove if count reaches 0
-        save_json("player_inventories.json", inventory_data, folder=SHARED_DIR)
+        save_json("player_inventories.json", inventory_data)
 
         # Add stock back to the shop
         for category in shop_data.values():
@@ -128,13 +124,13 @@ class ShopTransactions(commands.Cog):
 
         player_cp += sell_price_cp
         gold_data[user_id] = {"gp": player_cp // 100, "sp": (player_cp % 100) // 10, "cp": player_cp % 10}
-        save_json("gold_data.json", gold_data, folder=SHARED_DIR)
+        save_json("gold_data.json", gold_data)
 
         logger.info(f"✅ {interaction.user.name} sold `{matched_item}` for `{sell_price_cp // 100} gp`.")
         await interaction.followup.send(get_response("sell_success", user=interaction.user.name, item=matched_item, price_gp=sell_price_cp // 100))
 
 async def setup(bot):
     """Loads the ShopTransactions cog into the bot."""
-    print("🔍 Debug: Loading ShopTransactions cog...")
-    await bot.add_cog(ShopTransactions(bot))
-    print("✅ ShopTransactions cog loaded!")
+    cog = ShopTransactions(bot)
+    await bot.add_cog(cog)
+    print(f"✅ {cog} cog loaded!")

@@ -1,0 +1,139 @@
+{
+    "Bloodgrass": {
+        "base_price": 10,
+        "stock": 2
+    },
+    "Primordial Balm": {
+        "base_price": 40,
+        "stock": 4
+    },
+    "Chromus Slime": {
+        "base_price": 34,
+        "stock": 3
+    },
+    "Dried Ephedra": {
+        "base_price": 30,
+        "stock": 5
+    },
+    "Fennel Silk": {
+        "base_price": 7,
+        "stock": 1
+    },
+    "Gengko Brush": {
+        "base_price": 28,
+        "stock": 4
+    },
+    "Lavender Sprig": {
+        "base_price": 8,
+        "stock": 3
+    },
+    "Wild Sageroot": {
+        "base_price": 11,
+        "stock": 2
+    },
+    "Wyrmtongue Petals": {
+        "base_price": 15,
+        "stock": 1
+    },
+    "Amanita Cap": {
+        "base_price": 11,
+        "stock": 2
+    },
+    "Arctic Creeper": {
+        "base_price": 9,
+        "stock": 1
+    },
+    "Cactus Juice": {
+        "base_price": 15,
+        "stock": 4
+    },
+    "Hydrathistle": {
+        "base_price": 28,
+        "stock": 4
+    },
+    "Fiends Ivy": {
+        "base_price": 50,
+        "stock": 3
+    },
+    "Voidroot": {
+        "base_price": 92,
+        "stock": 4
+    },
+    "Emetic Wax": {
+        "base_price": 6,
+        "stock": 2
+    },
+    "Hyancinth Nectar": {
+        "base_price": 12,
+        "stock": 3
+    },
+    "Mandrake Root": {
+        "base_price": 14,
+        "stock": 2
+    },
+    "Milkweed Seeds": {
+        "base_price": 11,
+        "stock": 2
+    },
+    "Arrow Root": {
+        "base_price": 16,
+        "stock": 4
+    },
+    "Blue Toadshade": {
+        "base_price": 40,
+        "stock": 5
+    },
+    "Cosmos Glond": {
+        "base_price": 30,
+        "stock": 1
+    },
+    "Devil\u2019s Bloodleaf": {
+        "base_price": 74,
+        "stock": 3
+    },
+    "Elemental Water": {
+        "base_price": 50,
+        "stock": 2
+    },
+    "Ironwood Heart": {
+        "base_price": 15,
+        "stock": 3
+    },
+    "Luminous Cap Dust": {
+        "base_price": 40,
+        "stock": 5
+    },
+    "Mortflesh Powder": {
+        "base_price": 77,
+        "stock": 3
+    },
+    "Nightshade Berries": {
+        "base_price": 15,
+        "stock": 4
+    },
+    "Rock Vine": {
+        "base_price": 38,
+        "stock": 5
+    },
+    "Scillia Beans": {
+        "base_price": 15,
+        "stock": 3
+    },
+    "Silver Hibiscus": {
+        "base_price": 33,
+        "stock": 2
+    },
+    "Tail Leaf": {
+        "base_price": 100,
+        "stock": 1
+    },
+    "Verdant Nettle": {
+        "base_price": 26,
+        "stock": 4
+    },
+    "Wrackwort Bulbs": {
+        "base_price": 31,
+        "stock": 2
+    },
+    "last_update": 1740700661.905987
+}

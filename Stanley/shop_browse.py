@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
-import os
 from data_manager import load_json
 
 class ShopBrowse(commands.Cog):
@@ -12,8 +11,7 @@ class ShopBrowse(commands.Cog):
 
     async def shop_autocomplete(interaction: discord.Interaction, command: discord.app_commands.Command, current: str):
         """Provides autocomplete suggestions for shop categories."""
-        shared_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "shared_inventories")
-        SHOP_CATEGORIES = load_json("stanley_shop.json", folder=shared_dir)  # ✅ Load fresh shop data
+        SHOP_CATEGORIES = load_json("stanley_shop.json")
         
         return [
             discord.app_commands.Choice(name=c.replace("_", " ").title(), value=c)
@@ -21,13 +19,13 @@ class ShopBrowse(commands.Cog):
         ]
 
     @app_commands.command(name="shop", description="Browse Stanley's legendary wares.")
-    @app_commands.autocomplete(category=shop_autocomplete)  # ✅ Correctly linked
+    @app_commands.autocomplete(category=shop_autocomplete)
     async def shop(self, interaction: discord.Interaction, category: str = None):
         """Lists available shop items by category."""
         await interaction.response.defer(thinking=True)
 
         shared_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "shared_inventories")
-        SHOP_CATEGORIES = load_json("stanley_shop.json", folder=shared_dir)  # ✅ Load fresh data at runtime
+        SHOP_CATEGORIES = load_json("stanley_shop.json")
         
         if not SHOP_CATEGORIES:
             await interaction.followup.send("⚠️ No shop items available!")
@@ -64,5 +62,6 @@ class ShopBrowse(commands.Cog):
         )
 async def setup(bot):
     """Loads the ShopBrowse cog into the bot."""
-    await bot.add_cog(ShopBrowse(bot))
-    print("✅ ShopBrowse cog loaded!")
+    cog = ShopBrowse(bot)
+    await bot.add_cog(cog)  
+    print(f"✅ {cog} cog loaded!")

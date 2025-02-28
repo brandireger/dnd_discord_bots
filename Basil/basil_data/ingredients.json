@@ -137,114 +137,171 @@
         "rarity": "Common",
         "effect": "Delays the effect of an ingredient this was combined with by 1d6 rounds.",
         "DC": 1,
-        "found_in": ["Forest", "Swamp"]
+        "found_in": [
+            "Forest",
+            "Swamp"
+        ]
     },
     "Hyancinth Nectar": {
         "rarity": "Common",
-        "effect": "Removes 1d6 rounds of poison in the target’s system, but cannot remove it completely.",
+        "effect": "Removes 1d6 rounds of poison in the target\u2019s system, but cannot remove it completely.",
         "DC": 1,
-        "found_in": ["Coastal", "Grasslands"]
+        "found_in": [
+            "Coastal",
+            "Grasslands"
+        ]
     },
     "Mandrake Root": {
         "rarity": "Common",
-        "effect": "Reduces any disease or poison’s potency by half for 2d12 hours. Only hinders already existing poisons or diseases in the body.",
+        "effect": "Reduces any disease or poison\u2019s potency by half for 2d12 hours. Only hinders already existing poisons or diseases in the body.",
         "DC": 0,
-        "found_in": ["Most Terrain"]
+        "found_in": [
+            "Most Terrain"
+        ]
     },
     "Milkweed Seeds": {
         "rarity": "Common",
         "effect": "Double the dice rolled of any healing effect, but remove all Alchemy Modifier bonuses. This modifier can stack.",
         "DC": 2,
-        "found_in": ["Most Terrain"]
+        "found_in": [
+            "Most Terrain"
+        ]
     },
     "Arrow Root": {
         "rarity": "Uncommon",
         "effect": "+1 to attack rolls for one minute when applied to a weapon.",
         "DC": 2,
-        "found_in": ["Desert", "Forest", "Grasslands"]
+        "found_in": [
+            "Desert",
+            "Forest",
+            "Grasslands"
+        ]
     },
     "Blue Toadshade": {
         "rarity": "Rare",
         "effect": "User creates a potion of gaseous form.",
         "DC": 3,
-        "found_in": ["Coastal", "Forest", "Swamp"]
+        "found_in": [
+            "Coastal",
+            "Forest",
+            "Swamp"
+        ]
     },
     "Cosmos Glond": {
         "rarity": "Rare",
         "effect": "User creates a potion of clairvoyance.",
         "DC": 3,
-        "found_in": ["Coastal", "Desert"]
+        "found_in": [
+            "Coastal",
+            "Desert"
+        ]
     },
-    "Devil’s Bloodleaf": {
+    "Devil\u2019s Bloodleaf": {
         "rarity": "Very Rare",
         "effect": "User creates a potion of vitality.",
         "DC": 5,
-        "found_in": ["Hills", "Swamp", "Underdark"]
+        "found_in": [
+            "Hills",
+            "Swamp",
+            "Underdark"
+        ]
     },
     "Elemental Water": {
         "rarity": "Rare",
         "effect": "Required as the base catalyst for all Enchantment ingredients.",
         "DC": 3,
-        "found_in": ["Special (See Appendix B)"]
+        "found_in": [
+            "Special (See Appendix B)"
+        ]
     },
     "Ironwood Heart": {
         "rarity": "Uncommon",
         "effect": "User creates a potion of growth.",
         "DC": 3,
-        "found_in": ["Arctic", "Forest", "Hills"]
+        "found_in": [
+            "Arctic",
+            "Forest",
+            "Hills"
+        ]
     },
     "Luminous Cap Dust": {
         "rarity": "Rare",
         "effect": "User creates a potion of heroism.",
         "DC": 4,
-        "found_in": ["Mountain", "Underdark"]
+        "found_in": [
+            "Mountain",
+            "Underdark"
+        ]
     },
     "Mortflesh Powder": {
         "rarity": "Very Rare",
         "effect": "User creates a potion of longevity.",
         "DC": 5,
-        "found_in": ["Arctic", "Underdark"]
+        "found_in": [
+            "Arctic",
+            "Underdark"
+        ]
     },
     "Nightshade Berries": {
         "rarity": "Uncommon",
         "effect": "The effect of this 'potion' is similar to the oil of slipperiness.",
         "DC": 3,
-        "found_in": ["Forest", "Hills"]
+        "found_in": [
+            "Forest",
+            "Hills"
+        ]
     },
     "Rock Vine": {
         "rarity": "Rare",
         "effect": "User creates a potion of invulnerability.",
         "DC": 4,
-        "found_in": ["Hills", "Mountain"]
+        "found_in": [
+            "Hills",
+            "Mountain"
+        ]
     },
     "Scillia Beans": {
         "rarity": "Common",
         "effect": "User creates a potion of climbing.",
         "DC": 1,
-        "found_in": ["Desert", "Grasslands"]
+        "found_in": [
+            "Desert",
+            "Grasslands"
+        ]
     },
     "Silver Hibiscus": {
         "rarity": "Rare",
         "effect": "When consumed, the user can unleash a random elemental breath weapon 3 times.",
         "DC": 4,
-        "found_in": ["Arctic", "Underdark"]
+        "found_in": [
+            "Arctic",
+            "Underdark"
+        ]
     },
     "Tail Leaf": {
         "rarity": "Very Rare",
         "effect": "User creates a potion of speed.",
         "DC": 5,
-        "found_in": ["Grasslands", "Hills"]
+        "found_in": [
+            "Grasslands",
+            "Hills"
+        ]
     },
     "Verdant Nettle": {
         "rarity": "Uncommon",
         "effect": "User creates a potion of animal friendship.",
         "DC": 2,
-        "found_in": ["Forest"]
+        "found_in": [
+            "Forest"
+        ]
     },
     "Wrackwort Bulbs": {
         "rarity": "Rare",
         "effect": "User creates a potion of diminution.",
         "DC": 4,
-        "found_in": ["Coastal", "Swamp"]
+        "found_in": [
+            "Coastal",
+            "Swamp"
+        ]
     }
 }

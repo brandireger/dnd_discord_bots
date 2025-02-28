@@ -1,19 +1,46 @@
 import discord
+from discord import app_commands
 from discord.ext import commands
+import logging
+import time
 import os
+import asyncio
+import traceback 
+import random
+from bot_logging import logger
+from data_manager import ensure_file_exists, load_json
 from dotenv import load_dotenv
+
+# ✅ Ensure logs directory exists
+if not os.path.exists("logs"):
+    os.makedirs("logs")
+
+# ✅ Configure logging
+logging.basicConfig(
+    level=logging.INFO,  # Set to DEBUG for more details
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("logs/basil_bot.log"),  # ✅ Save logs to a file
+        logging.StreamHandler()  # ✅ Show logs in the terminal
+    ]
+)
+
+logger = logging.getLogger(__name__)
 
 # Load environment variables
 load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
 GUILD_ID = os.getenv("GUILD_ID")
+GUILD_ID = int(GUILD_ID) if GUILD_ID and GUILD_ID.isdigit() else None
 
-if not TOKEN:
-    raise ValueError("Missing BOT_TOKEN in environment variables.")
-if not GUILD_ID:
-    raise ValueError("Missing GUILD_ID in environment variables.")
-
-GUILD_ID = int(GUILD_ID)
+# ✅ Ensure Required Files Exist Before Bot Starts
+REQUIRED_FILES = [
+    "gold_data.json",
+    "player_stats.json",
+    "basil_inventory.json"
+]
+for file in REQUIRED_FILES:
+    ensure_file_exists(file)
 
 # Define bot intents and setup
 intents = discord.Intents.all()
@@ -25,9 +52,17 @@ COGS = [
     "basil_craft", 
     "economy", 
     "herbalism", 
-    "inventory_commands", 
+    "inventory_commands",
+    "player_stats",
     "responses"
     ]
+
+PRESENCE_MESSAGES = [
+    "Brewing Potions...",
+    "Exploring the Herbal Archives...",
+    "Experimenting with Alchemy...",
+    "Collecting Rare Ingredients...",
+]
 
 def split_text(text, max_length=1024):
     """Splits a long text into chunks that fit Discord's limit."""
@@ -35,34 +70,34 @@ def split_text(text, max_length=1024):
 
 @bot.event
 async def on_ready():
-    print(f"🌿 Basil is online! Logged in as {bot.user}")
-    await bot.change_presence(activity=discord.Game(name="Brewing Potions"))
+    """Runs when Basil is online."""
+    logger.info(f"🌿 Basil is online! Logged in as {bot.user}")
+    await bot.change_presence(activity=discord.Game(name=random.choice(PRESENCE_MESSAGES)))
 
-CLEAR_COMMANDS_ON_START = False 
+    # Track setup timing
+    start_time = time.time()
 
-@bot.event
-async def setup_hook():
-    """Loads all cogs and syncs commands in the current guild only."""
-    print("🔄 Running setup_hook()...")
-    if CLEAR_COMMANDS_ON_START:
-        print("🚨 Clearing all slash commands before syncing...")
-        await bot.tree.clear_commands(guild=discord.Object(id=YOUR_GUILD_ID))
-
-    # Load cogs
     for cog in COGS:
         try:
             await bot.load_extension(cog)
-            print(f"✅ Loaded {cog}.py")
+            logger.info(f"✅ Loaded {cog}.py")
         except Exception as e:
-            print(f"❌ Failed to load {cog}.py: {e}")
-
-    print("🔄 Syncing bot commands...")
+            logger.error(f"❌ Failed to load {cog}.py:\n{traceback.format_exc()}")  # ✅ Logs full error trace
+    
+    logger.info("🔄 Syncing bot commands...")
     try:
-        bot.tree.copy_global_to(guild=discord.Object(id=GUILD_ID))  # ✅ Force sync to your guild
-        synced = await bot.tree.sync(guild=discord.Object(id=GUILD_ID))  
-        print(f"✅ Synced {len(synced)} commands successfully!")
+        if GUILD_ID:
+            bot.tree.copy_global_to(guild=discord.Object(id=GUILD_ID))
+            synced = await bot.tree.sync(guild=discord.Object(id=GUILD_ID))
+        else:
+            synced = await bot.tree.sync()
+   
+        logger.info(f"✅ Synced {len(synced)} commands successfully!")
+    
+        elapsed_time = time.time() - start_time
+        logger.info(f"🚀 Basil fully loaded in {elapsed_time:.2f} seconds!")
     except Exception as e:
-        print(f"❌ Error syncing commands: {e}")
+        logger.error(f"❌ Error syncing commands:\n{traceback.format_exc()}")
         
 @bot.tree.command(name="basil_help", description="Displays Basil's available commands.")
 async def basil_help(interaction: discord.Interaction):
@@ -77,7 +112,7 @@ async def basil_help(interaction: discord.Interaction):
         cmd_entry = f"**/{cmd.name}** - {cmd.description}"
 
         # Check if it's an admin command
-        if hasattr(cmd, "default_permissions") and cmd.default_permissions and cmd.default_permissions.administrator:
+        if isinstance(cmd, app_commands.Command) and cmd.default_permissions and cmd.default_permissions.administrator:
             admin_commands.append(cmd_entry)
         else:
             regular_commands.append(cmd_entry)
@@ -103,15 +138,18 @@ async def basil_help(interaction: discord.Interaction):
     await interaction.response.send_message(embed=embed)
 
 @bot.tree.command(name="sync", description="Manually sync bot commands (Admin only).")
+@commands.has_permissions(administrator=True) 
 async def sync(interaction: discord.Interaction):
-    if not interaction.user.guild_permissions.administrator:
-        await interaction.response.send_message("❌ You need to be an admin to use this!", ephemeral=True)
-        return
-
+    """Manually sync slash commands (Admin only)."""
     try:
         synced = await bot.tree.sync(guild=discord.Object(id=GUILD_ID))
         await interaction.response.send_message(f"✅ Synced `{len(synced)}` commands successfully!", ephemeral=True)
     except Exception as e:
         await interaction.response.send_message(f"❌ Error syncing commands: {e}", ephemeral=True)
 
-bot.run(TOKEN)
+if __name__ == "__main__":
+    try:
+        logger.info("🚀 Starting Basil...")
+        bot.run(TOKEN)
+    except Exception as e:
+        logger.critical(f"🔥 Critical error on startup:\n{traceback.format_exc()}")  # ✅ Logs full traceback

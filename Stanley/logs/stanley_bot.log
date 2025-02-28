@@ -1,0 +1,99 @@
+2025-02-27 13:39:15,949 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 13:39:15,949 - INFO - logging in using static token
+2025-02-27 13:39:17,033 - INFO - Shard ID None has connected to Gateway (Session ID: b308569fe598f72b01d9e4a26943e95c).
+2025-02-27 13:39:19,037 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-02-27 13:39:19,037 - INFO - 🔄 Running setup_hook()...
+2025-02-27 13:39:19,039 - INFO - ✅ Successfully loaded admin_commands.py
+2025-02-27 13:39:19,041 - INFO - ✅ Successfully loaded economy.py
+2025-02-27 13:39:19,041 - INFO - ✅ Successfully loaded shop_browse.py
+2025-02-27 13:39:19,042 - INFO - ✅ Successfully loaded shop_requests.py
+2025-02-27 13:39:19,042 - INFO - ✅ Successfully loaded shop_transactions.py
+2025-02-27 13:39:19,042 - INFO - 🚀 Stanley fully loaded in 0.01 seconds!
+2025-02-27 14:35:03,180 - INFO - Shard ID None session has been invalidated.
+2025-02-27 14:35:08,644 - INFO - Shard ID None has connected to Gateway (Session ID: a2011d4d4fbf25c71f85c4f42f7453cc).
+2025-02-27 14:52:54,153 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-02-27 14:52:54,154 - INFO - 🔄 Running setup_hook()...
+2025-02-27 14:52:54,154 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-02-27 14:52:54,154 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-02-27 14:52:54,154 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-02-27 14:52:54,154 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-02-27 14:52:54,154 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-02-27 14:52:54,155 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-02-27 14:52:54,378 - INFO - Shard ID None session has been invalidated.
+2025-02-27 15:02:03,848 - INFO - Shard ID None session has been invalidated.
+2025-02-27 15:02:09,295 - INFO - Shard ID None has connected to Gateway (Session ID: d562f88ba34dbec97f5a1de46fa6ee55).
+2025-02-27 15:02:11,299 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-02-27 15:02:11,299 - INFO - 🔄 Running setup_hook()...
+2025-02-27 15:02:11,299 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-02-27 15:02:11,300 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-02-27 15:02:11,300 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-02-27 15:02:11,300 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-02-27 15:02:11,300 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-02-27 15:02:11,300 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-02-27 15:46:21,905 - INFO - Shard ID None session has been invalidated.
+2025-02-27 15:46:27,254 - INFO - Shard ID None has connected to Gateway (Session ID: 50e7dbd109f8044226ec8ec2c302b708).
+2025-02-27 15:46:29,261 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-02-27 15:46:29,262 - INFO - 🔄 Running setup_hook()...
+2025-02-27 15:46:29,262 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-02-27 15:46:29,262 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-02-27 15:46:29,263 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-02-27 15:46:29,263 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-02-27 15:46:29,263 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-02-27 15:46:29,263 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-02-27 16:20:42,473 - INFO - Shard ID None session has been invalidated.
+2025-02-27 16:20:47,839 - INFO - Shard ID None has connected to Gateway (Session ID: 6260041594b2321d43a953cf959884da).
+2025-02-27 16:20:49,847 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-02-27 16:20:49,849 - INFO - 🔄 Running setup_hook()...
+2025-02-27 16:20:49,849 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-02-27 16:20:49,850 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-02-27 16:20:49,850 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-02-27 16:20:49,850 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-02-27 16:20:49,850 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-02-27 16:20:49,850 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-02-27 17:05:17,074 - INFO - Shard ID None session has been invalidated.
+2025-02-27 17:21:09,973 - INFO - Shard ID None session has been invalidated.
+2025-02-27 17:23:48,799 - INFO - Shard ID None session has been invalidated.
+2025-02-27 17:23:54,201 - INFO - Shard ID None has connected to Gateway (Session ID: 4d5158f7e0b00acee83656b507dc287b).
+2025-02-27 17:23:56,213 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-02-27 17:23:56,214 - INFO - 🔄 Running setup_hook()...
+2025-02-27 17:23:56,214 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-02-27 17:23:56,214 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-02-27 17:23:56,214 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-02-27 17:23:56,214 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-02-27 17:23:56,214 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-02-27 17:23:56,214 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-02-27 17:35:29,341 - INFO - Shard ID None session has been invalidated.
+2025-02-27 17:35:34,802 - INFO - Shard ID None has connected to Gateway (Session ID: 804d667a8ea79eee193dca8cd58b7819).
+2025-02-27 17:35:36,808 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-02-27 17:35:36,809 - INFO - 🔄 Running setup_hook()...
+2025-02-27 17:35:36,810 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-02-27 17:35:36,810 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-02-27 17:35:36,810 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-02-27 17:35:36,810 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-02-27 17:35:36,810 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-02-27 17:35:36,810 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-02-27 17:59:03,179 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "identify" is not found
+2025-02-27 18:18:21,216 - INFO - Shard ID None session has been invalidated.
+2025-02-27 18:18:26,866 - INFO - Shard ID None has connected to Gateway (Session ID: c0a638377c4e5129be4305989b6790f0).
+2025-02-27 18:18:28,875 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-02-27 18:18:28,879 - INFO - 🔄 Running setup_hook()...
+2025-02-27 18:18:28,879 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-02-27 18:18:28,879 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-02-27 18:18:28,880 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-02-27 18:18:28,880 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-02-27 18:18:28,880 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-02-27 18:18:28,880 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-02-27 18:19:14,490 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "advance" is not found
+2025-02-27 18:31:35,701 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-02-27 18:31:35,702 - INFO - logging in using static token
+2025-02-27 18:31:36,402 - INFO - Shard ID None has connected to Gateway (Session ID: a121cb011214a2c273f02c87dfefda73).
+2025-02-27 18:31:38,459 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-02-27 18:31:38,461 - INFO - 🔄 Running setup_hook()...
+2025-02-27 18:31:38,464 - INFO - ✅ Successfully loaded admin_commands.py
+2025-02-27 18:31:38,465 - INFO - ✅ Successfully loaded economy.py
+2025-02-27 18:31:38,466 - INFO - ✅ Successfully loaded shop_browse.py
+2025-02-27 18:31:38,466 - INFO - ✅ Successfully loaded shop_requests.py
+2025-02-27 18:31:38,467 - INFO - ✅ Successfully loaded shop_transactions.py
+2025-02-27 18:31:38,467 - INFO - 🚀 Stanley fully loaded in 0.01 seconds!
