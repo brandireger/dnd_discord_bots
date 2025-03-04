@@ -402,5 +402,11 @@
             "price_gp": 50000,
             "rarity": "Legendary"
         }
+    },
+    "weapon": {
+        "holy avenger": {
+            "price_gp": 10,
+            "rarity": "Common"
+        }
     }
 }

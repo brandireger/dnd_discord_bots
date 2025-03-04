@@ -62,8 +62,21 @@ class ShopRequests(commands.Cog):
                 item_list = ", ".join(f"`{name}`" for name in items.keys())
                 request_lines.append(f"**{category.title()}**: {item_list}")
 
-        await interaction.followup.send("\n".join(request_lines))
+        # ✅ Ensure message doesn't exceed 2000 characters
+        response_chunks = []
+        chunk = ""
+        for line in request_lines:
+            if len(chunk) + len(line) + 1 > 2000:  # +1 for newline character
+                response_chunks.append(chunk)
+                chunk = ""
+            chunk += line + "\n"
+        if chunk:
+            response_chunks.append(chunk)
 
+        # ✅ Send messages in chunks
+        for idx, chunk in enumerate(response_chunks):
+            await interaction.followup.send(chunk if idx == 0 else f"🔹 {chunk}")
+            
     @discord.app_commands.command(name="all_requests", description="View all pending item requests.")
     async def all_requests(self, interaction: discord.Interaction):
         """Shows all pending item requests."""
@@ -134,8 +147,8 @@ class ShopRequests(commands.Cog):
         }
 
         del requests_data[item]  # ✅ Remove the request
-        save_json("stanley_shop.json", shop_data, folder=SHARED_DIR)
-        save_json("requests.json", requests_data, folder=SHARED_DIR)
+        save_json("stanley_shop.json", shop_data)
+        save_json("requests.json", requests_data)
 
         await interaction.followup.send(f"✅ **{item.capitalize()}** has been approved and added to Stanley's shop with `{stock}` in stock!")
 

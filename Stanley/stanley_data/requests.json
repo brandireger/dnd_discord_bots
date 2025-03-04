@@ -1,4 +1,10 @@
 {
-    "wand of fireballs": { "price_gp": 10000, "rarity": "Very Rare" },
-    "potion of healing": { "price_gp": 50, "rarity": "Common" }
+    "wand of fireballs": {
+        "price_gp": 10000,
+        "rarity": "Very Rare"
+    },
+    "potion of healing": {
+        "price_gp": 50,
+        "rarity": "Common"
+    }
 }
