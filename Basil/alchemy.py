@@ -3,7 +3,7 @@ from discord import app_commands
 from discord.ext import commands
 import random
 import os
-from data_manager import load_json
+from data_manager import load_json, save_json
 from inventory_functions import add_item, remove_item, remove_ingredients, get_inventory
 from bot_logging import logger
 
@@ -13,7 +13,6 @@ logger.info("✅ Alchemy module initialized")
 INGREDIENTS = load_json("ingredients.json") or {}
 RECIPES = load_json("recipes.json") or {}
 ENHANCED_RECIPES = load_json("enhanced_recipes.json") or {}
-STATS_FILE = load_json("player_stats.json") or {}
 
 class CraftConfirmationView(discord.ui.View):
     """Confirmation UI for crafting items."""
@@ -49,6 +48,10 @@ class Alchemy(commands.Cog):
     def get_player_stats():
         return load_json("player_stats.json") or {}
 
+    @staticmethod
+    def save_player_stats(self, stats):
+        return save_json("player_stats.json", stats)
+    
     @app_commands.command(name="alchemy", description="Provides alchemy-related help and lists available recipes.")
     async def alchemy(self, interaction: discord.Interaction, recipe: str = None):
         """Provides alchemy guidance and recipe lookup."""

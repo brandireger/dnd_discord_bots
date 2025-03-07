@@ -1,12 +1,56 @@
 {
-    "default": {
+    "621349758010654730": {
+        "wisdom": 5,
+        "intelligence": 5,
+        "charisma": 5,
+        "proficiency": 5,
+        "proficient": true,
+        "herbalism_kit": true,
+        "alchemist_tools": true
+    },
+    "741716328670298112": {
+        "wisdom": 3,
+        "intelligence": 4,
+        "charisma": 1,
+        "proficiency": 2,
+        "proficient": true,
+        "herbalism_kit": true,
+        "alchemist_tools": true
+    },
+    "178019225779044353": {
+        "wisdom": 1,
+        "intelligence": 4,
+        "charisma": 1,
+        "proficiency": 2,
+        "proficient": true,
+        "herbalism_kit": true,
+        "alchemist_tools": true
+    },
+    "405241901311197185": {
+        "wisdom": 1,
         "intelligence": 0,
-        "wisdom": 0,
-        "charisma": 0,
+        "charisma": 4,
+        "proficiency": 2,
+        "proficient": true,
+        "herbalism_kit": true,
+        "alchemist_tools": true
+    },
+    "248252028600451072": {
+        "wisdom": 1,
+        "intelligence": 1,
+        "charisma": 4,
         "proficiency": 2,
         "proficient": false,
-        "proficient_persuasion": false,
         "herbalism_kit": false,
         "alchemist_tools": false
+    },
+    "245741494353264641": {
+        "wisdom": 4,
+        "intelligence": 1,
+        "charisma": 1,
+        "proficiency": 2,
+        "proficient": true,
+        "herbalism_kit": true,
+        "alchemist_tools": true
     }
 }

@@ -30,7 +30,11 @@ class Inventory(commands.Cog):
                 description="\n".join(chunk),
                 color=discord.Color.green()
             )
-            await interaction.response.send_message(embed=embed)
+            
+            if idx == 0:
+                await interaction.response.send_message(embed=embed)
+            else:
+                await interaction.followup.send(embed=embed)
 
     @app_commands.command(name="add_item", description="(Admin) Adds an item to a player's inventory.")
     @commands.has_permissions(administrator=True)

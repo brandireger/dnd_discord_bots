@@ -54,13 +54,15 @@ class Herbalism(commands.Cog):
             return
 
         player_id = str(interaction.user.id)
-        player_cooldowns = load_json("player_cooldowns.json")
+        player_cooldowns = load_json("player_cooldowns.json") or {}
         in_game_time = load_json("in_game_time.json")
         terrain_tables = load_json("terrain_tables.json")
         MAX_GATHER_ATTEMPTS = 3
+        cooldowns_modified = False
 
-        # ✅ Ensure player cooldown data exists
-        player_cooldowns.setdefault(player_id, {"gather_attempts": 3, "last_gather_hour": -999})
+        if player_id not in player_cooldowns:
+            player_cooldowns[player_id] = {"gather_attempts": 3, "last_gather_hour": -999}
+            cooldowns_modified = True
 
         # ✅ Ensure in-game time is tracked
         if "hours" not in in_game_time:
@@ -73,14 +75,14 @@ class Herbalism(commands.Cog):
 
             for player in player_cooldowns:
                 player_cooldowns[player]["gather_attempts"] = 3  # ✅ Reset for all players
+                cooldowns_modified = True
 
-            save_json("player_cooldowns.json", player_cooldowns)
             save_json("in_game_time.json", in_game_time)
 
         # ✅ Check if gather attempts should reset before limiting it
         if player_cooldowns[player_id]["gather_attempts"] > MAX_GATHER_ATTEMPTS:
             player_cooldowns[player_id]["gather_attempts"] = MAX_GATHER_ATTEMPTS
-            save_json("player_cooldowns.json", player_cooldowns)
+            cooldowns_modified = True
 
         # ✅ Prevent gathering if attempts are 0
         if player_cooldowns[player_id]["gather_attempts"] <= 0:
@@ -93,8 +95,10 @@ class Herbalism(commands.Cog):
 
         # ✅ Deduct one attempt
         player_cooldowns[player_id]["gather_attempts"] -= 1
-        save_json("player_cooldowns.json", player_cooldowns)
+        cooldowns_modified = True
         
+        if cooldowns_modified:
+            save_json("player_cooldowns.json", player_cooldowns)
         await interaction.response.send_message(
             "🌍 **Select a terrain to gather herbs from:**",
             view=TerrainView(interaction, roll),

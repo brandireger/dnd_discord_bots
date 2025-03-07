@@ -10,5 +10,6 @@
             "effect": "Lasts 10 minutes, healing 1d4 per round",
             "quantity": 1
         }
-    ]
+    ],
+    "Potion of Frost Resistance": 1
 }

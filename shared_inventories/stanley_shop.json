@@ -12,8 +12,20 @@
             "price_cp": 5000,
             "stock": 3
         },
+        "amulet": {
+            "price_cp": 500,
+            "stock": 3
+        },
         "component pouch": {
             "price_cp": 2500,
+            "stock": 3
+        },
+        "emblem": {
+            "price_cp": 500,
+            "stock": 3
+        },
+        "holy symbol": {
+            "price_cp": 500,
             "stock": 3
         },
         "holy water": {
@@ -28,21 +40,33 @@
             "price_cp": 2,
             "stock": 3
         },
-        "oil": {
+        "oil, flask": {
             "price_cp": 10,
             "stock": 3
         },
-        "paper": {
+        "paper, one sheet": {
             "price_cp": 20,
             "stock": 3
         },
-        "parchment": {
+        "parchment, one sheet": {
             "price_cp": 10,
             "stock": 3
         },
         "potion of healing": {
             "price_cp": 5000,
             "stock": 3
+        },
+        "reliquary": {
+            "price_cp": 500,
+            "stock": 3
+        },
+        "sealing wax": {
+            "price_cp": 50,
+            "stock": 3
+        },
+        "spellbook": {
+            "price_cp": 5000,
+            "stock": 1
         },
         "spell scroll (cantrip)": {
             "price_cp": 3000,
@@ -136,9 +160,13 @@
             "price_cp": 10000,
             "stock": 3
         },
-        "iron spikes": {
+        "iron spike": {
+            "price_cp": 10,
+            "stock": 30
+        },
+        "iron spikes x10": {
             "price_cp": 100,
-            "stock": 3
+            "stock": 1
         }
     },
     "adventuring_essentials": {
@@ -174,6 +202,10 @@
             "price_cp": 200,
             "stock": 3
         },
+        "soap": {
+            "price_cp": 2,
+            "stock": 3
+        },
         "tent": {
             "price_cp": 200,
             "stock": 3
@@ -189,19 +221,23 @@
         "waterskin": {
             "price_cp": 20,
             "stock": 3
+        },
+        "whetstone": {
+            "price_cp": 1,
+            "stock": 3
         }
     },
     "miscellaneous_equipment": {
+        "abacus": {
+            "price_cp": 200,
+            "stock": 3
+        },
         "bell": {
             "price_cp": 100,
             "stock": 3
         },
         "book": {
             "price_cp": 2500,
-            "stock": 3
-        },
-        "chain": {
-            "price_cp": 500,
             "stock": 3
         },
         "fine clothes": {
@@ -214,6 +250,10 @@
         },
         "costume": {
             "price_cp": 500,
+            "stock": 3
+        },
+        "hourglass": {
+            "price_cp": 2500,
             "stock": 3
         },
         "ladder": {
@@ -236,7 +276,11 @@
             "price_cp": 100,
             "stock": 3
         },
-        "mirror": {
+        "merchant's scale": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "mirror, steel": {
             "price_cp": 500,
             "stock": 3
         },
@@ -256,6 +300,10 @@
             "price_cp": 5,
             "stock": 3
         },
+        "signet ring": {
+            "price_cp": 500,
+            "stock": 3
+        },
         "spyglass": {
             "price_cp": 100000,
             "stock": 3
@@ -270,6 +318,10 @@
             "price_cp": 100,
             "stock": 3
         },
+        "chain": {
+            "price_cp": 500,
+            "stock": 3
+        },
         "crowbar": {
             "price_cp": 200,
             "stock": 3
@@ -277,6 +329,22 @@
         "grappling hook": {
             "price_cp": 200,
             "stock": 3
+        },
+        "hammer": {
+            "price_cp": 100,
+            "stock": 3
+        },
+        "hammer, sledge": {
+            "price_cp": 200,
+            "stock": 3
+        },
+        "pick, miner's": {
+            "price_cp": 200,
+            "stock": 3
+        },
+        "piton": {
+            "price_cp": 5,
+            "stock": 30
         }
     },
     "adventurers_kits_packs": {
@@ -304,8 +372,16 @@
             "price_cp": 1000,
             "stock": 3
         },
+        "fishing tackle": {
+            "price_cp": 100,
+            "stock": 3
+        },
         "healer's kit": {
             "price_cp": 500,
+            "stock": 3
+        },
+        "mess kit": {
+            "price_cp": 20,
             "stock": 3
         },
         "priest's pack": {
@@ -321,12 +397,32 @@
         "lock": {
             "price_cp": 1000,
             "stock": 1
-        }
-    },
-    "armor_restraints": {
+        },
         "manacles": {
             "price_cp": 200,
             "stock": 3
+        }
+    },
+    "weapons_ammunition": {
+        "arrow": {
+            "price_cp": 5,
+            "stock": 60
+        },
+        "blowgun needle": {
+            "price_cp": 2,
+            "stock": 60
+        },
+        "crossbow bolt": {
+            "price_cp": 5,
+            "stock": 60
+        },
+        "sling bullet": {
+            "price_cp": 5,
+            "stock": 60
+        },
+        "arrow": {
+            "price_cp": 5,
+            "stock": 60
         }
     },
     "miscellaneous": {

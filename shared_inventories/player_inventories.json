@@ -1,14 +1,21 @@
 {
     "621349758010654730": {
-        "lock": 1,
-        "Common Ingredient": 9,
-        "Hydrathistle": 1,
-        "Harrada Leaf": 4,
-        "Arrow Root": 8,
-        "Wild Sageroot": 1
+        "Verdant Nettle": 4,
+        "Wisp Stalks": 14,
+        "Golden Thread of the Unwritten": 1,
+        "Market Credit Note": 1
     },
     "178019225779044353": {
-        "jug": 1,
-        "holy avenger": 1
+        "silver luck charm": 1
+    },
+    "741716328670298112": {
+        "copper gear": 2
+    },
+    "405241901311197185": {
+        "broken gear": 3
+    },
+    "248252028600451072": {
+    },
+    "245741494353264641": {
     }
 }

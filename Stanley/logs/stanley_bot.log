@@ -1646,3 +1646,15 @@ aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gatewa
 2025-03-04 20:17:42,769 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
 2025-03-04 20:17:42,769 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
 2025-03-04 20:17:42,769 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-03-06 20:48:09,441 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-06 20:48:09,442 - INFO - logging in using static token
+2025-03-06 20:48:10,124 - INFO - Shard ID None has connected to Gateway (Session ID: 66fb83a59f6ad95d295d4cdfa79d23cb).
+2025-03-06 20:48:12,129 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-03-06 20:48:12,132 - INFO - 🔄 Running setup_hook()...
+2025-03-06 20:48:12,137 - INFO - ✅ Successfully loaded admin_commands.py
+2025-03-06 20:48:12,139 - INFO - ✅ Successfully loaded economy.py
+2025-03-06 20:48:12,140 - INFO - ✅ Successfully loaded shop_browse.py
+2025-03-06 20:48:12,142 - INFO - ✅ Successfully loaded shop_requests.py
+2025-03-06 20:48:12,142 - INFO - ✅ Successfully loaded shop_transactions.py
+2025-03-06 20:48:12,142 - INFO - 🚀 Stanley fully loaded in 0.01 seconds!
+2025-03-06 20:48:42,906 - INFO - ✅ Saved `gold_data.json` to `/Users/brandireger/Documents/Radiant Citadel/BotScripts/shared_inventories`.
