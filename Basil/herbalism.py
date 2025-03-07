@@ -11,7 +11,7 @@ logger.info("✅ Herbalism module initialized")
 
 class TerrainSelect(ui.Select):
     """Dropdown menu for selecting a terrain type."""
-    def __init__(self, interaction):
+    def __init__(self, interaction, roll):
         terrain_tables = load_json("terrain_tables.json")
 
         options = [
@@ -21,18 +21,21 @@ class TerrainSelect(ui.Select):
 
         super().__init__(placeholder="Choose a terrain to gather herbs...", min_values=1, max_values=1, options=options)
         self.interaction = interaction
+        self.roll = roll
 
     async def callback(self, interaction: discord.Interaction):
         """Handles the selection of a terrain type."""
+        self.view.stop()  # ✅ Disables the dropdown after the first selection
+
         selected_terrain = self.values[0]
-        await gather_execute(interaction, selected_terrain)
+        await gather_execute(interaction, selected_terrain, self.roll)
 
 class TerrainView(ui.View):
     """View that contains the terrain selection dropdown."""
-    def __init__(self, interaction: discord.Interaction):
+    def __init__(self, interaction: discord.Interaction, roll: int):
         super().__init__()
         self.interaction = interaction  # ✅ Store interaction
-        self.add_item(TerrainSelect(interaction))  # ✅ Pass interaction to TerrainSelect
+        self.add_item(TerrainSelect(interaction, roll))  # ✅ Pass interaction to TerrainSelect
 
     async def interaction_check(self, interaction: discord.Interaction) -> bool:
         return interaction.user == self.interaction.user
@@ -42,24 +45,46 @@ class Herbalism(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="gather", description="Gather herbs based on terrain type.")
-    async def gather(self, interaction: discord.Interaction):
+    async def gather(self, interaction: discord.Interaction, roll: int = None):
         """Asks the player to select a terrain type using a dropdown menu."""
+        roll = roll or random.randint(1, 20)
+
+        if roll < 1 or roll > 20:
+            await interaction.response.send_message("❌ Invalid roll! Please provide a d20 roll between 1 and 20.")
+            return
+
         player_id = str(interaction.user.id)
         player_cooldowns = load_json("player_cooldowns.json")
         in_game_time = load_json("in_game_time.json")
         terrain_tables = load_json("terrain_tables.json")
+        MAX_GATHER_ATTEMPTS = 3
 
         # ✅ Ensure player cooldown data exists
-        player_cooldowns.setdefault(player_id, {"gather_attempts": 0, "last_gather_hour": -999})
+        player_cooldowns.setdefault(player_id, {"gather_attempts": 3, "last_gather_hour": -999})
 
         # ✅ Ensure in-game time is tracked
         if "hours" not in in_game_time:
             in_game_time["hours"], in_game_time["days"] = 0, 0
             save_json("in_game_time.json", in_game_time)
 
-        # ✅ Check if player has remaining gather attempts
+        if in_game_time["hours"] >= 24:
+            in_game_time["days"] += in_game_time["hours"] // 24  # ✅ Correctly increment days
+            in_game_time["hours"] %= 24  # ✅ Carry over remaining hours
+
+            for player in player_cooldowns:
+                player_cooldowns[player]["gather_attempts"] = 3  # ✅ Reset for all players
+
+            save_json("player_cooldowns.json", player_cooldowns)
+            save_json("in_game_time.json", in_game_time)
+
+        # ✅ Check if gather attempts should reset before limiting it
+        if player_cooldowns[player_id]["gather_attempts"] > MAX_GATHER_ATTEMPTS:
+            player_cooldowns[player_id]["gather_attempts"] = MAX_GATHER_ATTEMPTS
+            save_json("player_cooldowns.json", player_cooldowns)
+
+        # ✅ Prevent gathering if attempts are 0
         if player_cooldowns[player_id]["gather_attempts"] <= 0:
-            await interaction.response.send_message("❌ You have no gathering attempts left. Wait for more in-game time to pass.")
+            await interaction.response.send_message("❌ You've gathered enough for now. Try again after a long rest.")
             return
 
         if not terrain_tables:
@@ -72,20 +97,26 @@ class Herbalism(commands.Cog):
         
         await interaction.response.send_message(
             "🌍 **Select a terrain to gather herbs from:**",
-            view=TerrainView(interaction),
+            view=TerrainView(interaction, roll),
             ephemeral=True
         )
 
     @app_commands.command(name="identify", description="Identify an unknown herb with an Herbalism check.")
-    async def identify(self, interaction: discord.Interaction, ingredient: str):
+    async def identify(self, interaction: discord.Interaction, ingredient: str, roll: int = None):
         """Allows players to identify herbs using their stats."""
+        roll = roll or random.randint(1, 20)
+
+        if roll < 1 or roll > 20:
+            await interaction.response.send_message("❌ Invalid roll! Please provide a d20 roll between 1 and 20.")
+            return
+    
         player_id = str(interaction.user.id)
         stats = load_json("player_stats.json").get(player_id, {})
         ingredients = load_json("ingredients.json")
         player_cooldowns = load_json("player_cooldowns.json")
         in_game_time = load_json("in_game_time.json")
 
-        ingredient = ingredient.lower().strip()
+        ingredient = ingredient.lower().strip().replace(" ", "_")
 
         # ✅ Normalize common ingredient names
         if "common ingredient" in ingredient:
@@ -117,9 +148,9 @@ class Herbalism(commands.Cog):
         proficiency_bonus = stats.get("proficiency", 0) if stats.get("proficient", False) else 0
         kit_bonus = 2 if stats.get("herbalism_kit", False) else 0
         dc = 10 + ingredient_data.get("DC", 0)
-        roll = random.randint(1, 20) + best_mod + proficiency_bonus + kit_bonus
+        total_roll = roll + best_mod + proficiency_bonus + kit_bonus
 
-        logger.info(f"User {interaction.user} rolled {roll} vs DC {dc} to identify {identified_ingredient}.")
+        logger.info(f"User {interaction.user} rolled {total_roll} vs DC {dc} to identify {identified_ingredient}.")
 
         if roll >= dc:
             # ✅ Success: Update inventory
@@ -137,51 +168,52 @@ class Herbalism(commands.Cog):
             save_json("player_cooldowns.json", player_cooldowns)
             await interaction.response.send_message("❌ You failed to identify the herb. Try again later!")
             
-async def gather_execute(interaction: discord.Interaction, terrain: str):
+async def gather_execute(interaction: discord.Interaction, terrain: str, roll_value: int = None):
     """Handles the actual herb gathering logic."""
     player_id = str(interaction.user.id)
     stats = load_json("player_stats.json").get(player_id, {})
     terrain_tables = load_json("terrain_tables.json")
+
+    roll_value = roll_value or random.randint(1,20)
+
+    if roll_value < 1 or roll_value > 20:
+            await interaction.response.send_message("❌ Invalid roll! Please provide a d20 roll between 1 and 20.")
+            return
 
     # Validate terrain exists in our tables.
     if terrain not in terrain_tables:
         await interaction.response.send_message("❌ Invalid terrain selection!")
         return
 
-    # Calculate the herbalism roll.
+    # Calculate the herbalism roll.  # Pass the player's roll instead of rolling randomly
     best_mod = max(stats.get("wisdom", 0), stats.get("intelligence", 0))
     proficiency_bonus = stats.get("proficiency", 0) if stats.get("proficient", False) else 0
     kit_bonus = 2 if stats.get("herbalism_kit", False) else 0
-    roll_value = random.randint(1, 20) + best_mod + proficiency_bonus + kit_bonus
+    total_roll = roll_value + best_mod + proficiency_bonus + kit_bonus
 
     # Look up the terrain data.
     terrain_data = terrain_tables[terrain]
     # Convert keys to integers (assuming keys are stored as strings of numbers).
-    valid_keys = [int(k) for k in terrain_data.keys() if int(k) <= roll_value]
+    valid_keys = [int(k) for k in terrain_data.keys() if int(k) <= total_roll]
 
-    if valid_keys:
-        best_match = max(valid_keys)
-        # Use the string version of the key for lookup.
-        ingredient_name = terrain_data.get(str(best_match), "Nothing found")
-    else:
-        ingredient_name = "Nothing found"
-
+    ingredient_name = terrain_data.get(str(max(valid_keys))) if valid_keys else "Nothing found"
     quantity = random.randint(1, 4)
 
-    logger.info(f"User {interaction.user} rolled {roll_value} = {best_mod} (stat) + {proficiency_bonus} (prof) + {kit_bonus} (kit). Found: {ingredient_name}.")
+    logger.info(f"User {interaction.user} rolled {total_roll} = {best_mod} (stat) + {proficiency_bonus} (prof) + {kit_bonus} (kit). Found: {ingredient_name}.")
 
-    if ingredient_name != "Nothing found":
-        # Retrieve ingredient info (e.g. rarity) from the ingredients file.
-        ingredient_info = load_json("ingredients.json").get(ingredient_name, {})
-        rarity = ingredient_info.get("rarity", "Unknown")
-        add_item(player_id, ingredient_name, quantity)  # Add the gathered items to the player's inventory.
-        logger.info(f"User {interaction.user} gathered {quantity}x {ingredient_name} in {terrain}.")
-        await interaction.response.send_message(
-            f"🌿 You gathered **{quantity}x {ingredient_name}** ({rarity})."
-        )
-    else:
-        logger.info(f"User {interaction.user} searched in {terrain} but found nothing.")
-        await interaction.response.send_message("You searched but found nothing useful.")
+    if ingredient_name == "Nothing found":
+        await interaction.response.send_message("❌ The area seems barren. You found nothing.")
+        return
+    
+    # ✅ Add the found ingredient
+    ingredient_info = load_json("ingredients.json").get(ingredient_name, {})
+    rarity = ingredient_info.get("rarity", "Unknown")
+    add_item(player_id, ingredient_name, quantity)
+    logger.info(f"User {interaction.user} gathered {quantity}x {ingredient_name} in {terrain}.")
+
+    await interaction.response.send_message(
+        f"🌿 You gathered **{quantity}x {ingredient_name}** ({rarity}).", ephemeral=True
+    )
 
 async def setup(bot):
     cog = Herbalism(bot)

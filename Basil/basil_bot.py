@@ -1,7 +1,6 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
-import logging
 import time
 import os
 import asyncio
@@ -11,22 +10,6 @@ from bot_logging import logger
 from data_manager import ensure_file_exists, load_json
 from dotenv import load_dotenv
 
-# ✅ Ensure logs directory exists
-if not os.path.exists("logs"):
-    os.makedirs("logs")
-
-# ✅ Configure logging
-logging.basicConfig(
-    level=logging.INFO,  # Set to DEBUG for more details
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler("logs/basil_bot.log"),  # ✅ Save logs to a file
-        logging.StreamHandler()  # ✅ Show logs in the terminal
-    ]
-)
-
-logger = logging.getLogger(__name__)
-
 # Load environment variables
 load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
@@ -35,9 +18,13 @@ GUILD_ID = int(GUILD_ID) if GUILD_ID and GUILD_ID.isdigit() else None
 
 # ✅ Ensure Required Files Exist Before Bot Starts
 REQUIRED_FILES = [
-    "gold_data.json",
     "player_stats.json",
-    "basil_inventory.json"
+    "ingredients.json",
+    "market.json",
+    "recipes.json",
+    "enhanced_recipes.json",
+    "responses.json",
+    "terrain_tables.json"
 ]
 for file in REQUIRED_FILES:
     ensure_file_exists(file)

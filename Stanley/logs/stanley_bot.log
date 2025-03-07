@@ -1354,3 +1354,295 @@ discord.ext.commands.errors.CommandNotFound: Command "buy" is not found
 2025-03-04 15:09:12,026 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
 2025-03-04 15:09:12,027 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
 2025-03-04 15:09:12,027 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-03-04 15:44:33,135 - WARNING - PyNaCl is not installed, voice will NOT be supported
+2025-03-04 15:44:33,140 - INFO - logging in using static token
+2025-03-04 15:44:34,070 - INFO - Shard ID None has connected to Gateway (Session ID: b2fa6dd7e0055d2fa0bd34b8992d524a).
+2025-03-04 15:44:36,074 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-03-04 15:44:36,075 - INFO - 🔄 Running setup_hook()...
+2025-03-04 15:44:36,076 - INFO - ✅ Successfully loaded admin_commands.py
+2025-03-04 15:44:36,078 - INFO - ✅ Successfully loaded economy.py
+2025-03-04 15:44:36,079 - INFO - ✅ Successfully loaded shop_browse.py
+2025-03-04 15:44:36,080 - INFO - ✅ Successfully loaded shop_requests.py
+2025-03-04 15:44:36,080 - INFO - ✅ Successfully loaded shop_transactions.py
+2025-03-04 15:44:36,080 - INFO - 🚀 Stanley fully loaded in 0.01 seconds!
+2025-03-04 16:19:43,114 - INFO - Shard ID None session has been invalidated.
+2025-03-04 16:19:48,456 - INFO - Shard ID None has connected to Gateway (Session ID: 627be8ade688e362d44d6676a8ca2ded).
+2025-03-04 16:19:50,471 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-03-04 16:19:50,472 - INFO - 🔄 Running setup_hook()...
+2025-03-04 16:19:50,473 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-03-04 16:19:50,473 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-03-04 16:19:50,474 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-03-04 16:19:50,474 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-03-04 16:19:50,475 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-03-04 16:19:50,475 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-03-04 16:38:24,024 - INFO - Shard ID None session has been invalidated.
+2025-03-04 16:38:29,467 - INFO - Shard ID None has connected to Gateway (Session ID: 33dbc8a2eeb62c146a225808e69e35c7).
+2025-03-04 16:38:31,488 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-03-04 16:38:31,488 - INFO - 🔄 Running setup_hook()...
+2025-03-04 16:38:31,489 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-03-04 16:38:31,489 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-03-04 16:38:31,489 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-03-04 16:38:31,489 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-03-04 16:38:31,490 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-03-04 16:38:31,490 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-03-04 16:44:48,051 - INFO - Shard ID None session has been invalidated.
+2025-03-04 16:44:53,775 - INFO - Shard ID None has connected to Gateway (Session ID: e13f775d663e53a6e866d8415081f77f).
+2025-03-04 16:44:55,781 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-03-04 16:44:55,781 - INFO - 🔄 Running setup_hook()...
+2025-03-04 16:44:55,782 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-03-04 16:44:55,782 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-03-04 16:44:55,782 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-03-04 16:44:55,782 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-03-04 16:44:55,782 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-03-04 16:44:55,782 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!
+2025-03-04 19:10:37,822 - INFO - Shard ID None has successfully RESUMED session e13f775d663e53a6e866d8415081f77f.
+2025-03-04 20:16:17,977 - ERROR - Attempting a reconnect in 0.15s
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1351, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/base_events.py", line 860, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 1004, in _ws_connect
+    resp = await self.request(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1357, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+2025-03-04 20:16:18,303 - ERROR - Attempting a reconnect in 1.28s
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1351, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/base_events.py", line 860, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 1004, in _ws_connect
+    resp = await self.request(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1357, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+2025-03-04 20:16:19,591 - ERROR - Attempting a reconnect in 5.13s
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1351, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/base_events.py", line 860, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 1004, in _ws_connect
+    resp = await self.request(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1357, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+2025-03-04 20:16:24,730 - ERROR - Attempting a reconnect in 3.97s
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1351, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/base_events.py", line 860, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 1004, in _ws_connect
+    resp = await self.request(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1357, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+2025-03-04 20:16:28,724 - ERROR - Attempting a reconnect in 24.90s
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1351, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/base_events.py", line 860, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 1004, in _ws_connect
+    resp = await self.request(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1357, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+2025-03-04 20:16:53,644 - ERROR - Attempting a reconnect in 31.01s
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1351, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/base_events.py", line 860, in getaddrinfo
+    return await self.run_in_executor(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/discord/http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 1004, in _ws_connect
+    resp = await self.request(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/brandireger/.pyenv/versions/3.10.4/lib/python3.10/site-packages/aiohttp/connector.py", line 1357, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [nodename nor servname provided, or not known]
+2025-03-04 20:17:35,004 - INFO - Shard ID None session has been invalidated.
+2025-03-04 20:17:40,749 - INFO - Shard ID None has connected to Gateway (Session ID: d4a781d9261823636b3c4c9473c8c7cd).
+2025-03-04 20:17:42,767 - INFO - 🎩 merchant_bot is online! Logged in as merchant_bot#0794
+2025-03-04 20:17:42,768 - INFO - 🔄 Running setup_hook()...
+2025-03-04 20:17:42,768 - ERROR - ❌ Failed to load admin_commands.py: Extension 'admin_commands' is already loaded.
+2025-03-04 20:17:42,768 - ERROR - ❌ Failed to load economy.py: Extension 'economy' is already loaded.
+2025-03-04 20:17:42,769 - ERROR - ❌ Failed to load shop_browse.py: Extension 'shop_browse' is already loaded.
+2025-03-04 20:17:42,769 - ERROR - ❌ Failed to load shop_requests.py: Extension 'shop_requests' is already loaded.
+2025-03-04 20:17:42,769 - ERROR - ❌ Failed to load shop_transactions.py: Extension 'shop_transactions' is already loaded.
+2025-03-04 20:17:42,769 - INFO - 🚀 Stanley fully loaded in 0.00 seconds!

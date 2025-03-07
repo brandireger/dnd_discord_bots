@@ -1,48 +1,139 @@
 {
     "Bloodgrass": {
-        "price": 15
+        "base_price": 15,
+        "stock": 3
     },
     "Primordial Balm": {
-        "price": 46
+        "base_price": 31,
+        "stock": 3
     },
     "Chromus Slime": {
-        "price": 33
+        "base_price": 36,
+        "stock": 3
     },
     "Dried Ephedra": {
-        "price": 28
+        "base_price": 15,
+        "stock": 4
     },
     "Fennel Silk": {
-        "price": 15
+        "base_price": 9,
+        "stock": 2
     },
     "Gengko Brush": {
-        "price": 25
+        "base_price": 21,
+        "stock": 2
     },
     "Lavender Sprig": {
-        "price": 11
+        "base_price": 12,
+        "stock": 2
     },
     "Wild Sageroot": {
-        "price": 7
+        "base_price": 7,
+        "stock": 5
     },
     "Wyrmtongue Petals": {
-        "price": 6
+        "base_price": 13,
+        "stock": 3
     },
     "Amanita Cap": {
-        "price": 12
+        "base_price": 7,
+        "stock": 2
     },
     "Arctic Creeper": {
-        "price": 10
+        "base_price": 7,
+        "stock": 5
     },
     "Cactus Juice": {
-        "price": 9
+        "base_price": 8,
+        "stock": 1
     },
     "Hydrathistle": {
-        "price": 18
+        "base_price": 23,
+        "stock": 4
     },
-    "Fiend\u2019s Ivy": {
-        "price": 33
+    "Fiends Ivy": {
+        "base_price": 36,
+        "stock": 3
     },
     "Voidroot": {
-        "price": 98
+        "base_price": 62,
+        "stock": 4
     },
-    "last_update": 1740356870.167737
+    "Emetic Wax": {
+        "base_price": 11,
+        "stock": 5
+    },
+    "Hyancinth Nectar": {
+        "base_price": 12,
+        "stock": 5
+    },
+    "Mandrake Root": {
+        "base_price": 8,
+        "stock": 4
+    },
+    "Milkweed Seeds": {
+        "base_price": 10,
+        "stock": 4
+    },
+    "Arrow Root": {
+        "base_price": 24,
+        "stock": 4
+    },
+    "Blue Toadshade": {
+        "base_price": 38,
+        "stock": 5
+    },
+    "Cosmos Glond": {
+        "base_price": 30,
+        "stock": 1
+    },
+    "Devil\u2019s Bloodleaf": {
+        "base_price": 74,
+        "stock": 3
+    },
+    "Elemental Water": {
+        "base_price": 35,
+        "stock": 3
+    },
+    "Ironwood Heart": {
+        "base_price": 29,
+        "stock": 5
+    },
+    "Luminous Cap Dust": {
+        "base_price": 40,
+        "stock": 5
+    },
+    "Mortflesh Powder": {
+        "base_price": 81,
+        "stock": 5
+    },
+    "Nightshade Berries": {
+        "base_price": 23,
+        "stock": 5
+    },
+    "Rock Vine": {
+        "base_price": 41,
+        "stock": 2
+    },
+    "Scillia Beans": {
+        "base_price": 12,
+        "stock": 5
+    },
+    "Silver Hibiscus": {
+        "base_price": 38,
+        "stock": 5
+    },
+    "Tail Leaf": {
+        "base_price": 50,
+        "stock": 5
+    },
+    "Verdant Nettle": {
+        "base_price": 19,
+        "stock": 3
+    },
+    "Wrackwort Bulbs": {
+        "base_price": 31,
+        "stock": 1
+    },
+    "last_update": 1741293260.871249
 }

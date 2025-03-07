@@ -13,18 +13,17 @@ DEFAULTS_FOLDER = os.path.join(BASE_DIR, "default_game_files")  # ✅ Backup fil
 
 # ✅ Required Files & Default Data
 REQUIRED_FILES = {
+    "enhanced_recipes.json": (BASIL_DATA_FOLDER, {}),  
+    "in_game_time.json": (BASIL_DATA_FOLDER, {"days": 0, "hours": 0}),  # ✅ Tracks game time
     "ingredients.json": (BASIL_DATA_FOLDER, {}),  
+    "market.json": (BASIL_DATA_FOLDER, {"last_update": 0}),  
+    "player_cooldowns.json": (BASIL_DATA_FOLDER, {}),  # ✅ Tracks player cooldowns
     "recipes.json": (BASIL_DATA_FOLDER, {}),  
+    "responses.json": (BASIL_DATA_FOLDER, {}),
     "terrain_tables.json": (BASIL_DATA_FOLDER, {}),  
-    "market.json": (SHARED_FOLDER, {"last_update": 0}),  
     "gold_data.json": (SHARED_FOLDER, {}),  
     "player_stats.json": (SHARED_FOLDER, {}),  
-    "crafted_items.json": (BASIL_DATA_FOLDER, {}),  # ✅ Basil's crafting inventory
-    "in_game_time.json": (BASIL_DATA_FOLDER, {"days": 0, "hours": 0}),  # ✅ Tracks game time
-    "player_cooldowns.json": (BASIL_DATA_FOLDER, {}),  # ✅ Tracks player cooldowns
-    "basil_inventory.json": (SHARED_FOLDER, {}),  # ✅ Fixed missing inventory file
-    "enhanced_recipes.json": (BASIL_DATA_FOLDER, {}),  
-    "responses.json": (BASIL_DATA_FOLDER, {}),
+    "crafted_items.json": (SHARED_FOLDER, {}),
     "player_inventories.json": (SHARED_FOLDER, {})
 }
 

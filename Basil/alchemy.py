@@ -17,11 +17,12 @@ STATS_FILE = load_json("player_stats.json") or {}
 
 class CraftConfirmationView(discord.ui.View):
     """Confirmation UI for crafting items."""
-    def __init__(self, recipe_name, recipe_data, player_id, interaction, cog):
+    def __init__(self, recipe_name, recipe_data, player_id, roll, interaction, cog):
         super().__init__(timeout=30)
         self.recipe_name = recipe_name
         self.recipe_data = recipe_data
         self.player_id = player_id
+        self.roll = roll
         self.interaction = interaction
         self.cog = cog
 
@@ -43,6 +44,10 @@ class CraftConfirmationView(discord.ui.View):
 class Alchemy(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+
+    @staticmethod
+    def get_player_stats():
+        return load_json("player_stats.json") or {}
 
     @app_commands.command(name="alchemy", description="Provides alchemy-related help and lists available recipes.")
     async def alchemy(self, interaction: discord.Interaction, recipe: str = None):
@@ -106,11 +111,13 @@ class Alchemy(commands.Cog):
 
         await interaction.response.send_message(embed=embed)
 
-    @app_commands.command(name="craft_item", description="Attempt to craft a potion or poison.")
-    async def craft_item(self, interaction: discord.Interaction, recipe: str):
-        """Handles crafting attempts with confirmation."""
+    @app_commands.command(name="craft_item", description="Attempt to craft a potion or poison with your own d20 roll.")
+    async def craft_item(self, interaction: discord.Interaction, recipe: str, roll: int = None, auto: bool = False):
+        """Handles crafting attempts where players roll their own d20."""
         player_id = str(interaction.user.id)
         inventory = get_inventory(player_id)
+
+        roll = roll or random.randint(1, 20) 
 
         recipe_name = recipe.capitalize()
         if recipe_name not in RECIPES:
@@ -121,18 +128,34 @@ class Alchemy(commands.Cog):
         base = recipe_data["base"]
         modifiers = recipe_data.get("modifiers", [])
 
-        # Ensure player has all ingredients **and enough of them**
-        if inventory.get(base, 0) < 1 or any(inventory.get(mod, 0) < 1 for mod in modifiers):
-            await interaction.response.send_message("❌ You lack the required ingredients.")
+        # Make sure the roll is valid (between 1 and 20)
+        if roll < 1 or roll > 20:
+            await interaction.response.send_message("❌ Invalid roll! Please provide a d20 roll between 1 and 20.")
             return
 
-        # Ask for confirmation
-        view = CraftConfirmationView(recipe_name, recipe_data, player_id, interaction, self)
-        await interaction.response.send_message(f"🛠️ Do you want to craft **{recipe_name}**?", view=view, ephemeral=True)
+        # Ensure player has ingredients
+        if inventory.get(base, 0) < 1 or any(inventory.get(mod, 0) < 1 for mod in modifiers):
+            missing = [mod for mod in modifiers if inventory.get(mod, 0) == 0]
+            await interaction.response.send_message(f"❌ You lack the required ingredients: {', '.join(missing)}.")
+            return
 
-    def process_crafting(self, player_id, recipe_name, recipe_data):
+        # Process crafting with player's roll
+        if auto:
+            # ✅ Skip confirmation and process crafting immediately
+            success, message = self.process_crafting(player_id, recipe_name, recipe_data, roll)
+            await interaction.response.send_message(message)
+        else:
+            # ✅ Require confirmation before crafting
+            view = CraftConfirmationView(recipe_name, recipe_data, player_id, interaction, self)
+            await interaction.response.send_message(
+                f"🛠️ **You rolled {roll}.** Do you want to craft **{recipe_name}**? This will use your materials.",
+                view=view,
+                ephemeral=True
+            )
+
+    def process_crafting(self, player_id, recipe_name, recipe_data, d20_roll):
         """Processes the crafting attempt, handles failures and successes."""
-        stats = STATS_FILE.get(player_id, {})
+        stats = self.get_player_stats().get(player_id, {})
         inventory = get_inventory(player_id)
 
         base = recipe_data["base"]
@@ -148,7 +171,6 @@ class Alchemy(commands.Cog):
         total_bonus = best_mod + proficiency_bonus + tools_bonus
 
         # ✅ Roll crafting attempt
-        d20_roll = random.randint(1, 20)
         final_roll = d20_roll + total_bonus
 
         # ✅ Handle crafting outcomes

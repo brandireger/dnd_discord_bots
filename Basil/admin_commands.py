@@ -16,7 +16,7 @@ class AdminCommands(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="advance_time", description="(Admin) Advances in-game time by a set number of hours.")
-    @commands.has_permissions(administrator=True)
+    @app_commands.default_permissions(administrator=True)
     async def advance_time(self, interaction: discord.Interaction, hours: int):
         """Advances the in-game time and updates player cooldowns accordingly."""
         if hours <= 0:
@@ -35,22 +35,29 @@ class AdminCommands(commands.Cog):
 
         save_json("in_game_time.json", in_game_time)
 
-        # ✅ Update player cooldowns
-        player_cooldowns = load_json("player_cooldowns.json")
-        for player_id in get_all_players():
-            player_cooldowns.setdefault(player_id, {"gather_attempts": 0})
-            player_cooldowns[player_id]["gather_attempts"] += hours
-
-            # ✅ Reset daily cooldowns if a new day starts
-            if old_days != in_game_time["days"]:
-                player_cooldowns[player_id] = {
-                    key: value for key, value in player_cooldowns[player_id].items() if not key.startswith("identify_")
-                }
-
-        save_json("player_cooldowns.json", player_cooldowns)
+        # ✅ Reset gather attempts for all players when a new day starts
+        if old_days != in_game_time["days"]:
+            player_cooldowns = load_json("player_cooldowns.json")
+            for player_id in player_cooldowns:
+                player_cooldowns[player_id]["gather_attempts"] = 3  # ✅ Correctly reset all players
+            save_json("player_cooldowns.json", player_cooldowns)
 
         # ✅ Process Basil's crafting
-        crafted_potions, failures = await self.process_basil_crafting(interaction, hours)
+        basil_cog = self.bot.get_cog("BasilCrafting")
+        
+        if not basil_cog:
+            logger.error("❌ Basil crafting command not found!")
+            return [], []
+
+        basil_crafting_cmd = self.bot.tree.get_command("basil_crafting")
+
+        crafted_potions, failures = [], []
+        for _ in range(hours):  # Basil attempts to craft once per in-game hour
+            crafting_result = await basil_crafting_cmd._callback(basil_cog, interaction, hours)
+            if crafting_result:
+                crafted, failed = crafting_result
+                crafted_potions.extend(crafted)
+                failures.extend(failed)
 
         # ✅ Response message
         result_text = f"🕰️ **Time Advanced!**\n⏳ In-game time: `{in_game_time['hours']} hours, {in_game_time['days']} days`\n\n"
@@ -87,7 +94,7 @@ class AdminCommands(commands.Cog):
         return crafted_potions, failures
 
     @app_commands.command(name="reset_market", description="(Admin) Reset and regenerate the market inventory.")
-    @commands.has_permissions(administrator=True)
+    @app_commands.default_permissions(administrator=True)
     async def reset_market(self, interaction: discord.Interaction):
         """Regenerates the market inventory."""
         self.bot.get_cog("Economy").market = generate_market()
@@ -96,7 +103,7 @@ class AdminCommands(commands.Cog):
         await interaction.response.send_message("✅ The market has been **refreshed** with new items!")
 
     @app_commands.command(name="reset_inventory", description="(Admin) Reset a player's inventory.")
-    @commands.has_permissions(administrator=True)
+    @app_commands.default_permissions(administrator=True)
     async def reset_inventory(self, interaction: discord.Interaction, member: discord.Member = None):
         """Clears a player's inventory or resets all inventories if no player is specified."""
         if member:
@@ -111,7 +118,7 @@ class AdminCommands(commands.Cog):
             await interaction.response.send_message("✅ **All** player inventories have been reset!")
                    
     @app_commands.command(name="open_shop", description="(Admin) Resets and prepares Basil's shop.")
-    @commands.has_permissions(administrator=True)
+    @app_commands.default_permissions(administrator=True)
     async def open_shop(self, interaction: discord.Interaction):
         """Admin command that resets the shop inventory and ensures it is properly prepared."""
         await interaction.response.defer(thinking=True)
@@ -126,7 +133,7 @@ class AdminCommands(commands.Cog):
             save_market(economy_cog.market)
 
         # ✅ Ensure Basil's Shop Inventory Exists
-        shop_inventory = load_json("basil_shop.json") or {}
+        shop_inventory = load_json("market.json") or {}
         crafted_items = load_json("crafted_items.json") or {}
 
         # ✅ Combine Market Items & Crafted Items into Basil's Shop
@@ -134,7 +141,7 @@ class AdminCommands(commands.Cog):
         shop_inventory.update(crafted_items)  # Add Crafted Items
 
         # ✅ Save the Shop Inventory
-        save_json("basil_shop.json", shop_inventory)
+        save_json("market.json", shop_inventory)
 
         logger.info(f"Admin {interaction.user} reset Basil's shop inventory.")
         await interaction.followup.send(f"{result}\n✅ **Basil's shop has been fully reset and stocked with new items!**") 

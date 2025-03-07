@@ -92,7 +92,7 @@
         },
         "jug": {
             "price_cp": 2,
-            "stock": 3
+            "stock": 2
         },
         "iron pot": {
             "price_cp": 200,
@@ -327,6 +327,13 @@
         "manacles": {
             "price_cp": 200,
             "stock": 3
+        }
+    },
+    "miscellaneous": {
+        "holy avenger": {
+            "price_cp": 5000000,
+            "stock": 0,
+            "rarity": "Legendary"
         }
     }
 }

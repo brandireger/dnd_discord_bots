@@ -15,7 +15,7 @@ from bot_logging import logger
 logger.info("✅ BasilCraft module initialized")
 
 # File Paths
-BASIL_INVENTORY_FILE = "basil_inventory.json"
+BASIL_INVENTORY_FILE = "market.json"
 RECIPES_FILE = "recipes.json"
 CRAFTED_ITEMS_FILE = "crafted_items.json"
 ENHANCED_RECIPES_FILE = "enhanced_recipes.json"
@@ -30,7 +30,7 @@ class BasilCrafting(commands.Cog):
         self.bot = bot
 
     @app_commands.command(name="basil_crafting", description="Simulate Basil crafting potions for a set number of in-game days.")
-    @commands.has_permissions(administrator=True)
+    @app_commands.default_permissions(administrator=True)
     async def basil_crafting(self, interaction: discord.Interaction, days: int):
         """Runs Basil's crafting cycle based on in-game time."""
         if days <= 0:
@@ -43,9 +43,10 @@ class BasilCrafting(commands.Cog):
         recipes = load_json(RECIPES_FILE) or {}
         enhanced_recipes = load_json(ENHANCED_RECIPES_FILE) or {}
 
+        basil_inventory = {item: data["stock"] for item, data in basil_inventory.items() if isinstance(data, dict) and "stock" in data}
+
         # Determine the number of potions Basil can attempt
         craft_attempts = max(1, int(days * random.uniform(0.8, 1.2)))  # Adds slight randomness
-
         crafted_items_log = []
         failures = []
 
@@ -61,22 +62,21 @@ class BasilCrafting(commands.Cog):
                 all(basil_inventory.get(mod, 0) > 0 for mod in modifiers)
             )
 
-            if not has_ingredients:
-                # Add a small chance to supplement missing ingredients with random ones
-                if random.random() < 0.3:  # 30% chance Basil improvises
-                    logger.info(f"Basil improvises ingredients for {recipe}.")
-                else:
-                    continue  # Skip crafting this potion
+            if not has_ingredients and random.random() >= 0.4:  # 30% chance Basil improvises
+                logger.info(f"Basil improvises ingredients for {recipe}.")
+                continue  # Skip crafting this potion
 
             # Simulate crafting success/failure
             dc = recipe_data["DC"]
             d20_roll = random.randint(1, 20)  # Store raw d20 roll
-            total_roll = d20_roll + 5  # Basil gets a +5 crafting bonus
+            total_roll = d20_roll + 8  # Basil gets a +5 crafting bonus
 
             def remove_ingredients():
-                basil_inventory[base] = max(0, basil_inventory.get(base, 0) - 1)
+                if base in basil_inventory:
+                    basil_inventory[base] = max(0, basil_inventory[base] - 1)
                 for mod in modifiers:
-                    basil_inventory[mod] = max(0, basil_inventory.get(mod, 0) - 1)
+                    if mod in basil_inventory:
+                        basil_inventory[mod] = max(0, basil_inventory[mod] - 1)
             
             if d20_roll == 1:
                 # ❌ **Critical Failure:** Basil messes up horribly
